@@ -25,14 +25,20 @@ module PSRAM64(input clk,
 					output rdfifo_rdempty
 					);
 reg psram_ctrl;
+reg psram_ctrl_buf;
+always @(negedge clk)
+begin
+	psram_ctrl_buf <= psram_ctrl;
+end
 reg[3:0] psram_sio_out;
 reg psram_cs_n;
 wire gated_clk;
 GATED_CLK psram_gated(.clkin(clk),
 							.clkout(gated_clk),
 							.clken(~psram_cs_n));
+
 assign PSRAM_CEn = psram_ctrl ? psram_cs_n : MCU_CS;
-assign PSRAM_CLK = psram_ctrl ? gated_clk : MCU_SCLK;
+assign PSRAM_CLK = psram_ctrl_buf ? clk : MCU_SCLK;
 assign PSRAM_SIO_OUT = psram_ctrl ? psram_sio_out : {3'b111, MCU_MOSI};
 
 reg[15:0] rdfifo_data;
@@ -243,12 +249,36 @@ begin
 end
 endtask
 
+task PSRAM_DIS_4BIT;
+begin
+	case (task_state)
+	8'd0: _SHIFT_OUT_4(8'd1, 4'hF);
+	8'd2: _SHIFT_OUT_4(8'd3, 4'h5);
+	8'd3: 
+	begin
+		psram_cs_n <= 1'b1;
+		psram_sio_out <= 4'hf;
+		task_state <= 8'hff;
+	end
+	8'hff:
+	begin
+	end
+	endcase
+end
+endtask
+
 task PSRAM_EN_4BIT;
 begin
 	case (task_state)
 	8'd0:
 	begin
+		task_state <= 8'd1;
 		task_x <= 16'd0;
+		task_data <= 8'h35;
+	end
+	8'd1:	_SHIFT_OUT_1(8'hff, 8'hff);
+	8'hff:
+	begin
 	end
 	endcase
 end
@@ -257,7 +287,9 @@ endtask
 `define STATE_INIT	8'd0
 `define STATE_TSK_SELECT	8'd1
 `define STATE_TSK_RDFIFO	8'd2
-`define STATE_TSK_WAIT_MCU	8'd3
+`define STATE_TSK_BEGIN_MCU 8'd3
+`define STATE_TSK_WAIT_MCU	8'd4
+`define STATE_TSK_END_MCU 8'd5
 reg[7:0] state;
 reg [21:0] psram_addr;
 wire syn_mcu_req;
@@ -313,7 +345,7 @@ begin
 				 begin
 					psram_cs_n <= 1'b0;
 					MCU_ACK <= 1'b0;
-					state <= `STATE_TSK_WAIT_MCU;
+					state <= `STATE_TSK_BEGIN_MCU;
 				 end
 			end
 		end
@@ -327,12 +359,34 @@ begin
 				state <= `STATE_TSK_SELECT;
 			end
 		end
+		`STATE_TSK_BEGIN_MCU:
+		begin
+			PSRAM_DIS_4BIT();
+			if (task_state == 8'hff)
+			begin
+				TASK_RESET();
+				PSRAM_SIO_DIR <= 1'b0;
+				PSRAM_CMD_DIR <= 1'b1;
+				state <= `STATE_TSK_WAIT_MCU;
+			end
+		end
 		`STATE_TSK_WAIT_MCU:
 		begin
 			if (syn_mcu_req)
 			begin
 				psram_cs_n <= 1'b1;
 				MCU_ACK <= 1'b1;
+				state <= `STATE_TSK_END_MCU;
+			end
+		end
+		`STATE_TSK_END_MCU:
+		begin
+			PSRAM_EN_4BIT();
+			if (task_state == 8'hff)
+			begin
+				TASK_RESET();
+				PSRAM_SIO_DIR <= 1'b0;
+				PSRAM_CMD_DIR <= 1'b0;
 				state <= `STATE_TSK_SELECT;
 			end
 		end
