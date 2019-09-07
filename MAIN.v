@@ -6,6 +6,7 @@
  */
 module MAIN(input SYS_CLK,
             input SYS_RSTn,
+				inout SYS_WDI,
 				// psram interface
 				output PSRAM_CEn,
 				output PSRAM_CLK,
@@ -19,10 +20,12 @@ module MAIN(input SYS_CLK,
 				//output MCU_SPI_MISO
 				);
 wire SYS_CLK_100M;
+wire SYS_CLK_33M;
 wire pll0_locked;
-wire GLOBAL_RESET = (~SYS_RSTn) & (~pll0_locked);
+wire GLOBAL_RESET = (~SYS_RSTn) | (~pll0_locked);
 PLL0 pll0(.inclk0(SYS_CLK),
 				.c0(SYS_CLK_100M),
+				.c1(SYS_CLK_33M),
 				.locked(pll0_locked));
 wire[3:0] PSRAM_SIO_OUT;
 wire PSRAM_CMD_DIR;
@@ -35,6 +38,7 @@ PSRAM64 psram64(.clk(SYS_CLK_100M),
 						.PSRAM_CLK(PSRAM_CLK),
 						.PSRAM_SIO_OUT(PSRAM_SIO_OUT),
 						.PSRAM_SIO_IN(PSRAM_SIO),
+						.PSRAM_CMD_DIR(PSRAM_CMD_DIR),
 						.PSRAM_SIO_DIR(PSRAM_SIO_DIR),
 						.rdfifo_rdclk(SYS_CLK_100M),
 						.rdfifo_rdreq(1'b1),

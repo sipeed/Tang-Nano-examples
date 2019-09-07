@@ -19,7 +19,7 @@
 ## PROGRAM "Quartus II"
 ## VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
 
-## DATE    "Sat Sep 07 00:33:56 2019"
+## DATE    "Sun Sep 08 00:14:05 2019"
 
 ##
 ## DEVICE  "EP4CE115F23I7"
@@ -40,6 +40,7 @@ set_time_format -unit ns -decimal_places 3
 
 create_clock -name {altera_reserved_tck} -period 100.000 -waveform { 0.000 50.000 } [get_ports {altera_reserved_tck}]
 create_clock -name {SYS_CLK} -period 100.000 -waveform { 0.000 50.000 } [get_ports {SYS_CLK}]
+create_clock -name {PSRAM_CLK} -period 10.000 -waveform { 0.000 5.000 } [get_ports {PSRAM_CLK}]
 
 
 #**************************************************************
@@ -65,12 +66,30 @@ create_generated_clock -name {pll0|altpll_component|auto_generated|pll1|clk[0]} 
 # Set Input Delay
 #**************************************************************
 
+set_input_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  7.500 [get_ports {PSRAM_SIO[0]}]
+set_input_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  2.500 [get_ports {PSRAM_SIO[0]}]
+set_input_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  7.500 [get_ports {PSRAM_SIO[1]}]
+set_input_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  2.500 [get_ports {PSRAM_SIO[1]}]
+set_input_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  7.500 [get_ports {PSRAM_SIO[2]}]
+set_input_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  2.500 [get_ports {PSRAM_SIO[2]}]
+set_input_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  7.500 [get_ports {PSRAM_SIO[3]}]
+set_input_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  2.500 [get_ports {PSRAM_SIO[3]}]
 
 
 #**************************************************************
 # Set Output Delay
 #**************************************************************
 
+set_output_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  4.000 [get_ports {PSRAM_CEn}]
+set_output_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  -1.500 [get_ports {PSRAM_CEn}]
+set_output_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  4.000 [get_ports {PSRAM_SIO[0]}]
+set_output_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  -1.500 [get_ports {PSRAM_SIO[0]}]
+set_output_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  4.000 [get_ports {PSRAM_SIO[1]}]
+set_output_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  -1.500 [get_ports {PSRAM_SIO[1]}]
+set_output_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  4.000 [get_ports {PSRAM_SIO[2]}]
+set_output_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  -1.500 [get_ports {PSRAM_SIO[2]}]
+set_output_delay -add_delay -max -clock [get_clocks {PSRAM_CLK}]  4.000 [get_ports {PSRAM_SIO[3]}]
+set_output_delay -add_delay -min -clock [get_clocks {PSRAM_CLK}]  -1.500 [get_ports {PSRAM_SIO[3]}]
 
 
 #**************************************************************
@@ -78,12 +97,18 @@ create_generated_clock -name {pll0|altpll_component|auto_generated|pll1|clk[0]} 
 #**************************************************************
 
 set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
+set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
+set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
+set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
+set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
 
 
 #**************************************************************
 # Set False Path
 #**************************************************************
 
+set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_qe9:dffpipe17|dffe18a*}]
+set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_pe9:dffpipe12|dffe13a*}]
 
 
 #**************************************************************

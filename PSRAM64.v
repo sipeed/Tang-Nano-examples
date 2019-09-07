@@ -27,8 +27,12 @@ module PSRAM64(input clk,
 reg psram_ctrl;
 reg[3:0] psram_sio_out;
 reg psram_cs_n;
+wire gated_clk;
+GATED_CLK psram_gated(.clkin(clk),
+							.clkout(gated_clk),
+							.clken(~psram_cs_n));
 assign PSRAM_CEn = psram_ctrl ? psram_cs_n : MCU_CS;
-assign PSRAM_CLK = psram_ctrl ? clk : MCU_SCLK;
+assign PSRAM_CLK = psram_ctrl ? gated_clk : MCU_SCLK;
 assign PSRAM_SIO_OUT = psram_ctrl ? psram_sio_out : {3'b111, MCU_MOSI};
 
 reg[15:0] rdfifo_data;
@@ -111,7 +115,8 @@ begin
 	begin
 		psram_cs_n <= 1'b1;
 		PSRAM_SIO_DIR <= 1'b0;
-		PSRAM_CMD_DIR <= 1'b0;			
+		PSRAM_CMD_DIR <= 1'b0;	
+		task_data <= 8'hff;
 		if (task_x < 16'd20000) task_x <= task_x + 1'b1;
 		else
 		begin 
@@ -120,9 +125,11 @@ begin
 			task_data <= 8'h66;	
 		end
 	end
-	8'd1: _SHIFT_OUT_4(8'd2, 8'h66);
-	8'd2: _SHIFT_OUT_4(8'd2, 8'h99);
-	8'd3:
+	8'd1: _SHIFT_OUT_4(8'd2, 4'h6);
+	8'd2: _SHIFT_OUT_4(8'd3, 4'h6);
+	8'd3: _SHIFT_OUT_4(8'd4, 4'h9);
+	8'd4: _SHIFT_OUT_4(8'd5, 4'h9);
+	8'd5:
 	begin
 		psram_cs_n <= 1'b1;
 		PSRAM_SIO_DIR <= 1'b0;
@@ -132,13 +139,13 @@ begin
 		begin
 			task_x <= 16'd0;
 			task_data <= 8'h66;	
-			task_state <= 8'd4;
+			task_state <= 8'd6;
 		end
 	end
-	8'd4:	_SHIFT_OUT_1(8'd5, 8'h99);	// enable reset
-	8'd5:	_SHIFT_OUT_1(8'd6, 8'h35);	// reset
-	8'd6:	_SHIFT_OUT_1(8'd7, 8'hff);	// 4bit
-	8'd7:
+	8'd6:	_SHIFT_OUT_1(8'd7, 8'h99);	// enable reset
+	8'd7:	_SHIFT_OUT_1(8'd8, 8'h35);	// reset
+	8'd8:	_SHIFT_OUT_1(8'd9, 8'hff);	// 4bit
+	8'd9:
 	begin
 		psram_cs_n <= 1'b1;
 		PSRAM_SIO_DIR <= 1'b0;
@@ -147,12 +154,12 @@ begin
 		else
 		begin
 			task_x <= 16'd0;
-			task_state <= 8'd8;
+			task_state <= 8'd10;
 		end
 	end
-	8'd8:	_SHIFT_OUT_4(8'd8, 4'hC);// wrap mode
-	8'd9: _SHIFT_OUT_4(8'd9, 4'h0);
-	8'd10:
+	8'd10: _SHIFT_OUT_4(8'd11, 4'hC);// wrap mode
+	8'd11: _SHIFT_OUT_4(8'd12, 4'h0);
+	8'd12:
 	begin
 		psram_cs_n <= 1'b1;
 		PSRAM_CMD_DIR <= 1'b0;
@@ -217,7 +224,7 @@ begin
 			task_x <= 16'd0;
 			psram_cs_n <= 1'b1;
 			rdfifo_wrreq <= 1'b1;
-			state <= 8'hff;
+			task_state <= 8'hff;
 		end
 	end
 	/*8'd7: _SHIFT_IN_4(8'd8, 1'b0);
@@ -231,6 +238,17 @@ begin
 	8'hff:
 	begin
 		rdfifo_wrreq <= 1'b0;
+	end
+	endcase
+end
+endtask
+
+task PSRAM_EN_4BIT;
+begin
+	case (task_state)
+	8'd0:
+	begin
+		task_x <= 16'd0;
 	end
 	endcase
 end
