@@ -1,3 +1,9 @@
+/*
+ * analysis.cpp
+ *
+ *  Created on: 2019年9月7日
+ *      Author: athieka@hotmail.com
+ */
 module MAIN(input SYS_CLK,
             input SYS_RSTn,
 				// psram interface
@@ -8,7 +14,9 @@ module MAIN(input SYS_CLK,
 				input MCU_SPI_SCLK,
 				input MCU_SPI_CS,
 				input MCU_SPI_MOSI,
-				output MCU_SPI_MISO
+				input MCU_REQ,
+				output MCU_ACK
+				//output MCU_SPI_MISO
 				);
 wire SYS_CLK_100M;
 wire pll0_locked;
@@ -29,5 +37,10 @@ PSRAM64 psram64(.clk(SYS_CLK_100M),
 						.PSRAM_SIO_IN(PSRAM_SIO),
 						.PSRAM_SIO_DIR(PSRAM_SIO_DIR),
 						.rdfifo_rdclk(SYS_CLK_100M),
-						.rdfifo_rdreq(1'b1));
+						.rdfifo_rdreq(1'b1),
+						.MCU_SCLK(MCU_SPI_SCLK),
+						.MCU_CS(MCU_SPI_CS),
+						.MCU_MOSI(MCU_SPI_MOSI),
+						.MCU_REQ(MCU_REQ),
+						.MCU_ACK(MCU_ACK));
 endmodule

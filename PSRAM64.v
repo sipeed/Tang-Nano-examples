@@ -1,8 +1,14 @@
+/*
+ * analysis.cpp
+ *
+ *  Created on: 2019年9月7日
+ *      Author: athieka@hotmail.com
+ */
 module PSRAM64(input clk, 
 					input reset,
-					output reg PSRAM_CEn,
+					output PSRAM_CEn,
 					output PSRAM_CLK,
-					output reg[3:0] PSRAM_SIO_OUT,
+					output [3:0] PSRAM_SIO_OUT,
 					input[3:0] PSRAM_SIO_IN,
 					output reg PSRAM_CMD_DIR,
 					output reg PSRAM_SIO_DIR,
@@ -10,17 +16,26 @@ module PSRAM64(input clk,
 					input MCU_SCLK,
 					input MCU_CS,
 					input MCU_MOSI,
+					input MCU_REQ,
+					output reg MCU_ACK,
 					
 					input rdfifo_rdclk,
 					input rdfifo_rdreq,
 					output[16:0] rdfifo_q,
 					output rdfifo_rdempty
 					);
-assign PSRAM_CLK = clk;
+reg psram_ctrl;
+reg[3:0] psram_sio_out;
+reg psram_cs_n;
+assign PSRAM_CEn = psram_ctrl ? psram_cs_n : MCU_CS;
+assign PSRAM_CLK = psram_ctrl ? clk : MCU_SCLK;
+assign PSRAM_SIO_OUT = psram_ctrl ? psram_sio_out : {3'b111, MCU_MOSI};
+
 reg[15:0] rdfifo_data;
 reg rdfifo_wrreq;
 wire rdfifo_wrfull;
 wire[9:0] rdfifo_wrusedw;
+`define RDFIFO_LEN	16'd512
 PSRAM_RDFIFO rdfifo(.aclr(reset),
 							.data({2'b00, rdfifo_data}),
 							.rdclk(rdfifo_rdclk),
@@ -53,14 +68,14 @@ begin
 	if (task_x < 8'd8)
 	begin
 		task_x <= task_x + 1'b1;
-		PSRAM_CEn <= 1'b0;
-		PSRAM_SIO_OUT[0] <= task_data[7];
+		psram_cs_n <= 1'b0;
+		psram_sio_out[0] <= task_data[7];
 		task_data <= {task_data[6:0], 1'b1};
 	end
 	else
 	begin
 		task_x <= 16'd0;
-		PSRAM_CEn <= 1'b1;
+		psram_cs_n <= 1'b1;
 		task_state <= next_state;
 		task_data <= next_data;
 	end
@@ -71,10 +86,10 @@ task _SHIFT_OUT_4;
 input[7:0] next_state;
 input[3:0] shift_data;
 begin
-	PSRAM_CEn <= 1'b0;
+	psram_cs_n <= 1'b0;
 	PSRAM_CMD_DIR <= 1'b1;
 	PSRAM_SIO_DIR <= 1'b1;
-	PSRAM_SIO_OUT <= shift_data;
+	psram_sio_out <= shift_data;
 	task_state <= next_state;	
 end
 endtask
@@ -94,7 +109,7 @@ begin
 	case (task_state)
 	8'd0:
 	begin
-		PSRAM_CEn <= 1'b1;
+		psram_cs_n <= 1'b1;
 		PSRAM_SIO_DIR <= 1'b0;
 		PSRAM_CMD_DIR <= 1'b0;			
 		if (task_x < 16'd20000) task_x <= task_x + 1'b1;
@@ -109,7 +124,7 @@ begin
 	8'd2: _SHIFT_OUT_4(8'd2, 8'h99);
 	8'd3:
 	begin
-		PSRAM_CEn <= 1'b1;
+		psram_cs_n <= 1'b1;
 		PSRAM_SIO_DIR <= 1'b0;
 		PSRAM_CMD_DIR <= 1'b1;	
 		if (task_x <= `WAIT_CYCLE) task_x <= task_x + 1'b1;
@@ -125,7 +140,7 @@ begin
 	8'd6:	_SHIFT_OUT_1(8'd7, 8'hff);	// 4bit
 	8'd7:
 	begin
-		PSRAM_CEn <= 1'b1;
+		psram_cs_n <= 1'b1;
 		PSRAM_SIO_DIR <= 1'b0;
 		PSRAM_CMD_DIR <= 1'b0;	
 		if (task_x <= `WAIT_CYCLE) task_x <= task_x + 1'b1;
@@ -139,7 +154,7 @@ begin
 	8'd9: _SHIFT_OUT_4(8'd9, 4'h0);
 	8'd10:
 	begin
-		PSRAM_CEn <= 1'b1;
+		psram_cs_n <= 1'b1;
 		PSRAM_CMD_DIR <= 1'b0;
 		PSRAM_SIO_DIR <= 1'b0;
 		task_state <= 8'hff;
@@ -180,7 +195,7 @@ begin
 		else
 		begin
 			task_x <= 16'd0;
-			task_state <= 8'd;
+			task_state <= 8'd9;
 		end
 	end
 	8'd9:
@@ -200,7 +215,7 @@ begin
 		else
 		begin
 			task_x <= 16'd0;
-			PSRAM_CEn <= 1'b1;
+			psram_cs_n <= 1'b1;
 			rdfifo_wrreq <= 1'b1;
 			state <= 8'hff;
 		end
@@ -224,20 +239,29 @@ endtask
 `define STATE_INIT	8'd0
 `define STATE_TSK_SELECT	8'd1
 `define STATE_TSK_RDFIFO	8'd2
+`define STATE_TSK_WAIT_MCU	8'd3
 reg[7:0] state;
 reg [21:0] psram_addr;
+wire syn_mcu_req;
+SYNC_SIGNAL syn_mcu(.clk(clk),
+							.reset(reset),
+							.signal(MCU_REQ),
+							.syn_signal(syn_mcu_req));
+
 always @(posedge clk or posedge reset)
 begin
 	if (reset)
 	begin
 		state <= `STATE_INIT;
-		PSRAM_CEn <= 1'b1;
-		PSRAM_SIO_OUT <= 4'hf;
+		psram_ctrl <= 1'b1;	
+		psram_cs_n <= 1'b1;
+		psram_sio_out <= 4'hf;		
 		PSRAM_SIO_DIR <= 1'b0;
 		PSRAM_CMD_DIR <= 1'b0;
 		rdfifo_wrreq <= 1'b0;
 		rdfifo_data <= {16{1'b1}};
 		psram_addr <= 21'd0;
+		MCU_ACK <= 1'b1;
 		TASK_RESET();
 	end
 	else
@@ -254,8 +278,26 @@ begin
 		end
 		`STATE_TSK_SELECT:
 		begin
+			psram_ctrl <= 1'b1;
+			PSRAM_SIO_DIR <= 1'b0;
+			PSRAM_CMD_DIR <= 1'b0;
+			psram_cs_n <= 1'b1;
+			MCU_ACK <= 1'b1;
 			TASK_RESET();
-			if (~rdfifo_wrfull) state <= `STATE_TSK_RDFIFO;
+			if (syn_mcu_req)
+			begin
+				if ((`RDFIFO_LEN - rdfifo_wrusedw >= 8'd32) && (~rdfifo_wrfull)) state <= `STATE_TSK_RDFIFO;
+			end
+			else
+			begin
+				 if ((`RDFIFO_LEN - rdfifo_wrusedw >= 8'd32) && (~rdfifo_wrfull)) state <= `STATE_TSK_RDFIFO;
+				 else
+				 begin
+					psram_cs_n <= 1'b0;
+					MCU_ACK <= 1'b0;
+					state <= `STATE_TSK_WAIT_MCU;
+				 end
+			end
 		end
 		`STATE_TSK_RDFIFO:
 		begin
@@ -264,6 +306,15 @@ begin
 			begin
 				TASK_RESET();
 				psram_addr <= psram_addr + 8'd32;
+				state <= `STATE_TSK_SELECT;
+			end
+		end
+		`STATE_TSK_WAIT_MCU:
+		begin
+			if (syn_mcu_req)
+			begin
+				psram_cs_n <= 1'b1;
+				MCU_ACK <= 1'b1;
 				state <= `STATE_TSK_SELECT;
 			end
 		end
