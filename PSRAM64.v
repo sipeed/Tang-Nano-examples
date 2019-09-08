@@ -32,13 +32,14 @@ begin
 end
 reg[3:0] psram_sio_out;
 reg psram_cs_n;
+reg en_clk_out;
 wire gated_clk;
 GATED_CLK psram_gated(.clkin(clk),
 							.clkout(gated_clk),
-							.clken(~psram_cs_n));
+							.clken(en_clk_out));
 
 assign PSRAM_CEn = psram_ctrl ? psram_cs_n : MCU_CS;
-assign PSRAM_CLK = psram_ctrl_buf ? clk : MCU_SCLK;
+assign PSRAM_CLK = psram_ctrl_buf ? gated_clk : MCU_SCLK;
 assign PSRAM_SIO_OUT = psram_ctrl ? psram_sio_out : {3'b111, MCU_MOSI};
 
 reg[15:0] rdfifo_data;
@@ -57,13 +58,13 @@ PSRAM_RDFIFO rdfifo(.aclr(reset),
 							.wrfull(rdfifo_wrfull),
 							.wrusedw(rdfifo_wrusedw));
 reg[7:0] task_state;
-reg[15:0] task_x;
-reg[7:0] task_data;
+reg[7:0] task_x;
 `define WAIT_CYCLE	8'd6
 task TASK_RESET;
 begin
 	task_state <= 8'd0;
 	task_x <= 16'd0;
+	en_clk_out <= 1'b0;
 	rdfifo_wrreq <= 1'b0;
 	rdfifo_data <= {16{1'b1}};
 end
@@ -71,23 +72,21 @@ endtask
 
 task _SHIFT_OUT_1;
 input[7:0] next_state;
-input[7:0] next_data;
+input[7:0] shift_data;
 begin
 	PSRAM_SIO_DIR <= 1'b0;
 	PSRAM_CMD_DIR <= 1'b1;
+	en_clk_out <= 1'b1;
 	if (task_x < 8'd8)
 	begin
 		task_x <= task_x + 1'b1;
-		psram_cs_n <= 1'b0;
-		psram_sio_out[0] <= task_data[7];
-		task_data <= {task_data[6:0], 1'b1};
+		psram_sio_out[0] <= shift_data[8'd7-task_x];
 	end
 	else
 	begin
 		task_x <= 16'd0;
-		psram_cs_n <= 1'b1;
+		en_clk_out <= 1'b0;
 		task_state <= next_state;
-		task_data <= next_data;
 	end
 end
 endtask
@@ -96,11 +95,12 @@ task _SHIFT_OUT_4;
 input[7:0] next_state;
 input[3:0] shift_data;
 begin
-	psram_cs_n <= 1'b0;
+	en_clk_out <= 1'b1;
 	PSRAM_CMD_DIR <= 1'b1;
 	PSRAM_SIO_DIR <= 1'b1;
 	psram_sio_out <= shift_data;
-	task_state <= next_state;	
+	task_state <= next_state;
+	task_x <= 16'd0;
 end
 endtask
 
@@ -114,71 +114,84 @@ begin
 end
 endtask
 
+task _PSRAM_CS_DELAY;
+input[7:0] next_state;
+input[7:0] delay;
+begin
+	if (task_x < delay)
+	begin
+		if (~psram_cs_n) en_clk_out <= 1'b0;
+		task_x <= task_x + 1'b1;
+	end
+	else
+	begin
+		task_x <= 16'd0;
+		task_state <= next_state;
+		psram_cs_n <= ~psram_cs_n;
+	end
+end
+endtask
+reg[15:0] cnt;
 task PSRAM_RESET;
 begin
 	case (task_state)
 	8'd0:
 	begin
 		psram_cs_n <= 1'b1;
+		en_clk_out <= 1'b0;
 		PSRAM_SIO_DIR <= 1'b0;
 		PSRAM_CMD_DIR <= 1'b0;	
-		task_data <= 8'hff;
-		if (task_x < 16'd20000) task_x <= task_x + 1'b1;
+		if (cnt < 16'd20000) cnt <= cnt + 1'b1;
 		else
 		begin 
+			cnt <= 16'd0;
+			psram_cs_n <= 1'b0;
 			task_state <= 8'd1;
-			task_x <= 16'd0;
-			task_data <= 8'h66;	
+			task_x <= 16'd0;			
 		end
 	end
 	8'd1: _SHIFT_OUT_4(8'd2, 4'h6);
 	8'd2: _SHIFT_OUT_4(8'd3, 4'h6);
-	8'd3: _SHIFT_OUT_4(8'd4, 4'h9);
-	8'd4: _SHIFT_OUT_4(8'd5, 4'h9);
-	8'd5:
-	begin
-		psram_cs_n <= 1'b1;
-		PSRAM_SIO_DIR <= 1'b0;
-		PSRAM_CMD_DIR <= 1'b1;	
-		if (task_x <= `WAIT_CYCLE) task_x <= task_x + 1'b1;
-		else
-		begin
-			task_x <= 16'd0;
-			task_data <= 8'h66;	
-			task_state <= 8'd6;
-		end
-	end
-	8'd6:	_SHIFT_OUT_1(8'd7, 8'h99);	// enable reset
-	8'd7:	_SHIFT_OUT_1(8'd8, 8'h35);	// reset
-	8'd8:	_SHIFT_OUT_1(8'd9, 8'hff);	// 4bit
-	8'd9:
-	begin
-		psram_cs_n <= 1'b1;
-		PSRAM_SIO_DIR <= 1'b0;
-		PSRAM_CMD_DIR <= 1'b0;	
-		if (task_x <= `WAIT_CYCLE) task_x <= task_x + 1'b1;
-		else
-		begin
-			task_x <= 16'd0;
-			task_state <= 8'd10;
-		end
-	end
-	8'd10: _SHIFT_OUT_4(8'd11, 4'hC);// wrap mode
-	8'd11: _SHIFT_OUT_4(8'd12, 4'h0);
-	8'd12:
-	begin
-		psram_cs_n <= 1'b1;
-		PSRAM_CMD_DIR <= 1'b0;
-		PSRAM_SIO_DIR <= 1'b0;
-		task_state <= 8'hff;
-	end
+	8'd3: _PSRAM_CS_DELAY(8'd4, 8'd3); // cs off
+	8'd4: _PSRAM_CS_DELAY(8'd5, 8'd5);	// cs on
+	8'd5: _SHIFT_OUT_4(8'd6, 4'h9);
+	8'd6: _SHIFT_OUT_4(8'd7, 4'h9);
+	8'd7: _PSRAM_CS_DELAY(8'd8, 8'd3);	// cs off
+	8'd8: _PSRAM_CS_DELAY(8'd9, 8'd6);	// cs on
+	8'd9: _SHIFT_OUT_1(8'd10, 8'h66);
+	8'd10: _SHIFT_OUT_1(8'd11, 8'h99);	// enable reset
+	8'd11: _PSRAM_CS_DELAY(8'd12, 8'd3);
+	8'd12: _PSRAM_CS_DELAY(8'd13, 8'd5);
+	8'd13: _SHIFT_OUT_1(8'd14, 8'h35);	// 4bit
+	8'd14: _PSRAM_CS_DELAY(8'd15, 8'd3); // cs off
+	8'd15: _PSRAM_CS_DELAY(8'd16, 8'd5); // cs on
+	8'd16: _SHIFT_OUT_4(8'd17, 4'hC);// wrap mode
+	8'd17: _SHIFT_OUT_4(8'd18, 4'h0);
+	8'd18: _PSRAM_CS_DELAY(8'hff, 8'd3); // cs off
 	8'hff:
 	begin
+		PSRAM_CMD_DIR <= 1'b0;
+		PSRAM_SIO_DIR <= 1'b0;
 	end
 	endcase
 end
 endtask
 
+task PSRAM_DELAY;
+input[7:0] next_state;
+input[7:0] delay;
+begin
+	PSRAM_CMD_DIR <= 1'b0;
+	PSRAM_SIO_DIR <= 1'b0;
+	psram_sio_out <= 4'hf;
+	if (task_x < delay) task_x <= task_x + 1'b1;
+	else
+	begin
+		task_x <= 16'd0;
+		task_state <= next_state;
+	end
+end
+endtask
 
 integer i;
 
@@ -188,30 +201,22 @@ begin
 	case (task_state)
 	8'd0:
 	begin
+		psram_cs_n <= 1'b0;
 		rdfifo_wrreq <= 1'b0;
 		rdfifo_data <= {{1'b1}};
 		task_x <= 16'd0;
-		_SHIFT_OUT_4(8'd1, 4'hE);
+		task_state <= 8'd1;
 	end
-	8'd1: _SHIFT_OUT_4(8'd2, 8'hB);
-	8'd2: _SHIFT_OUT_4(8'd3, addr[6*4-1-:4]);
-	8'd3: _SHIFT_OUT_4(8'd4, addr[5*4-1-:4]);
-	8'd4: _SHIFT_OUT_4(8'd5, addr[4*4-1-:4]);
-	8'd5: _SHIFT_OUT_4(8'd6, addr[3*4-1-:4]);
-	8'd6: _SHIFT_OUT_4(8'd7, addr[2*4-1-:4]);
-	8'd7: _SHIFT_OUT_4(8'd8, addr[1*4-1-:4]);
-	8'd8:
-	begin
-		PSRAM_CMD_DIR <= 1'b0;
-		PSRAM_SIO_DIR <= 1'b0;
-		if (task_x < `WAIT_CYCLE) task_x <= task_x+1'b1;
-		else
-		begin
-			task_x <= 16'd0;
-			task_state <= 8'd9;
-		end
-	end
-	8'd9:
+	8'd1: _SHIFT_OUT_4(8'd2, 4'hE);
+	8'd2: _SHIFT_OUT_4(8'd3, 8'hB);
+	8'd3: _SHIFT_OUT_4(8'd4, addr[6*4-1-:4]);
+	8'd4: _SHIFT_OUT_4(8'd5, addr[5*4-1-:4]);
+	8'd5: _SHIFT_OUT_4(8'd6, addr[4*4-1-:4]);
+	8'd6: _SHIFT_OUT_4(8'd7, addr[3*4-1-:4]);
+	8'd7: _SHIFT_OUT_4(8'd8, addr[2*4-1-:4]);
+	8'd8: _SHIFT_OUT_4(8'd9, addr[1*4-1-:4]);
+	8'd9: PSRAM_DELAY(8'd10, `WAIT_CYCLE);
+	8'd10:
 	begin
 		if (task_x < 8'd64)
 		begin
@@ -228,22 +233,18 @@ begin
 		else
 		begin
 			task_x <= 16'd0;
-			psram_cs_n <= 1'b1;
+			en_clk_out <= 1'b0;			
 			rdfifo_wrreq <= 1'b1;
-			task_state <= 8'hff;
+			task_state <= 8'd11;
 		end
 	end
-	/*8'd7: _SHIFT_IN_4(8'd8, 1'b0);
-	8'd8: _SHIFT_IN_4(8'd9, 1'b0);
-	8'd9: _SHIFT_IN_4(8'd10, 1'b0);
-	8'd10: _SHIFT_IN_4(8'd11, 1'b1);
-	8'd11: _SHIFT_IN_4(8'd12, 1'b0);
-	8'd12: _SHIFT_IN_4(8'd13, 1'b0);
-	8'd13: _SHIFT_IN_4(8'd14, 1'b0);
-	8'd15: _SHIFT_IN_4(8'd15, 1'b1);*/
-	8'hff:
+	8'd11: 
 	begin
 		rdfifo_wrreq <= 1'b0;
+		_PSRAM_CS_DELAY(8'hff, 8'd3); // cs off
+	end
+	8'hff:
+	begin
 	end
 	endcase
 end
@@ -252,14 +253,15 @@ endtask
 task PSRAM_DIS_4BIT;
 begin
 	case (task_state)
-	8'd0: _SHIFT_OUT_4(8'd1, 4'hF);
-	8'd2: _SHIFT_OUT_4(8'd3, 4'h5);
-	8'd3: 
+	8'd0:
 	begin
-		psram_cs_n <= 1'b1;
-		psram_sio_out <= 4'hf;
-		task_state <= 8'hff;
+		psram_cs_n <= 1'b0;
+		task_x <= 16'd0;
+		task_state <= 8'd1;
 	end
+	8'd1: _SHIFT_OUT_4(8'd2, 4'hF);
+	8'd2: _SHIFT_OUT_4(8'd3, 4'h5);
+	8'd3: _PSRAM_CS_DELAY(8'hff, 8'd3);	// cs off
 	8'hff:
 	begin
 	end
@@ -272,11 +274,12 @@ begin
 	case (task_state)
 	8'd0:
 	begin
-		task_state <= 8'd1;
+		psram_cs_n <= 1'b0;
 		task_x <= 16'd0;
-		task_data <= 8'h35;
+		task_state <= 8'd1;
 	end
-	8'd1:	_SHIFT_OUT_1(8'hff, 8'hff);
+	8'd1: _SHIFT_OUT_1(8'd1, 8'h35);
+	8'd2: _PSRAM_CS_DELAY(8'hff, 8'd3);	// cs off
 	8'hff:
 	begin
 	end
@@ -303,6 +306,7 @@ begin
 	if (reset)
 	begin
 		state <= `STATE_INIT;
+		cnt <= 16'd0;
 		psram_ctrl <= 1'b1;	
 		psram_cs_n <= 1'b1;
 		psram_sio_out <= 4'hf;		
@@ -343,7 +347,6 @@ begin
 				 if ((`RDFIFO_LEN - rdfifo_wrusedw >= 8'd32) && (~rdfifo_wrfull)) state <= `STATE_TSK_RDFIFO;
 				 else
 				 begin
-					psram_cs_n <= 1'b0;
 					MCU_ACK <= 1'b0;
 					state <= `STATE_TSK_BEGIN_MCU;
 				 end
