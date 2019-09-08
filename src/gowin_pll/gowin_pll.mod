@@ -1,0 +1,32 @@
+-series GW1N
+-device GW1N-1
+-package QFN48
+-part_number GW1N-LV1QN48C5/I4
+
+
+-mod_name Gowin_PLL
+-file_name gowin_pll
+-path /home/athieka/tang/src/gowin_pll/
+-type PLL
+-file_type vlg
+-dev_type GW1N-1
+-dyn_idiv_sel false
+-idiv_sel 1
+-dyn_fbdiv_sel false
+-fbdiv_sel 10
+-dyn_odiv_sel false
+-odiv_sel 8
+-dyn_da_en true
+-rst_sig false
+-rst_sig_p false
+-fclkin 10
+-rst_sig_i false
+-clkfb_sel 0
+-en_lock true
+-clkout_bypass false
+-clkout_ft_dir 1
+-en_clkoutp false
+-clkoutp_bypass false
+-en_clkoutd false
+-clkoutd_bypass false
+-en_clkoutd3 false

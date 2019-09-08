@@ -1,0 +1,14 @@
+i WrClk
+m 0 0
+u 8 52
+p {p:WrClk}{t:fifo_inst.WrClk}{p:ENCRYPTED}{t:ENCRYPTED}
+e ckid0_0 {t:ENCRYPTED} <ENCRYPTED>
+c ckid0_0 {p:WrClk} port Unsupported/too complex instance on clock path
+i RdClk
+m 0 0
+u 8 69
+p {p:RdClk}{t:fifo_inst.RdClk}{p:ENCRYPTED}{t:ENCRYPTED}
+e ckid0_1 {t:ENCRYPTED} <ENCRYPTED>
+c ckid0_1 {p:RdClk} port Unsupported/too complex instance on clock path
+l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

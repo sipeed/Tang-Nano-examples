@@ -23,10 +23,9 @@ wire SYS_CLK_100M;
 wire SYS_CLK_33M;
 wire pll0_locked;
 wire GLOBAL_RESET = (~SYS_RSTn) | (~pll0_locked);
-PLL0 pll0(.inclk0(SYS_CLK),
-				.c0(SYS_CLK_100M),
-				.c1(SYS_CLK_33M),
-				.locked(pll0_locked));
+Gowin_PLL pll0(.clkin(SYS_CLK),
+				.clkout(SYS_CLK_100M),
+				.lock(pll0_locked));
 wire[3:0] PSRAM_SIO_OUT;
 wire PSRAM_CMD_DIR;
 wire PSRAM_SIO_DIR;

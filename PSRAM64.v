@@ -21,7 +21,7 @@ module PSRAM64(input clk,
 					
 					input rdfifo_rdclk,
 					input rdfifo_rdreq,
-					output[16:0] rdfifo_q,
+					output[18:0] rdfifo_q,
 					output rdfifo_rdempty
 					);
 reg psram_ctrl;
@@ -47,16 +47,17 @@ reg rdfifo_wrreq;
 wire rdfifo_wrfull;
 wire[9:0] rdfifo_wrusedw;
 `define RDFIFO_LEN	16'd512
-PSRAM_RDFIFO rdfifo(.aclr(reset),
-							.data({2'b00, rdfifo_data}),
-							.rdclk(rdfifo_rdclk),
-							.rdreq(rdfifo_rdreq),
-							.wrclk(clk),
-							.wrreq(rdfifo_wrreq),
-							.q(rdfifo_q),
-							.rdempty(rdfifo_rdempty),
-							.wrfull(rdfifo_wrfull),
-							.wrusedw(rdfifo_wrusedw));
+PSRAM_RDFIFO rdfifo(.WrReset(reset),
+                    .RdReset(reset),
+							.Data({3'b00, rdfifo_data}),
+							.RdClk(rdfifo_rdclk),
+							.RdEn(rdfifo_rdreq),
+							.WrClk(clk),
+							.WrEn(rdfifo_wrreq),
+							.Q(rdfifo_q),
+							.Empty(rdfifo_rdempty),
+							.Full(rdfifo_wrfull),
+							.Wnum(rdfifo_wrusedw));
 reg[7:0] task_state;
 reg[7:0] task_x;
 `define WAIT_CYCLE	8'd6
