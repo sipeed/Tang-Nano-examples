@@ -19,7 +19,7 @@
 ## PROGRAM "Quartus II"
 ## VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
 
-## DATE    "Sun Sep 08 00:14:05 2019"
+## DATE    "Mon Sep 09 21:46:20 2019"
 
 ##
 ## DEVICE  "EP4CE115F23I7"
@@ -48,6 +48,7 @@ create_clock -name {PSRAM_CLK} -period 10.000 -waveform { 0.000 5.000 } [get_por
 #**************************************************************
 
 create_generated_clock -name {pll0|altpll_component|auto_generated|pll1|clk[0]} -source [get_pins {pll0|altpll_component|auto_generated|pll1|inclk[0]}] -duty_cycle 50.000 -multiply_by 10 -master_clock {SYS_CLK} [get_pins {pll0|altpll_component|auto_generated|pll1|clk[0]}] 
+create_generated_clock -name {pll0|altpll_component|auto_generated|pll1|clk[1]} -source [get_pins {pll0|altpll_component|auto_generated|pll1|inclk[0]}] -duty_cycle 50.000 -multiply_by 2 -master_clock {SYS_CLK} [get_pins {pll0|altpll_component|auto_generated|pll1|clk[1]}] 
 
 
 #**************************************************************
@@ -101,14 +102,15 @@ set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}]
 set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
 set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
 set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
+set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
 
 
 #**************************************************************
 # Set False Path
 #**************************************************************
 
-set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_qe9:dffpipe17|dffe18a*}]
-set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_pe9:dffpipe12|dffe13a*}]
+set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_se9:dffpipe9|dffe10a*}]
+set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_re9:dffpipe6|dffe7a*}]
 
 
 #**************************************************************

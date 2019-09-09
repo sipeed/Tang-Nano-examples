@@ -18,12 +18,66 @@ module PSRAM64(input clk,
 					input MCU_MOSI,
 					input MCU_REQ,
 					output reg MCU_ACK,
-					
-					input rdfifo_rdclk,
-					input rdfifo_rdreq,
-					output[16:0] rdfifo_q,
-					output rdfifo_rdempty
+					input pclk,
+					output[4:0] red,
+					output[5:0] green,
+					output[4:0] blue,
+					output hsync,
+					output vsync,
+					output den					
 					);
+parameter SCREEN_WIDTH = 10'd800;
+parameter SCREEN_HEIGTH = 10'd480;
+parameter VBP	= 8'd1;	// vertical back porch timing
+parameter VFP	= 8'd5;	// vertical front porch timing
+parameter HBP	= 8'd10;	// horizontal back porch timing
+parameter HFP	= 8'd20;	// horizontal front porch timing
+localparam LCD_LINES = SCREEN_HEIGTH + VBP + HBP;
+localparam LCD_LINE_SIZE = SCREEN_WIDTH + HBP + HFP;
+wire[13:0] fb_line_addr[0:LCD_LINES-1];
+
+genvar j;
+generate
+for (j=0;j<LCD_LINES; j=j+1)
+begin: insLineAddr
+	assign fb_line_addr[j] = j * LCD_LINE_SIZE;
+end
+endgenerate
+
+reg[9:0] cur_line;
+reg[9:0] cur_pos;
+wire[9:0] next_pos = cur_pos + 1'b1;
+wire[9:0] next_line = cur_line + 1'b1;
+wire cur_hsync = cur_pos == 0 ? 1'b1 : 1'b0/* synthesis keep=1 */;
+wire cur_vsync = cur_line == 0 ? 1'b1 : 1'b0/* synthesis keep=1 */;
+wire cur_den/* synthesis keep="1" */;
+assign cur_den = ((cur_line >= VBP) 
+						&& (cur_line <= LCD_LINES - VFP) 
+						&& (cur_pos >= HBP) 
+						&& (cur_pos <= LCD_LINE_SIZE - HFP)) ? 1'b1 : 1'b0;
+wire[21:0] cur_addr = fb_line_addr[cur_line] + cur_pos/* synthesis keep=1 */;
+always @(posedge clk or posedge reset)
+begin
+	if (reset)
+	begin
+		cur_line <= 10'd0;
+		cur_pos <= 10'd0;
+	end
+	else
+	begin
+		if (rdfifo_wrreq)
+		begin
+			if (next_pos < LCD_LINE_SIZE) cur_pos <= next_pos;
+			else
+			begin
+				cur_pos <= 10'd0;
+				if (next_line < LCD_LINES) cur_line <= next_line;
+				else cur_line <= 10'd0;
+			end			
+		end
+	end
+end
+
 reg psram_ctrl;
 reg psram_ctrl_buf;
 always @(negedge clk)
@@ -46,11 +100,20 @@ reg[15:0] rdfifo_data;
 reg rdfifo_wrreq;
 wire rdfifo_wrfull;
 wire[9:0] rdfifo_wrusedw;
+wire[19:0] rdfifo_q;
+wire rdfifo_rdempty;
+assign blue = rdfifo_q[4:0];
+assign green = rdfifo_q[10:5];
+assign red = rdfifo_q[15:11];
+assign hsync = rdfifo_q[16];
+assign vsync = rdfifo_q[17];
+assign den = rdfifo_q[18];
+
 `define RDFIFO_LEN	16'd512
 PSRAM_RDFIFO rdfifo(.aclr(reset),
-							.data({2'b00, rdfifo_data}),
-							.rdclk(rdfifo_rdclk),
-							.rdreq(rdfifo_rdreq),
+							.data({1'b0, cur_den, cur_vsync, cur_hsync, rdfifo_data}),
+							.rdclk(pclk),
+							.rdreq(1'b1),
 							.wrclk(clk),
 							.wrreq(rdfifo_wrreq),
 							.q(rdfifo_q),
@@ -294,7 +357,7 @@ endtask
 `define STATE_TSK_WAIT_MCU	8'd4
 `define STATE_TSK_END_MCU 8'd5
 reg[7:0] state;
-reg [21:0] psram_addr;
+//reg [21:0] psram_addr;
 wire syn_mcu_req;
 SYNC_SIGNAL syn_mcu(.clk(clk),
 							.reset(reset),
@@ -314,7 +377,6 @@ begin
 		PSRAM_CMD_DIR <= 1'b0;
 		rdfifo_wrreq <= 1'b0;
 		rdfifo_data <= {16{1'b1}};
-		psram_addr <= 21'd0;
 		MCU_ACK <= 1'b1;
 		TASK_RESET();
 	end
@@ -340,11 +402,11 @@ begin
 			TASK_RESET();
 			if (syn_mcu_req)
 			begin
-				if ((`RDFIFO_LEN - rdfifo_wrusedw >= 8'd32) && (~rdfifo_wrfull)) state <= `STATE_TSK_RDFIFO;
+				if ((`RDFIFO_LEN - rdfifo_wrusedw >= 8'd16) && (~rdfifo_wrfull)) state <= `STATE_TSK_RDFIFO;
 			end
 			else
 			begin
-				 if ((`RDFIFO_LEN - rdfifo_wrusedw >= 8'd32) && (~rdfifo_wrfull)) state <= `STATE_TSK_RDFIFO;
+				 if ((`RDFIFO_LEN - rdfifo_wrusedw >= 8'd16) && (~rdfifo_wrfull)) state <= `STATE_TSK_RDFIFO;
 				 else
 				 begin
 					MCU_ACK <= 1'b0;
@@ -354,11 +416,10 @@ begin
 		end
 		`STATE_TSK_RDFIFO:
 		begin
-			PSRAM_RDFIFO_FILL({2'b00, psram_addr});
+			PSRAM_RDFIFO_FILL({2'b00, cur_addr});
 			if (task_state == 8'hff)
 			begin
 				TASK_RESET();
-				psram_addr <= psram_addr + 8'd32;
 				state <= `STATE_TSK_SELECT;
 			end
 		end
