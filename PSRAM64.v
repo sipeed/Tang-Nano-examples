@@ -56,6 +56,7 @@ assign cur_den = ((cur_line >= VBP)
 						&& (cur_pos >= HBP) 
 						&& (cur_pos <= LCD_LINE_SIZE - HFP)) ? 1'b1 : 1'b0;
 wire[21:0] cur_addr = fb_line_addr[cur_line] + cur_pos/* synthesis keep=1 */;
+wire[23:0] psram_addr = {1'b0, cur_addr, 1'b0};
 always @(posedge clk or posedge reset)
 begin
 	if (reset)
@@ -416,7 +417,7 @@ begin
 		end
 		`STATE_TSK_RDFIFO:
 		begin
-			PSRAM_RDFIFO_FILL({2'b00, cur_addr});
+			PSRAM_RDFIFO_FILL(psram_addr);
 			if (task_state == 8'hff)
 			begin
 				TASK_RESET();
