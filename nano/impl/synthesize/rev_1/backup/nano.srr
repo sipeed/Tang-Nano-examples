@@ -1,0 +1,486 @@
+#Build: Synplify Pro (R) P-2019.03G-Beta4, Build 231R, Aug  2 2019
+#install: /home/athieka/gowin/SynplifyPro
+#OS: Linux 
+#Hostname: gowin-vm
+
+# Sun Sep 22 16:41:43 2019
+
+#Implementation: rev_1
+
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys HDL Compiler, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Verilog Compiler, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+
+@I::"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v" (library work)
+@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/umr_capim.v" (library snps_haps)
+@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/athieka/tang/nano/src/TOP.v" (library work)
+Verilog syntax check successful!
+Selecting top level module MAIN
+@N: CG364 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Synthesizing module MAIN in library work.
+@W: CG146 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Creating black box for empty module MAIN
+
+@N: CG706 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected top-level module MAIN is a black box, ignoring black box ...
+@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":7:18:7:24|Input SYS_CLK is unused.
+@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":8:18:8:25|Input SYS_RSTn is unused.
+@W: CL158 :"/home/athieka/tang/nano/src/TOP.v":9:10:9:16|Inout SYS_WDI is unused
+@W: CL158 :"/home/athieka/tang/nano/src/TOP.v":13:15:13:23|Inout PSRAM_SIO is unused
+@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":15:10:15:21|Input MCU_SPI_SCLK is unused.
+@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":16:10:16:19|Input MCU_SPI_CS is unused.
+@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":17:10:17:21|Input MCU_SPI_MOSI is unused.
+@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":18:10:18:16|Input MCU_REQ is unused.
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 144MB peak: 144MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 22 16:41:45 2019
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+
+@N|Running in 64-bit mode
+@N: NF107 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected library: work cell: MAIN view verilog as top level
+@N: NF107 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected library: work cell: MAIN view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 141MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 22 16:41:45 2019
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 54MB peak: 54MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 22 16:41:45 2019
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+
+@N|Running in 64-bit mode
+@N: NF107 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected library: work cell: MAIN view verilog as top level
+@N: NF107 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected library: work cell: MAIN view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 141MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 22 16:41:46 2019
+
+###########################################################]
+Premap Report
+
+# Sun Sep 22 16:41:46 2019
+
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Generic Technology Pre-mapping, Version mapgw, Build 1429R, Built Aug 27 2019 09:26:01
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 218MB peak: 218MB)
+
+@A: MF827 |No constraint file specified.
+@L: /home/athieka/tang/nano/impl/synthesize/rev_1/nano_scck.rpt 
+Printing clock  summary report in "/home/athieka/tang/nano/impl/synthesize/rev_1/nano_scck.rpt" file 
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 228MB peak: 228MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 228MB peak: 228MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 228MB peak: 228MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 242MB peak: 242MB)
+
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":27:11:27:18|Tristate driver LCD_PCLK (in view: work.MAIN(verilog)) on net LCD_PCLK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":19:11:19:17|Tristate driver MCU_ACK (in view: work.MAIN(verilog)) on net MCU_ACK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":11:11:11:19|Tristate driver PSRAM_CEn (in view: work.MAIN(verilog)) on net PSRAM_CEn (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":12:11:12:19|Tristate driver PSRAM_CLK (in view: work.MAIN(verilog)) on net PSRAM_CLK (in view: work.MAIN(verilog)) has its enable tied to GND.
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+
+
+
+Clock Summary
+******************
+
+          Start     Requested     Requested     Clock     Clock     Clock
+Level     Clock     Frequency     Period        Type      Group     Load 
+-------------------------------------------------------------------------
+=========================================================================
+
+
+
+Clock Load Summary
+***********************
+
+          Clock     Source     Clock Pin       Non-clock Pin     Non-clock Pin
+Clock     Load      Pin        Seq Example     Seq Example       Comb Example 
+------------------------------------------------------------------------------
+==============================================================================
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":27:11:27:18|Tristate driver LCD_PCLK (in view: work.MAIN(verilog)) on net LCD_PCLK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":19:11:19:17|Tristate driver MCU_ACK (in view: work.MAIN(verilog)) on net MCU_ACK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":12:11:12:19|Tristate driver PSRAM_CLK (in view: work.MAIN(verilog)) on net PSRAM_CLK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":11:11:11:19|Tristate driver PSRAM_CEn (in view: work.MAIN(verilog)) on net PSRAM_CEn (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: BN225 |Writing default property annotation file /home/athieka/tang/nano/impl/synthesize/rev_1/nano.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 325MB peak: 325MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 325MB peak: 325MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 325MB peak: 325MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 325MB peak: 325MB)
+
+Process took 0h:00m:04s realtime, 0h:00m:04s cputime
+# Sun Sep 22 16:41:50 2019
+
+###########################################################]
+Map & Optimize Report
+
+# Sun Sep 22 16:41:51 2019
+
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Generic Technology Mapper, Version mapgw, Build 1429R, Built Aug 27 2019 09:26:01
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 218MB peak: 218MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 219MB peak: 219MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 219MB peak: 219MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 219MB peak: 219MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 239MB peak: 239MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 322MB peak: 322MB)
+
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":27:11:27:18|Tristate driver LCD_PCLK (in view: work.MAIN(verilog)) on net LCD_PCLK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":19:11:19:17|Tristate driver MCU_ACK (in view: work.MAIN(verilog)) on net MCU_ACK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":12:11:12:19|Tristate driver PSRAM_CLK (in view: work.MAIN(verilog)) on net PSRAM_CLK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":11:11:11:19|Tristate driver PSRAM_CEn (in view: work.MAIN(verilog)) on net PSRAM_CEn (in view: work.MAIN(verilog)) has its enable tied to GND.
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MT206 |Auto Constrain mode is enabled
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+
+Writing Analyst data base /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 322MB peak: 322MB)
+
+Writing Verilog Simulation files
+
+Writing scf file... (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 322MB peak: 322MB)
+
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 322MB peak: 322MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 322MB peak: 322MB)
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Sun Sep 22 16:41:55 2019
+#
+
+
+Top view:               MAIN
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: NA
+
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 322MB peak: 322MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 322MB peak: 322MB)
+
+---------------------------------------
+Resource Usage Report for MAIN 
+
+Mapping to part: gw1n_1qfn48-6
+Cell usage:
+GSR             1 use
+
+I/O ports: 34
+I/O primitives: 23
+OBUF           19 uses
+TBUF           4 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   0 of 864 (0%)
+Total load per clock:
+
+@S |Mapping Summary:
+Total  LUTs: 0 (0%)
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 322MB peak: 322MB)
+
+Process took 0h:00m:04s realtime, 0h:00m:04s cputime
+# Sun Sep 22 16:41:55 2019
+
+###########################################################]

@@ -1,0 +1,3 @@
+@W: MT246 :"/home/athieka/tang/nano/src/gowin_pll/PLL0.v":21:4:21:11|Blackbox PLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock PLL0|clkoutd_inferred_clock with period 10.11ns. Please declare a user-defined clock on net pll0.SYS_CLK_25M.
+@W: MT420 |Found inferred clock PLL0|clkout_inferred_clock with period 12.83ns. Please declare a user-defined clock on net pll0.SYS_CLK_100M.

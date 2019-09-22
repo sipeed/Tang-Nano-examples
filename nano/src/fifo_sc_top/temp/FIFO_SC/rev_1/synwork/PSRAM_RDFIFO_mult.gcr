@@ -1,0 +1,71 @@
+i Clk
+m 0 0
+u 10 68
+p {p:Clk}{t:fifo_sc_inst.Clk}{p:ENCRYPTED}{t:ENCRYPTED}
+e ckid0_0 {t:ENCRYPTED} <ENCRYPTED>
+c ckid0_0 {p:Clk} port Unsupported/too complex instance on clock path
+i fifo_sc_inst.ENCNET2
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET3
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET4
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET7
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET8
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET11
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET12
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET15
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET16
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET19
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET20
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET23
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET24
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET27
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET28
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET31
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET32
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET35
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET36
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET39
+m 0 0
+u 0 0
+i fifo_sc_inst.ENCNET40
+m 0 0
+u 0 0
+l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

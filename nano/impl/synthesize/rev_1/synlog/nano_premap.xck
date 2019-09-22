@@ -1,0 +1,2 @@
+ckid0_1:@|S:pll0.pll_inst.CLKOUT@|E:psram64.state[5]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1
+ckid0_2:@|S:pll0.pll_inst.CLKOUTD@|E:LCD_G[5:0]@|F:@syn_dgcc_clockid0_2==1@|M:ClockId_0_2

@@ -1,0 +1,226 @@
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys HDL Compiler, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Verilog Compiler, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+
+@I::"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v" (library work)
+@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/umr_capim.v" (library snps_haps)
+@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/athieka/tang/nano/src/TOP.v" (library work)
+@I::"/home/athieka/tang/nano/src/SYNC_SIGNAL.v" (library work)
+@I::"/home/athieka/tang/nano/src/GATED_CLK.v" (library work)
+@I::"/home/athieka/tang/nano/src/PSRAM64.v" (library work)
+@I::"/home/athieka/tang/nano/src/gowin_pll/PLL0.v" (library work)
+@W: CS141 :"/home/athieka/tang/nano/src/gowin_pll/PLL0.v":3:7:3:11|Unrecognized synthesis directive title. Verify the correct directive name.
+@I::"/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v" (library work)
+Verilog syntax check successful!
+File /home/athieka/tang/nano/src/TOP.v changed - recompiling
+Selecting top level module TOP
+@N: CG364 :"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v":1800:7:1800:9|Synthesizing module PLL in library work.
+Running optimization stage 1 on PLL .......
+@N: CG364 :"/home/athieka/tang/nano/src/gowin_pll/PLL0.v":8:7:8:10|Synthesizing module PLL0 in library work.
+Running optimization stage 1 on PLL0 .......
+@N: CG364 :"/home/athieka/tang/nano/src/GATED_CLK.v":1:7:1:15|Synthesizing module GATED_CLK in library work.
+Running optimization stage 1 on GATED_CLK .......
+@N: CG364 :"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v":1864:7:1864:9|Synthesizing module GSR in library work.
+Running optimization stage 1 on GSR .......
+Running optimization stage 1 on INV .......
+Running optimization stage 1 on LUT4 .......
+Running optimization stage 1 on LUT3 .......
+Running optimization stage 1 on LUT2 .......
+Running optimization stage 1 on MUX2_LUT5 .......
+Running optimization stage 1 on MUX2_LUT6 .......
+Running optimization stage 1 on DFFC .......
+Running optimization stage 1 on DFFP .......
+Running optimization stage 1 on DFFCE .......
+Running optimization stage 1 on SDPX9 .......
+Running optimization stage 1 on ALU .......
+Running optimization stage 1 on GND .......
+Running optimization stage 1 on VCC .......
+Running optimization stage 1 on \~fifo.PSRAM_RDFIFO_  .......
+@N: CG364 :"/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v":2927:7:2927:18|Synthesizing module PSRAM_RDFIFO in library work.
+Running optimization stage 1 on PSRAM_RDFIFO .......
+@W: CL168 :"/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v":3000:6:3000:11|Removing instance GND_cZ because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@N: CG364 :"/home/athieka/tang/nano/src/SYNC_SIGNAL.v":7:7:7:17|Synthesizing module SYNC_SIGNAL in library work.
+Running optimization stage 1 on SYNC_SIGNAL .......
+@N: CG364 :"/home/athieka/tang/nano/src/PSRAM64.v":7:7:7:13|Synthesizing module PSRAM64 in library work.
+@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CS263 :"/home/athieka/tang/nano/src/PSRAM64.v":125:13:125:26|Port-width mismatch for port Wnum. The port definition is 11 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+Running optimization stage 1 on PSRAM64 .......
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Optimizing register bit cur_pos[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Optimizing register bit cur_pos[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit psram_ctrl to a constant 1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Pruning register bits 9 to 8 of cur_pos[9:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning unused register psram_ctrl. Make sure that there are no unused intermediate registers.
+@N: CG364 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:9|Synthesizing module TOP in library work.
+@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":9:19:9:23|Removing wire LED_R, as there is no assignment to it.
+@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":10:19:10:23|Removing wire LED_G, as there is no assignment to it.
+@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":11:19:11:23|Removing wire LED_B, as there is no assignment to it.
+Running optimization stage 1 on TOP .......
+@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":9:19:9:23|*Output LED_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":10:19:10:23|*Output LED_G has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":11:19:11:23|*Output LED_B has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+Running optimization stage 2 on TOP .......
+@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":30:18:30:24|Input LCD_BKL is unused.
+Running optimization stage 2 on PSRAM64 .......
+@N: CL189 :"/home/athieka/tang/nano/src/PSRAM64.v":85:0:85:5|Register bit psram_ctrl_buf is always 1.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit task_x[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning register bit 7 of task_x[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning register bit 15 of cnt[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL201 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Trying to extract state machine for register task_state.
+Extracted state machine for register task_state
+State machine has 20 reachable states with original encodings of:
+   00000000
+   00000001
+   00000010
+   00000011
+   00000100
+   00000101
+   00000110
+   00000111
+   00001000
+   00001001
+   00001010
+   00001011
+   00001100
+   00001101
+   00001110
+   00001111
+   00010000
+   00010001
+   00010010
+   11111111
+@N: CL201 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 6 reachable states with original encodings of:
+   00000000
+   00000001
+   00000010
+   00000011
+   00000100
+   00000101
+Running optimization stage 2 on SYNC_SIGNAL .......
+Running optimization stage 2 on PSRAM_RDFIFO .......
+Running optimization stage 2 on \~fifo.PSRAM_RDFIFO_  .......
+Running optimization stage 2 on VCC .......
+Running optimization stage 2 on GND .......
+Running optimization stage 2 on ALU .......
+Running optimization stage 2 on SDPX9 .......
+Running optimization stage 2 on DFFCE .......
+Running optimization stage 2 on DFFP .......
+Running optimization stage 2 on DFFC .......
+Running optimization stage 2 on MUX2_LUT6 .......
+Running optimization stage 2 on MUX2_LUT5 .......
+Running optimization stage 2 on LUT2 .......
+Running optimization stage 2 on LUT3 .......
+Running optimization stage 2 on LUT4 .......
+Running optimization stage 2 on INV .......
+Running optimization stage 2 on GSR .......
+Running optimization stage 2 on GATED_CLK .......
+Running optimization stage 2 on PLL0 .......
+Running optimization stage 2 on PLL .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 162MB peak: 162MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 22 22:24:43 2019
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 143MB peak: 143MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 22 22:24:43 2019
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 54MB peak: 54MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 22 22:24:43 2019
+
+###########################################################]

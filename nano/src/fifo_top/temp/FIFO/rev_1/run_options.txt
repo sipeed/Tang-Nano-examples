@@ -1,0 +1,73 @@
+#--  Synopsys, Inc.
+#--  Version P-2019.03G-Beta4
+#--  Project file /home/athieka/tang/nano/src/fifo_top/temp/FIFO/rev_1/run_options.txt
+#--  Written on Sun Sep 22 21:19:22 2019
+
+
+#project files
+add_file -verilog "/home/athieka/tang/nano/src/fifo_top/temp/FIFO/fifo_define.v"
+add_file -verilog "/home/athieka/tang/nano/src/fifo_top/temp/FIFO/fifo_parameter.v"
+add_file -verilog "/home/athieka/gowin/IDE/ipcore/FIFO/data/edc.v"
+add_file -verilog "/home/athieka/gowin/IDE/ipcore/FIFO/data/fifo.v"
+add_file -verilog "/home/athieka/gowin/IDE/ipcore/FIFO/data/fifo_top.v"
+
+
+
+#implementation: "rev_1"
+impl -add rev_1 -type fpga
+
+#
+#implementation attributes
+
+set_option -project_relative_includes 1
+
+#device options
+set_option -technology GOWIN-GW1N
+set_option -part GW1N_1
+set_option -package QFN48
+set_option -speed_grade -5
+set_option -part_companion ""
+
+#compilation/mapping options
+
+# hdl_compiler_options
+set_option -distributed_compile 0
+set_option -hdl_strict_syntax 0
+
+# mapper_without_write_options
+set_option -frequency auto
+set_option -srs_instrumentation 1
+
+# mapper_options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+# GOWIN-GW1N
+set_option -maxfan 10000
+set_option -rw_check_on_ram 1
+set_option -disable_io_insertion 1
+set_option -pipe 1
+set_option -retiming 0
+set_option -update_models_cp 0
+set_option -fix_gated_and_generated_clocks 1
+set_option -run_prop_extract 1
+
+# NFilter
+set_option -no_sequential_opt 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "rev_1/PSRAM_RDFIFO.vm"
+impl -active "rev_1"

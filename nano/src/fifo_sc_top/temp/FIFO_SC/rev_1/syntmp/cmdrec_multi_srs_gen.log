@@ -1,0 +1,8 @@
+/home/athieka/gowin/SynplifyPro/bin/syn_nfilter  -link  -multisrs  /home/athieka/tang/nano/src/fifo_sc_top/temp/FIFO_SC/rev_1/synwork/PSRAM_RDFIFO_comp.srs  -osyn  /home/athieka/tang/nano/src/fifo_sc_top/temp/FIFO_SC/rev_1/synwork/PSRAM_RDFIFO_mult.srs  -log  /home/athieka/tang/nano/src/fifo_sc_top/temp/FIFO_SC/rev_1/synlog/PSRAM_RDFIFO_multi_srs_gen.srr 
+relcom:../../../../../../../../gowin/SynplifyPro/bin/syn_nfilter -link -multisrs ../synwork/PSRAM_RDFIFO_comp.srs -osyn ../synwork/PSRAM_RDFIFO_mult.srs -log ../synlog/PSRAM_RDFIFO_multi_srs_gen.srr
+rc:0 success:1 runtime:1
+file:../synwork/PSRAM_RDFIFO_comp.srs|io:i|time:1569158014|size:12306|exec:0|csum:8B8C9F5485CA293373F25F8514CFDB05
+file:../synwork/PSRAM_RDFIFO_mult.srs|io:o|time:1569158016|size:2484|exec:0|csum:
+file:../synlog/PSRAM_RDFIFO_multi_srs_gen.srr|io:o|time:1569158016|size:1408|exec:0|csum:
+file:../../../../../../../../gowin/SynplifyPro/linux_a_64/syn_nfilter|io:i|time:1567039481|size:12227208|exec:1|csum:99F130565A5CD6ECEE0D20F180C16BBD
+file:../../../../../../../../gowin/SynplifyPro/bin/syn_nfilter|io:i|time:1567039468|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0

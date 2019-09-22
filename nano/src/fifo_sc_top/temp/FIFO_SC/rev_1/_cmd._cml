@@ -1,0 +1,1 @@
+-link -encrypt -top NoName -osyn /home/athieka/tang/nano/src/fifo_sc_top/temp/FIFO_SC/rev_1/synwork/PSRAM_RDFIFO_comp.srs /home/athieka/tang/nano/src/fifo_sc_top/temp/FIFO_SC/rev_1/synwork/layer0.srs  -jobname linker  

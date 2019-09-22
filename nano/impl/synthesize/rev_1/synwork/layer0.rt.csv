@@ -1,0 +1,23 @@
+Library, Design Unit, compile Time, Peak Mem Usage
+work, TOP, 0h:00m:00s,    159 MB
+work, PSRAM64, 0h:00m:00s,    162 MB
+work, SYNC_SIGNAL, 0h:00m:00s,    162 MB
+work, PSRAM_RDFIFO, 0h:00m:00s,    162 MB
+work, \~fifo.PSRAM_RDFIFO_ , 0h:00m:00s,    162 MB
+work, VCC, 0h:00m:00s,    162 MB
+work, GND, 0h:00m:00s,    162 MB
+work, ALU, 0h:00m:00s,    162 MB
+work, SDPX9, 0h:00m:00s,    162 MB
+work, DFFCE, 0h:00m:00s,    162 MB
+work, DFFP, 0h:00m:00s,    162 MB
+work, DFFC, 0h:00m:00s,    162 MB
+work, MUX2_LUT6, 0h:00m:00s,    162 MB
+work, MUX2_LUT5, 0h:00m:00s,    162 MB
+work, LUT2, 0h:00m:00s,    162 MB
+work, LUT3, 0h:00m:00s,    162 MB
+work, LUT4, 0h:00m:00s,    162 MB
+work, INV, 0h:00m:00s,    162 MB
+work, GSR, 0h:00m:00s,    162 MB
+work, GATED_CLK, 0h:00m:00s,    162 MB
+work, PLL0, 0h:00m:00s,    162 MB
+work, PLL, 0h:00m:00s,    162 MB

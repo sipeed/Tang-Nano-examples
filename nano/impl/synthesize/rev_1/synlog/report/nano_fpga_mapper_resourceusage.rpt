@@ -1,0 +1,39 @@
+---------------------------------------
+Resource Usage Report for TOP 
+
+Mapping to part: gw1n_1qfn48-5
+Cell usage:
+ALU             95 uses
+DFFC            126 uses
+DFFCE           65 uses
+DFFN            1 use
+DFFP            23 uses
+DFFPE           22 uses
+GSR             1 use
+INV             10 uses
+MUX2_LUT5       13 uses
+MUX2_LUT6       2 uses
+PLL             1 use
+SDPX9           2 uses
+LUT1            10 uses
+LUT2            103 uses
+LUT3            113 uses
+LUT4            253 uses
+
+I/O ports: 34
+I/O primitives: 33
+IBUF           3 uses
+IOBUF          4 uses
+OBUF           23 uses
+TBUF           3 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   237 of 864 (27%)
+
+RAM/ROM usage summary
+Block Rams : 2 of 4 (50%)
+
+
+@S |Mapping Summary:
+Total  LUTs: 479 (41%)
+

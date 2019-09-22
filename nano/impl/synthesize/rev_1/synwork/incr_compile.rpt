@@ -1,0 +1,58 @@
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: /home/athieka/gowin/SynplifyPro
+OS: Ubuntu 16.04.6 LTS
+Hostname: gowin-vm
+max virtual memory: unlimited (bytes)
+max user processes: 15449
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys HDL compiler and linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+
+Modified Files: 1
+FID:  path (prevtimestamp, timestamp)
+5        /home/athieka/tang/nano/src/TOP.v (2019-09-22 21:09:27, 2019-09-22 22:24:40)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 7
+MID:  lib.cell.view
+2        work.GATED_CLK.verilog may have changed because the following files changed:
+                        /home/athieka/tang/nano/src/TOP.v (2019-09-22 21:09:27, 2019-09-22 22:24:40) <-- (may instantiate this module)
+4        work.PLL0.verilog may have changed because the following files changed:
+                        /home/athieka/tang/nano/src/TOP.v (2019-09-22 21:09:27, 2019-09-22 22:24:40) <-- (may instantiate this module)
+5        work.PSRAM64.verilog may have changed because the following files changed:
+                        /home/athieka/tang/nano/src/TOP.v (2019-09-22 21:09:27, 2019-09-22 22:24:40) <-- (may instantiate this module)
+6        work.PSRAM_RDFIFO.verilog may have changed because the following files changed:
+                        /home/athieka/tang/nano/src/TOP.v (2019-09-22 21:09:27, 2019-09-22 22:24:40) <-- (may instantiate this module)
+3        work.SYNC_SIGNAL.verilog may have changed because the following files changed:
+                        /home/athieka/tang/nano/src/TOP.v (2019-09-22 21:09:27, 2019-09-22 22:24:40) <-- (may instantiate this module)
+1        work.TOP.verilog may have changed because the following files changed:
+                        /home/athieka/tang/nano/src/TOP.v (2019-09-22 21:09:27, 2019-09-22 22:24:40) <-- (module definition)
+7        work.\~fifo.PSRAM_RDFIFO_.verilog may have changed because the following files changed:
+                        /home/athieka/tang/nano/src/TOP.v (2019-09-22 21:09:27, 2019-09-22 22:24:40) <-- (may instantiate this module)
+
+*******************************************************************
+Unmodified files: 10
+FID:  path (timestamp)
+0        /home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v (2019-08-29 08:44:30)
+1        /home/athieka/gowin/SynplifyPro/lib/vlog/hypermods.v (2019-08-29 08:44:31)
+2        /home/athieka/gowin/SynplifyPro/lib/vlog/scemi_objects.v (2019-08-29 08:44:31)
+3        /home/athieka/gowin/SynplifyPro/lib/vlog/scemi_pipes.svh (2019-08-29 08:44:31)
+4        /home/athieka/gowin/SynplifyPro/lib/vlog/umr_capim.v (2019-08-29 08:44:31)
+6        /home/athieka/tang/nano/src/GATED_CLK.v (2019-09-09 03:12:30)
+8        /home/athieka/tang/nano/src/PSRAM64.v (2019-09-22 22:21:36)
+7        /home/athieka/tang/nano/src/SYNC_SIGNAL.v (2019-09-09 03:12:30)
+9        /home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v (2019-09-22 21:19:34)
+10       /home/athieka/tang/nano/src/gowin_pll/PLL0.v (2019-09-22 22:14:12)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

@@ -1,0 +1,23 @@
+@W: CS141 :"/home/athieka/tang/nano/src/gowin_pll/PLL0.v":3:7:3:11|Unrecognized synthesis directive title. Verify the correct directive name.
+@W: CL168 :"/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v":3000:6:3000:11|Removing instance GND_cZ because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CS263 :"/home/athieka/tang/nano/src/PSRAM64.v":125:13:125:26|Port-width mismatch for port Wnum. The port definition is 11 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Optimizing register bit cur_pos[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Optimizing register bit cur_pos[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit psram_ctrl to a constant 1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Pruning register bits 9 to 8 of cur_pos[9:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning unused register psram_ctrl. Make sure that there are no unused intermediate registers.
+@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":9:19:9:23|Removing wire LED_R, as there is no assignment to it.
+@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":10:19:10:23|Removing wire LED_G, as there is no assignment to it.
+@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":11:19:11:23|Removing wire LED_B, as there is no assignment to it.
+@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":9:19:9:23|*Output LED_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":10:19:10:23|*Output LED_G has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":11:19:11:23|*Output LED_B has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit task_x[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning register bit 7 of task_x[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning register bit 15 of cnt[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+

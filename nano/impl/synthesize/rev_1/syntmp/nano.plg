@@ -1,0 +1,23 @@
+@P:  Worst Slack : -2.264
+@P:  PLL0|clkout_inferred_clock - Estimated Frequency : 66.3 MHz
+@P:  PLL0|clkout_inferred_clock - Requested Frequency : 78.0 MHz
+@P:  PLL0|clkout_inferred_clock - Estimated Period : 15.091
+@P:  PLL0|clkout_inferred_clock - Requested Period : 12.827
+@P:  PLL0|clkout_inferred_clock - Slack : -2.264
+@P:  PLL0|clkoutd_inferred_clock - Estimated Frequency : 84.1 MHz
+@P:  PLL0|clkoutd_inferred_clock - Requested Frequency : 98.9 MHz
+@P:  PLL0|clkoutd_inferred_clock - Estimated Period : 11.897
+@P:  PLL0|clkoutd_inferred_clock - Requested Period : 10.113
+@P:  PLL0|clkoutd_inferred_clock - Slack : -1.785
+@P:  System - Estimated Frequency : 163.3 MHz
+@P:  System - Requested Frequency : 192.2 MHz
+@P:  System - Estimated Period : 6.122
+@P:  System - Requested Period : 5.204
+@P:  System - Slack : -0.918
+@P: TOP Part : gw1n_1qfn48-5
+@P: TOP I/O primitives : 33
+@P: TOP I/O Register bits : 0
+@P: TOP Register bits (Non I/O) : 237 (27%)
+@P: TOP Block Rams : 2 of 4 (50%)
+@P: TOP Total Luts : 479 of 800 (41%)
+@P:  CPU Time : 0h:00m:07s

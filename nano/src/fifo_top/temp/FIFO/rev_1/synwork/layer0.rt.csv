@@ -1,0 +1,4 @@
+Library, Design Unit, compile Time, Peak Mem Usage
+work, PSRAM_RDFIFO, 0h:00m:00s,    158 MB
+work, \~fifo.PSRAM_RDFIFO , 0h:00m:00s,    167 MB
+work, work_/home/athieka/tang/nano/src/fifo_top/temp/FIFO/fifo_define.v_unit, 0h:00m:00s,      0 MB

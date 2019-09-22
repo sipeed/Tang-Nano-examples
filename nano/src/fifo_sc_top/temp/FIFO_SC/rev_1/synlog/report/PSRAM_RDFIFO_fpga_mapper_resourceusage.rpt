@@ -1,0 +1,26 @@
+---------------------------------------
+Resource Usage Report for PSRAM_RDFIFO 
+
+Mapping to part: gw1n_1qfn48-5
+Cell usage:
+ALU             33 uses
+DFFC            35 uses
+DFFCE           10 uses
+DFFP            2 uses
+GSR             1 use
+INV             12 uses
+SDPX9           2 uses
+LUT2            3 uses
+LUT3            13 uses
+LUT4            12 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   47 of 864 (5%)
+
+RAM/ROM usage summary
+Block Rams : 2 of 4 (50%)
+
+
+@S |Mapping Summary:
+Total  LUTs: 28 (2%)
+

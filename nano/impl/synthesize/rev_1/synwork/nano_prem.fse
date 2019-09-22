@@ -1,0 +1,60 @@
+
+fsm_encoding {837003701} onehot
+
+fsm_state_encoding {837003701} 00000000 {00000000000000000001}
+
+fsm_state_encoding {837003701} 00000001 {00000000000000000010}
+
+fsm_state_encoding {837003701} 00000010 {00000000000000000100}
+
+fsm_state_encoding {837003701} 00000011 {00000000000000001000}
+
+fsm_state_encoding {837003701} 00000100 {00000000000000010000}
+
+fsm_state_encoding {837003701} 00000101 {00000000000000100000}
+
+fsm_state_encoding {837003701} 00000110 {00000000000001000000}
+
+fsm_state_encoding {837003701} 00000111 {00000000000010000000}
+
+fsm_state_encoding {837003701} 00001000 {00000000000100000000}
+
+fsm_state_encoding {837003701} 00001001 {00000000001000000000}
+
+fsm_state_encoding {837003701} 00001010 {00000000010000000000}
+
+fsm_state_encoding {837003701} 00001011 {00000000100000000000}
+
+fsm_state_encoding {837003701} 00001100 {00000001000000000000}
+
+fsm_state_encoding {837003701} 00001101 {00000010000000000000}
+
+fsm_state_encoding {837003701} 00001110 {00000100000000000000}
+
+fsm_state_encoding {837003701} 00001111 {00001000000000000000}
+
+fsm_state_encoding {837003701} 00010000 {00010000000000000000}
+
+fsm_state_encoding {837003701} 00010001 {00100000000000000000}
+
+fsm_state_encoding {837003701} 00010010 {01000000000000000000}
+
+fsm_state_encoding {837003701} 11111111 {10000000000000000000}
+
+fsm_registers {837003701} {task_state[19]}  {task_state[18]}  {task_state[17]}  {task_state[16]}  {task_state[15]}  {task_state[14]}  {task_state[13]}  {task_state[12]}  {task_state[11]}  {task_state[10]}  {task_state[9]}  {task_state[8]}  {task_state[7]}  {task_state[6]}  {task_state[5]}  {task_state[4]}  {task_state[3]}  {task_state[2]}  {task_state[1]}  {task_state[0]} 
+
+fsm_encoding {837003702} onehot
+
+fsm_state_encoding {837003702} 00000000 {000001}
+
+fsm_state_encoding {837003702} 00000001 {000010}
+
+fsm_state_encoding {837003702} 00000010 {000100}
+
+fsm_state_encoding {837003702} 00000011 {001000}
+
+fsm_state_encoding {837003702} 00000100 {010000}
+
+fsm_state_encoding {837003702} 00000101 {100000}
+
+fsm_registers {837003702} {state[5]}  {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state[0]} 

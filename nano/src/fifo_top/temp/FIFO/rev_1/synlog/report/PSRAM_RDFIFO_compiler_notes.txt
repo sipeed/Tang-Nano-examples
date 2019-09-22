@@ -1,0 +1,10 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+@N: CG364 :"/home/athieka/tang/nano/src/fifo_top/temp/FIFO/fifo_parameter.v":1:0:1:8|Synthesizing module work_/home/athieka/tang/nano/src/fifo_top/temp/FIFO/fifo_define.v_unit in library work.
+@N: CG364 :"/home/athieka/gowin/IDE/ipcore/FIFO/data/fifo_top.v":3:20:3:20|Synthesizing module PSRAM_RDFIFO in library work.
+@N|Running in 64-bit mode
+@N: NF107 :"/home/athieka/gowin/IDE/ipcore/FIFO/data/fifo_top.v":3:20:3:20|Selected library: work cell: PSRAM_RDFIFO view verilog as top level
+@N: NF107 :"/home/athieka/gowin/IDE/ipcore/FIFO/data/fifo_top.v":3:20:3:20|Selected library: work cell: PSRAM_RDFIFO view verilog as top level
+

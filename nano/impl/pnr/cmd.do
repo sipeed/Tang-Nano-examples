@@ -1,0 +1,10 @@
+-d /home/athieka/tang/nano/impl/synthesize/rev_1/nano.vm
+-p GW1N-1-QFN48-5
+-pn GW1N-LV1QN48C5/I4
+-cst /home/athieka/tang/nano/src/nano.cst
+-cfg /home/athieka/tang/nano/impl/pnr/device.cfg
+-sdc /home/athieka/tang/nano/src/nano.sdc
+-bit
+-tr
+-ph
+-timing

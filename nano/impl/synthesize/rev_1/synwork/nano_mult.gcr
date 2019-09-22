@@ -1,0 +1,25 @@
+i pll0.clkout_i
+m 0 0
+u 103 158
+n ckid0_0 {t:psram64.syn_mcu.syn_signal.C} Black box on clock path
+p {t:pll0.pll_inst.CLKOUT}{t:pll0.clkout_inferred_clock.I[0]}{t:pll0.clkout_inferred_clock.OUT[0]}{p:pll0.clkout}{t:pll0.clkout}{t:psram64.clk}{p:psram64.clk}{t:psram64.state[5].C}
+e ckid0_1 {t:psram64.state[5].C} dffr
+d ckid0_0,ckid0_1 {t:pll0.pll_inst.CLKOUT} PLL Black box on clock path
+i pll0.clkoutd_i
+m 0 0
+u 69 82
+n ckid0_2 {t:LCD_G[5:0].C} Black box on clock path
+p {t:pll0.pll_inst.CLKOUTD}{t:pll0.clkoutd_inferred_clock.I[0]}{t:pll0.clkoutd_inferred_clock.OUT[0]}{p:pll0.clkoutd}{t:pll0.clkoutd}{t:LCD_G[5:0].C}
+e ckid0_2 {t:LCD_G[5:0].C} dffs
+d ckid0_2 {t:pll0.pll_inst.CLKOUTD} PLL Black box on clock path
+i pll0.clkoutd3_o
+m 0 0
+u 0 0
+i pll0.clkoutp_o
+m 0 0
+u 0 0
+i pll0.lock
+m 0 0
+u 0 0
+l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0
