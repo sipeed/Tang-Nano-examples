@@ -6,17 +6,14 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
 
-# Written on Sun Sep 22 22:24:47 2019
+# Written on Fri Sep 27 16:13:36 2019
 
 ##### DESIGN INFO #######################################################
 
@@ -38,17 +35,21 @@ Found 0 issues in 0 out of 0 constraints
 Clock Relationships
 *******************
 
-Starting                        Ending                          |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                          PLL0|clkoutd_inferred_clock     |     14.350           |     No paths         |     No paths         |     No paths                         
-System                          PLL0|clkout_inferred_clock      |     13.530           |     No paths         |     No paths         |     No paths                         
-PLL0|clkoutd_inferred_clock     System                          |     14.350           |     No paths         |     No paths         |     No paths                         
-PLL0|clkoutd_inferred_clock     PLL0|clkoutd_inferred_clock     |     14.350           |     No paths         |     No paths         |     No paths                         
-PLL0|clkoutd_inferred_clock     PLL0|clkout_inferred_clock      |     Diff grp         |     No paths         |     No paths         |     No paths                         
-PLL0|clkout_inferred_clock      System                          |     13.530           |     No paths         |     No paths         |     No paths                         
-PLL0|clkout_inferred_clock      PLL0|clkoutd_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
-PLL0|clkout_inferred_clock      PLL0|clkout_inferred_clock      |     13.530           |     No paths         |     6.765            |     No paths                         
-===========================================================================================================================================================================
+Starting                            Ending                              |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                              PLL0|clkoutd_inferred_clock         |     14.152           |     No paths         |     No paths         |     No paths                         
+System                              GATED_CLK|clkout_inferred_clock     |     1.799            |     No paths         |     No paths         |     No paths                         
+System                              PLL0|clkout_inferred_clock          |     No paths         |     No paths         |     13.494           |     No paths                         
+PLL0|clkoutd_inferred_clock         System                              |     14.152           |     No paths         |     No paths         |     No paths                         
+PLL0|clkoutd_inferred_clock         PLL0|clkoutd_inferred_clock         |     14.152           |     14.152           |     No paths         |     7.076                            
+PLL0|clkoutd_inferred_clock         PLL0|clkout_inferred_clock          |     No paths         |     No paths         |     Diff grp         |     No paths                         
+GATED_CLK|clkout_inferred_clock     GATED_CLK|clkout_inferred_clock     |     1.799            |     No paths         |     No paths         |     No paths                         
+GATED_CLK|clkout_inferred_clock     PLL0|clkout_inferred_clock          |     No paths         |     No paths         |     Diff grp         |     No paths                         
+PLL0|clkout_inferred_clock          System                              |     No paths         |     No paths         |     No paths         |     13.494                           
+PLL0|clkout_inferred_clock          PLL0|clkoutd_inferred_clock         |     No paths         |     No paths         |     No paths         |     Diff grp                         
+PLL0|clkout_inferred_clock          GATED_CLK|clkout_inferred_clock     |     No paths         |     No paths         |     No paths         |     Diff grp                         
+PLL0|clkout_inferred_clock          PLL0|clkout_inferred_clock          |     13.494           |     13.494           |     No paths         |     No paths                         
+===================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -82,6 +83,7 @@ p:LED_R
 p:MCU_ACK
 p:MCU_REQ
 p:PSRAM_CEn
+p:PSRAM_CLK
 p:PSRAM_SIO[0] (bidir end point)
 p:PSRAM_SIO[0] (bidir start point)
 p:PSRAM_SIO[1] (bidir end point)

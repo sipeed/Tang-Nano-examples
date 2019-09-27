@@ -1,10 +1,15 @@
 module GATED_CLK(input clkin,
 					 output clkout,
 					 input clken);
-reg clken_buf;
-always @(negedge clkin)
+/*reg clken_buf;
+always @(posedge clkin)
 begin
 	clken_buf <= clken;
 end
-assign clkout = clken_buf & clkin;
+assign clkout = clken_buf & clkin;*/
+DQCE dqce_inst (
+.CLKIN(clkin), 
+.CE(clken), 
+.CLKOUT(clkout)
+);
 endmodule

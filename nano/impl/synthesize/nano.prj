@@ -1,10 +1,10 @@
 # project files
-add_file -verilog "/home/athieka/tang/nano/src/TOP.v"
-add_file -verilog "/home/athieka/tang/nano/src/SYNC_SIGNAL.v"
-add_file -verilog "/home/athieka/tang/nano/src/GATED_CLK.v"
-add_file -verilog "/home/athieka/tang/nano/src/PSRAM64.v"
-add_file -verilog "/home/athieka/tang/nano/src/gowin_pll/PLL0.v"
-add_file -verilog "/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/TOP.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/SYNC_SIGNAL.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/GATED_CLK.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/gowin_pll/PLL0.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/LCD_PSRAM.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/LCD_FIFO/LCD_FIFO.v"
 
 # implementation: "rev_1"
 impl -add rev_1 -type fpga

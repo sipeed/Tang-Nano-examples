@@ -6,13 +6,10 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
 
@@ -27,20 +24,20 @@ Part:			GW1N_1QFN48-5 (GoWin)
 SEQUENTIAL ELEMENTS
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     237                100 %                
+REGISTERS     252                100 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block TOP:	237 (26.66 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP:	252 (25.79 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-LUTS          479                100 %                
-MUX2_LUT5     13                 100 %                
-MUX2_LUT6     2                  100 %                
-ALU           95                 100 %                
+LUTS          536                100 %                
+MUX2_LUT5     6                  100 %                
+MUX2_LUT6     3                  100 %                
+ALU           113                100 %                
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP:	589 (66.25 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP:	658 (67.35 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -48,83 +45,30 @@ Name                Total elements     Utilization     Notes
 ------------------------------------------------------------
 BLOCK RAMS/ROMS     2                  100 %                
 ============================================================
-Total MEMORY ELEMENTS in the block TOP:	2 (0.22 % Utilization)
-
-----------------------------------------------------------
-########   Utilization report for  cell:   PLL0   ########
-Instance path:   TOP.PLL0                                 
-==========================================================
--------------------------------------------------------------
-########   Utilization report for  cell:   PSRAM64   ########
-Instance path:   TOP.PSRAM64                                 
-=============================================================
-
-SEQUENTIAL ELEMENTS
-Name          Total elements     Utilization     Notes
-------------------------------------------------------
-REGISTERS     218                92 %                 
-======================================================
-Total SEQUENTIAL ELEMENTS in the block TOP.PSRAM64:	218 (24.52 % Utilization)
-
-
-COMBINATIONAL LOGIC
-Name          Total elements     Utilization     Notes
-------------------------------------------------------
-LUTS          478                99.8 %               
-MUX2_LUT5     13                 100 %                
-MUX2_LUT6     2                  100 %                
-ALU           95                 100 %                
-======================================================
-Total COMBINATIONAL LOGIC in the block TOP.PSRAM64:	588 (66.14 % Utilization)
-
-
-MEMORY ELEMENTS
-Name                Total elements     Utilization     Notes
-------------------------------------------------------------
-BLOCK RAMS/ROMS     2                  100 %                
-============================================================
-Total MEMORY ELEMENTS in the block TOP.PSRAM64:	2 (0.22 % Utilization)
+Total MEMORY ELEMENTS in the block TOP:	2 (0.20 % Utilization)
 
 ---------------------------------------------------------------
-########   Utilization report for  cell:   GATED_CLK   ########
-Instance path:   PSRAM64.GATED_CLK                             
+########   Utilization report for  cell:   LCD_PSRAM   ########
+Instance path:   TOP.LCD_PSRAM                                 
 ===============================================================
 
 SEQUENTIAL ELEMENTS
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     1                  0.4220 %             
+REGISTERS     240                95.2 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block PSRAM64.GATED_CLK:	1 (0.11 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP.LCD_PSRAM:	240 (24.56 % Utilization)
 
 
 COMBINATIONAL LOGIC
-Name     Total elements     Utilization     Notes
--------------------------------------------------
-LUTS     1                  0.2090 %             
-=================================================
-Total COMBINATIONAL LOGIC in the block PSRAM64.GATED_CLK:	1 (0.11 % Utilization)
-
-------------------------------------------------------------------
-########   Utilization report for  cell:   PSRAM_RDFIFO   ########
-Instance path:   PSRAM64.PSRAM_RDFIFO                             
-==================================================================
-
-SEQUENTIAL ELEMENTS
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     102                43 %                 
+LUTS          536                100 %                
+MUX2_LUT5     6                  100 %                
+MUX2_LUT6     3                  100 %                
+ALU           113                100 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block PSRAM64.PSRAM_RDFIFO:	102 (11.47 % Utilization)
-
-
-COMBINATIONAL LOGIC
-Name     Total elements     Utilization     Notes
--------------------------------------------------
-LUTS     81                 16.9 %               
-ALU      42                 44.2 %               
-=================================================
-Total COMBINATIONAL LOGIC in the block PSRAM64.PSRAM_RDFIFO:	123 (13.84 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.LCD_PSRAM:	658 (67.35 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -132,28 +76,34 @@ Name                Total elements     Utilization     Notes
 ------------------------------------------------------------
 BLOCK RAMS/ROMS     2                  100 %                
 ============================================================
-Total MEMORY ELEMENTS in the block PSRAM64.PSRAM_RDFIFO:	2 (0.22 % Utilization)
+Total MEMORY ELEMENTS in the block TOP.LCD_PSRAM:	2 (0.20 % Utilization)
 
--------------------------------------------------------------------------------
-########   Utilization report for  cell:   \\\~fifo\.PSRAM_RDFIFO_\    ########
-Instance path:   PSRAM_RDFIFO.\\\~fifo\.PSRAM_RDFIFO_\                         
-===============================================================================
+---------------------------------------------------------------
+########   Utilization report for  cell:   GATED_CLK   ########
+Instance path:   LCD_PSRAM.GATED_CLK                           
+===============================================================
+--------------------------------------------------------------
+########   Utilization report for  cell:   LCD_FIFO   ########
+Instance path:   LCD_PSRAM.LCD_FIFO                           
+==============================================================
 
 SEQUENTIAL ELEMENTS
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     102                43 %                 
+REGISTERS     115                45.6 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block PSRAM_RDFIFO.\\\~fifo\.PSRAM_RDFIFO_\ :	102 (11.47 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block LCD_PSRAM.LCD_FIFO:	115 (11.77 % Utilization)
 
 
 COMBINATIONAL LOGIC
-Name     Total elements     Utilization     Notes
--------------------------------------------------
-LUTS     81                 16.9 %               
-ALU      42                 44.2 %               
-=================================================
-Total COMBINATIONAL LOGIC in the block PSRAM_RDFIFO.\\\~fifo\.PSRAM_RDFIFO_\ :	123 (13.84 % Utilization)
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+LUTS          123                22.9 %               
+MUX2_LUT5     6                  100 %                
+MUX2_LUT6     3                  100 %                
+ALU           66                 58.4 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block LCD_PSRAM.LCD_FIFO:	198 (20.27 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -161,28 +111,43 @@ Name                Total elements     Utilization     Notes
 ------------------------------------------------------------
 BLOCK RAMS/ROMS     2                  100 %                
 ============================================================
-Total MEMORY ELEMENTS in the block PSRAM_RDFIFO.\\\~fifo\.PSRAM_RDFIFO_\ :	2 (0.22 % Utilization)
+Total MEMORY ELEMENTS in the block LCD_PSRAM.LCD_FIFO:	2 (0.20 % Utilization)
 
------------------------------------------------------------------
-########   Utilization report for  cell:   SYNC_SIGNAL   ########
-Instance path:   PSRAM64.SYNC_SIGNAL                             
-=================================================================
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   \\\~fifo\.LCD_FIFO_\    ########
+Instance path:   LCD_FIFO.\\\~fifo\.LCD_FIFO_\                             
+===========================================================================
 
 SEQUENTIAL ELEMENTS
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     3                  1.27 %               
+REGISTERS     115                45.6 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block PSRAM64.SYNC_SIGNAL:	3 (0.34 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block LCD_FIFO.\\\~fifo\.LCD_FIFO_\ :	115 (11.77 % Utilization)
 
 
 COMBINATIONAL LOGIC
-Name     Total elements     Utilization     Notes
--------------------------------------------------
-LUTS     1                  0.2090 %             
-=================================================
-Total COMBINATIONAL LOGIC in the block PSRAM64.SYNC_SIGNAL:	1 (0.11 % Utilization)
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+LUTS          123                22.9 %               
+MUX2_LUT5     6                  100 %                
+MUX2_LUT6     3                  100 %                
+ALU           66                 58.4 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block LCD_FIFO.\\\~fifo\.LCD_FIFO_\ :	198 (20.27 % Utilization)
 
+
+MEMORY ELEMENTS
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+BLOCK RAMS/ROMS     2                  100 %                
+============================================================
+Total MEMORY ELEMENTS in the block LCD_FIFO.\\\~fifo\.LCD_FIFO_\ :	2 (0.20 % Utilization)
+
+----------------------------------------------------------
+########   Utilization report for  cell:   PLL0   ########
+Instance path:   TOP.PLL0                                 
+==========================================================
 
 ##### END OF AREA REPORT #####]
 

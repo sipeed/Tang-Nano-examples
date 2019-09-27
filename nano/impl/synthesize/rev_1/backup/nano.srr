@@ -1,9 +1,9 @@
 #Build: Synplify Pro (R) P-2019.03G-Beta4, Build 231R, Aug  2 2019
-#install: /home/athieka/gowin/SynplifyPro
-#OS: Linux 
-#Hostname: gowin-vm
+#install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+#OS: Windows 7 6.1
+#Hostname: GOWIN-PC
 
-# Sun Sep 22 16:41:43 2019
+# Tue Sep 24 17:35:28 2019
 
 #Implementation: rev_1
 
@@ -15,16 +15,13 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
-Synopsys HDL Compiler, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+Synopsys HDL Compiler, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:58:27
 
 @N|Running in 64-bit mode
 ###########################################################[
@@ -36,54 +33,152 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
-Synopsys Verilog Compiler, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+Synopsys Verilog Compiler, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:58:27
 
 @N|Running in 64-bit mode
 @N: CG1349 :	| Running Verilog Compiler in System Verilog mode
 
 @N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
 
-@I::"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v" (library work)
-@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/hypermods.v" (library __hyper__lib__)
-@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/umr_capim.v" (library snps_haps)
-@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/scemi_objects.v" (library snps_haps)
-@I::"/home/athieka/gowin/SynplifyPro/lib/vlog/scemi_pipes.svh" (library snps_haps)
-@I::"/home/athieka/tang/nano/src/TOP.v" (library work)
+@I::"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v" (library work)
+@I::"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\fpga\Tang-Nano-examples\nano\src\TOP.v" (library work)
+@I::"C:\fpga\Tang-Nano-examples\nano\src\SYNC_SIGNAL.v" (library work)
+@I::"C:\fpga\Tang-Nano-examples\nano\src\GATED_CLK.v" (library work)
+@I::"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v" (library work)
+@I::"C:\fpga\Tang-Nano-examples\nano\src\gowin_pll\PLL0.v" (library work)
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\gowin_pll\PLL0.v":3:7:3:11|Unrecognized synthesis directive title. Verify the correct directive name.
+@I::"C:\fpga\Tang-Nano-examples\nano\src\fifo_top\PSRAM_RDFIFO.v" (library work)
 Verilog syntax check successful!
-Selecting top level module MAIN
-@N: CG364 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Synthesizing module MAIN in library work.
-@W: CG146 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Creating black box for empty module MAIN
-
-@N: CG706 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected top-level module MAIN is a black box, ignoring black box ...
-@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":7:18:7:24|Input SYS_CLK is unused.
-@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":8:18:8:25|Input SYS_RSTn is unused.
-@W: CL158 :"/home/athieka/tang/nano/src/TOP.v":9:10:9:16|Inout SYS_WDI is unused
-@W: CL158 :"/home/athieka/tang/nano/src/TOP.v":13:15:13:23|Inout PSRAM_SIO is unused
-@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":15:10:15:21|Input MCU_SPI_SCLK is unused.
-@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":16:10:16:19|Input MCU_SPI_CS is unused.
-@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":17:10:17:21|Input MCU_SPI_MOSI is unused.
-@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":18:10:18:16|Input MCU_REQ is unused.
+Selecting top level module TOP
+@N: CG364 :"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v":1800:7:1800:9|Synthesizing module PLL in library work.
+Running optimization stage 1 on PLL .......
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\gowin_pll\PLL0.v":8:7:8:10|Synthesizing module PLL0 in library work.
+Running optimization stage 1 on PLL0 .......
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\GATED_CLK.v":1:7:1:15|Synthesizing module GATED_CLK in library work.
+Running optimization stage 1 on GATED_CLK .......
+@N: CG364 :"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v":1864:7:1864:9|Synthesizing module GSR in library work.
+Running optimization stage 1 on GSR .......
+Running optimization stage 1 on INV .......
+Running optimization stage 1 on LUT4 .......
+Running optimization stage 1 on LUT3 .......
+Running optimization stage 1 on LUT2 .......
+Running optimization stage 1 on MUX2_LUT5 .......
+Running optimization stage 1 on MUX2_LUT6 .......
+Running optimization stage 1 on DFFC .......
+Running optimization stage 1 on DFFP .......
+Running optimization stage 1 on DFFCE .......
+Running optimization stage 1 on SDPX9 .......
+Running optimization stage 1 on ALU .......
+Running optimization stage 1 on GND .......
+Running optimization stage 1 on VCC .......
+Running optimization stage 1 on \~fifo.PSRAM_RDFIFO_  .......
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\fifo_top\PSRAM_RDFIFO.v":2927:7:2927:18|Synthesizing module PSRAM_RDFIFO in library work.
+Running optimization stage 1 on PSRAM_RDFIFO .......
+@W: CL168 :"C:\fpga\Tang-Nano-examples\nano\src\fifo_top\PSRAM_RDFIFO.v":3000:6:3000:11|Removing instance GND_cZ because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\SYNC_SIGNAL.v":7:7:7:17|Synthesizing module SYNC_SIGNAL in library work.
+Running optimization stage 1 on SYNC_SIGNAL .......
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":7:7:7:13|Synthesizing module PSRAM64 in library work.
+@W: CG1340 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":152:33:152:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":152:33:152:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":152:33:152:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":152:33:152:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
+@W: CS263 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":128:13:128:26|Port-width mismatch for port Wnum. The port definition is 11 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+Running optimization stage 1 on PSRAM64 .......
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":61:0:61:5|Optimizing register bit cur_pos[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":61:0:61:5|Optimizing register bit cur_pos[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":373:0:373:5|Optimizing register bit psram_ctrl to a constant 1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":61:0:61:5|Pruning register bits 9 to 8 of cur_pos[9:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":373:0:373:5|Pruning unused register psram_ctrl. Make sure that there are no unused intermediate registers.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":7:7:7:9|Synthesizing module TOP in library work.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":9:19:9:23|Removing wire LED_R, as there is no assignment to it.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":10:19:10:23|Removing wire LED_G, as there is no assignment to it.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":11:19:11:23|Removing wire LED_B, as there is no assignment to it.
+Running optimization stage 1 on TOP .......
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":9:19:9:23|*Output LED_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":10:19:10:23|*Output LED_G has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":11:19:11:23|*Output LED_B has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+Running optimization stage 2 on TOP .......
+@N: CL159 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":30:18:30:24|Input LCD_BKL is unused.
+Running optimization stage 2 on PSRAM64 .......
+@N: CL189 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":88:0:88:5|Register bit psram_ctrl_buf is always 1.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":373:0:373:5|Optimizing register bit cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":373:0:373:5|Optimizing register bit task_x[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":373:0:373:5|Pruning register bit 7 of task_x[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":373:0:373:5|Pruning register bit 15 of cnt[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL201 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":373:0:373:5|Trying to extract state machine for register task_state.
+Extracted state machine for register task_state
+State machine has 20 reachable states with original encodings of:
+   00000000
+   00000001
+   00000010
+   00000011
+   00000100
+   00000101
+   00000110
+   00000111
+   00001000
+   00001001
+   00001010
+   00001011
+   00001100
+   00001101
+   00001110
+   00001111
+   00010000
+   00010001
+   00010010
+   11111111
+@N: CL201 :"C:\fpga\Tang-Nano-examples\nano\src\PSRAM64.v":373:0:373:5|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 6 reachable states with original encodings of:
+   00000000
+   00000001
+   00000010
+   00000011
+   00000100
+   00000101
+Running optimization stage 2 on SYNC_SIGNAL .......
+Running optimization stage 2 on PSRAM_RDFIFO .......
+Running optimization stage 2 on \~fifo.PSRAM_RDFIFO_  .......
+Running optimization stage 2 on VCC .......
+Running optimization stage 2 on GND .......
+Running optimization stage 2 on ALU .......
+Running optimization stage 2 on SDPX9 .......
+Running optimization stage 2 on DFFCE .......
+Running optimization stage 2 on DFFP .......
+Running optimization stage 2 on DFFC .......
+Running optimization stage 2 on MUX2_LUT6 .......
+Running optimization stage 2 on MUX2_LUT5 .......
+Running optimization stage 2 on LUT2 .......
+Running optimization stage 2 on LUT3 .......
+Running optimization stage 2 on LUT4 .......
+Running optimization stage 2 on INV .......
+Running optimization stage 2 on GSR .......
+Running optimization stage 2 on GATED_CLK .......
+Running optimization stage 2 on PLL0 .......
+Running optimization stage 2 on PLL .......
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
-@L: /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/layer0.rt.csv
+@L: C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synwork\layer0.rt.csv
 
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 144MB peak: 144MB)
+At c_ver Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 101MB peak: 103MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
 
 Process completed successfully.
-# Sun Sep 22 16:41:45 2019
+# Tue Sep 24 17:35:31 2019
 
 ###########################################################]
 ###########################################################[
@@ -95,42 +190,37 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
-Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:58:27
 
 @N|Running in 64-bit mode
-@N: NF107 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected library: work cell: MAIN view verilog as top level
-@N: NF107 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected library: work cell: MAIN view verilog as top level
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 141MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 88MB peak: 88MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 22 16:41:45 2019
+# Tue Sep 24 17:35:32 2019
 
 ###########################################################]
 
 For a summary of runtime and memory usage for all design units, please see file:
 ==========================================================
-@L: /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_comp.rt.csv
+@L: C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synwork\nano_comp.rt.csv
 
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 54MB peak: 54MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 18MB peak: 18MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
 
 Process completed successfully.
-# Sun Sep 22 16:41:45 2019
+# Tue Sep 24 17:35:32 2019
 
 ###########################################################]
 ###########################################################[
@@ -142,32 +232,27 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
-Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:58:27
 
 @N|Running in 64-bit mode
-@N: NF107 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected library: work cell: MAIN view verilog as top level
-@N: NF107 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:10|Selected library: work cell: MAIN view verilog as top level
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 141MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 87MB peak: 88MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 22 16:41:46 2019
+# Tue Sep 24 17:35:33 2019
 
 ###########################################################]
 Premap Report
 
-# Sun Sep 22 16:41:46 2019
+# Tue Sep 24 17:35:33 2019
 
 
 Copyright (C) 1994-2019 Synopsys, Inc.
@@ -177,76 +262,114 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
-Synopsys Generic Technology Pre-mapping, Version mapgw, Build 1429R, Built Aug 27 2019 09:26:01
+Synopsys Generic Technology Pre-mapping, Version mapgw, Build 1429R, Built Aug 27 2019 09:36:45
 
 
-Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 218MB peak: 218MB)
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 116MB)
 
 @A: MF827 |No constraint file specified.
-@L: /home/athieka/tang/nano/impl/synthesize/rev_1/nano_scck.rpt 
-Printing clock  summary report in "/home/athieka/tang/nano/impl/synthesize/rev_1/nano_scck.rpt" file 
+@L: C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\nano_scck.rpt 
+Printing clock  summary report in "C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\nano_scck.rpt" file 
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 228MB peak: 228MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 126MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 228MB peak: 228MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 126MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 228MB peak: 228MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 127MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 242MB peak: 242MB)
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
 
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":27:11:27:18|Tristate driver LCD_PCLK (in view: work.MAIN(verilog)) on net LCD_PCLK (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":19:11:19:17|Tristate driver MCU_ACK (in view: work.MAIN(verilog)) on net MCU_ACK (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":11:11:11:19|Tristate driver PSRAM_CEn (in view: work.MAIN(verilog)) on net PSRAM_CEn (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":12:11:12:19|Tristate driver PSRAM_CLK (in view: work.MAIN(verilog)) on net PSRAM_CLK (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":11:19:11:23|Tristate driver LED_B (in view: work.TOP(verilog)) on net LED_B (in view: work.TOP(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":10:19:10:23|Tristate driver LED_G (in view: work.TOP(verilog)) on net LED_G (in view: work.TOP(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":9:19:9:23|Tristate driver LED_R (in view: work.TOP(verilog)) on net LED_R (in view: work.TOP(verilog)) has its enable tied to GND.
+Encoding state machine task_state[19:0] (in view: work.PSRAM64(verilog))
+original code -> new code
+   00000000 -> 00000000000000000001
+   00000001 -> 00000000000000000010
+   00000010 -> 00000000000000000100
+   00000011 -> 00000000000000001000
+   00000100 -> 00000000000000010000
+   00000101 -> 00000000000000100000
+   00000110 -> 00000000000001000000
+   00000111 -> 00000000000010000000
+   00001000 -> 00000000000100000000
+   00001001 -> 00000000001000000000
+   00001010 -> 00000000010000000000
+   00001011 -> 00000000100000000000
+   00001100 -> 00000001000000000000
+   00001101 -> 00000010000000000000
+   00001110 -> 00000100000000000000
+   00001111 -> 00001000000000000000
+   00010000 -> 00010000000000000000
+   00010001 -> 00100000000000000000
+   00010010 -> 01000000000000000000
+   11111111 -> 10000000000000000000
+Encoding state machine state[5:0] (in view: work.PSRAM64(verilog))
+original code -> new code
+   00000000 -> 000001
+   00000001 -> 000010
+   00000010 -> 000100
+   00000011 -> 001000
+   00000100 -> 010000
+   00000101 -> 100000
 
-Starting clock optimization phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+Starting clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 221MB peak: 221MB)
 
 
-Finished clock optimization phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+Finished clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 222MB peak: 222MB)
 
 
-Starting clock optimization report phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+Starting clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 222MB peak: 222MB)
 
 
-Finished clock optimization report phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+Finished clock optimization report phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 222MB peak: 222MB)
 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 325MB peak: 325MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 222MB peak: 222MB)
 
 
 
 Clock Summary
 ******************
 
-          Start     Requested     Requested     Clock     Clock     Clock
-Level     Clock     Frequency     Period        Type      Group     Load 
--------------------------------------------------------------------------
-=========================================================================
+          Start                           Requested     Requested     Clock        Clock                     Clock
+Level     Clock                           Frequency     Period        Type         Group                     Load 
+------------------------------------------------------------------------------------------------------------------
+0 -       System                          100.0 MHz     10.000        system       system_clkgroup           0    
+                                                                                                                  
+0 -       PLL0|clkout_inferred_clock      73.9 MHz      13.530        inferred     Autoconstr_clkgroup_1     168  
+                                                                                                                  
+0 -       PLL0|clkoutd_inferred_clock     69.7 MHz      14.350        inferred     Autoconstr_clkgroup_0     82   
+==================================================================================================================
 
 
 
 Clock Load Summary
 ***********************
 
-          Clock     Source     Clock Pin       Non-clock Pin     Non-clock Pin
-Clock     Load      Pin        Seq Example     Seq Example       Comb Example 
-------------------------------------------------------------------------------
-==============================================================================
+                                Clock     Source                         Clock Pin                   Non-clock Pin     Non-clock Pin                          
+Clock                           Load      Pin                            Seq Example                 Seq Example       Comb Example                           
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                          0         -                              -                           -                 -                                      
+                                                                                                                                                              
+PLL0|clkout_inferred_clock      168       pll0.pll_inst.CLKOUT(PLL)      psram64.cur_line[9:0].C     -                 psram64.psram_gated.un1_clkin.I[0](inv)
+                                                                                                                                                              
+PLL0|clkoutd_inferred_clock     82        pll0.pll_inst.CLKOUTD(PLL)     LCD_DEN.C                   -                 LCD_PCLK.I[0](inv)                     
+==============================================================================================================================================================
+
+@W: MT529 :"c:\fpga\tang-nano-examples\nano\src\gated_clk.v":5:0:5:5|Found inferred clock PLL0|clkout_inferred_clock which controls 168 sequential elements including psram64.psram_gated.clken_buf. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
 
 ICG Latch Removal Summary:
 Number of ICG latches removed: 0
@@ -260,40 +383,45 @@ Number of ICG latches not removed:	0
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
 0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
-0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
-0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+2 gated/generated clock tree(s) driving 250 clock pin(s) of sequential element(s)
+0 instances converted, 250 sequential instances remain driven by gated/generated clocks
 
+======================================================= Gated/Generated Clocks =======================================================
+Clock Tree ID     Driving Element           Drive Element Type     Unconverted Fanout     Sample Instance      Explanation            
+--------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_1       pll0.pll_inst.CLKOUT      PLL                    168                    psram64.state[5]     Black box on clock path
+@KP:ckid0_2       pll0.pll_inst.CLKOUTD     PLL                    82                     LCD_G[5:0]           Black box on clock path
+======================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######
 
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 Finished Pre Mapping Phase.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":27:11:27:18|Tristate driver LCD_PCLK (in view: work.MAIN(verilog)) on net LCD_PCLK (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":19:11:19:17|Tristate driver MCU_ACK (in view: work.MAIN(verilog)) on net MCU_ACK (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":12:11:12:19|Tristate driver PSRAM_CLK (in view: work.MAIN(verilog)) on net PSRAM_CLK (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":11:11:11:19|Tristate driver PSRAM_CEn (in view: work.MAIN(verilog)) on net PSRAM_CEn (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: BN225 |Writing default property annotation file /home/athieka/tang/nano/impl/synthesize/rev_1/nano.sap.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":11:19:11:23|Tristate driver LED_B (in view: work.TOP(verilog)) on net LED_B (in view: work.TOP(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":10:19:10:23|Tristate driver LED_G (in view: work.TOP(verilog)) on net LED_G (in view: work.TOP(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":9:19:9:23|Tristate driver LED_R (in view: work.TOP(verilog)) on net LED_R (in view: work.TOP(verilog)) has its enable tied to GND.
+@N: BN225 |Writing default property annotation file C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\nano.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 325MB peak: 325MB)
-
-
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 325MB peak: 325MB)
+Starting constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 223MB peak: 223MB)
 
 
-Finished constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 325MB peak: 325MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 223MB peak: 223MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 223MB peak: 223MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 325MB peak: 325MB)
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 143MB peak: 224MB)
 
 Process took 0h:00m:04s realtime, 0h:00m:04s cputime
-# Sun Sep 22 16:41:50 2019
+# Tue Sep 24 17:35:38 2019
 
 ###########################################################]
 Map & Optimize Report
 
-# Sun Sep 22 16:41:51 2019
+# Tue Sep 24 17:35:38 2019
 
 
 Copyright (C) 1994-2019 Synopsys, Inc.
@@ -303,112 +431,127 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
-Synopsys Generic Technology Mapper, Version mapgw, Build 1429R, Built Aug 27 2019 09:26:01
+Synopsys Generic Technology Mapper, Version mapgw, Build 1429R, Built Aug 27 2019 09:36:45
 
 
-Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 218MB peak: 218MB)
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
 
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 219MB peak: 219MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 119MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 219MB peak: 219MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 119MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 219MB peak: 219MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 121MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 239MB peak: 239MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
 
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 322MB peak: 322MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 216MB peak: 216MB)
 
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":27:11:27:18|Tristate driver LCD_PCLK (in view: work.MAIN(verilog)) on net LCD_PCLK (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":19:11:19:17|Tristate driver MCU_ACK (in view: work.MAIN(verilog)) on net MCU_ACK (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":12:11:12:19|Tristate driver PSRAM_CLK (in view: work.MAIN(verilog)) on net PSRAM_CLK (in view: work.MAIN(verilog)) has its enable tied to GND.
-@N: MO111 :"/home/athieka/tang/nano/src/TOP.v":11:11:11:19|Tristate driver PSRAM_CEn (in view: work.MAIN(verilog)) on net PSRAM_CEn (in view: work.MAIN(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":11:19:11:23|Tristate driver LED_B (in view: work.TOP(verilog)) on net LED_B (in view: work.TOP(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":10:19:10:23|Tristate driver LED_G (in view: work.TOP(verilog)) on net LED_G (in view: work.TOP(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\fpga\tang-nano-examples\nano\src\top.v":9:19:9:23|Tristate driver LED_R (in view: work.TOP(verilog)) on net LED_R (in view: work.TOP(verilog)) has its enable tied to GND.
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 @N: MT206 |Auto Constrain mode is enabled
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 221MB peak: 221MB)
+
+@N: MO231 :"c:\fpga\tang-nano-examples\nano\src\psram64.v":373:0:373:5|Found counter in view:work.PSRAM64(verilog) instance task_x[6:0] 
+@N: MO231 :"c:\fpga\tang-nano-examples\nano\src\psram64.v":373:0:373:5|Found counter in view:work.PSRAM64(verilog) instance cnt[14:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 225MB peak: 225MB)
 
 
-Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 232MB peak: 232MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 232MB peak: 232MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 232MB peak: 232MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 232MB peak: 232MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 232MB peak: 232MB)
+
+@N: MO106 :"c:\fpga\tang-nano-examples\nano\src\psram64.v":59:22:59:45|Found ROM psram64.un1_cur_line_10_0[10:0] (in view: work.TOP(verilog)) with 548 words by 11 bits.
+
+Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 235MB peak: 235MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
-
-
-Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
-
-
-Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 253MB peak: 253MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
+   1		0h:00m:03s		    -4.58ns		 523 /       145
+   2		0h:00m:03s		    -4.58ns		 513 /       145
+@N: FX271 :"c:\fpga\tang-nano-examples\nano\src\psram64.v":373:0:373:5|Replicating instance psram64.rdfifo_wrreq (in view: work.TOP(verilog)) with 20 loads 2 times to improve timing.
+@N: FX271 :"c:\fpga\tang-nano-examples\nano\src\psram64.v":61:0:61:5|Replicating instance psram64.cur_line[4] (in view: work.TOP(verilog)) with 34 loads 3 times to improve timing.
+@N: FX271 :"c:\fpga\tang-nano-examples\nano\src\psram64.v":61:0:61:5|Replicating instance psram64.cur_line[3] (in view: work.TOP(verilog)) with 32 loads 3 times to improve timing.
+@N: FX271 :"c:\fpga\tang-nano-examples\nano\src\psram64.v":61:0:61:5|Replicating instance psram64.cur_line[2] (in view: work.TOP(verilog)) with 36 loads 2 times to improve timing.
+Timing driven replication report
+Added 10 Registers via timing driven replication
+Added 10 LUTs via timing driven replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+   3		0h:00m:04s		    -4.58ns		 523 /       155
+
+   4		0h:00m:04s		    -4.58ns		 523 /       155
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 253MB peak: 253MB)
 
 @N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 253MB peak: 253MB)
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 322MB peak: 322MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 180MB peak: 253MB)
 
-Writing Analyst data base /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_m.srm
+Writing Analyst data base C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synwork\nano_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 322MB peak: 322MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 254MB peak: 254MB)
 
 Writing Verilog Simulation files
 
-Writing scf file... (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 322MB peak: 322MB)
+Writing scf file... (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 255MB peak: 255MB)
 
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 
-Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 322MB peak: 322MB)
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 255MB peak: 255MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 322MB peak: 322MB)
+Start final timing analysis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 251MB peak: 255MB)
 
+@W: MT246 :"c:\fpga\tang-nano-examples\nano\src\gowin_pll\pll0.v":21:4:21:11|Blackbox PLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock PLL0|clkoutd_inferred_clock with period 10.11ns. Please declare a user-defined clock on net pll0.SYS_CLK_25M.
+@W: MT420 |Found inferred clock PLL0|clkout_inferred_clock with period 13.13ns. Please declare a user-defined clock on net pll0.SYS_CLK_100M.
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Sun Sep 22 16:41:55 2019
+# Timing report written on Tue Sep 24 17:35:47 2019
 #
 
 
-Top view:               MAIN
-Requested Frequency:    100.0 MHz
+Top view:               TOP
+Requested Frequency:    76.2 MHz
 Wire load mode:         top
 Paths requested:        5
 Constraint File(s):    
@@ -422,8 +565,15 @@ Performance Summary
 *******************
 
 
-Worst slack in design: NA
+Worst slack in design: -2.316
 
+                                Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock                  Frequency     Frequency     Period        Period        Slack      Type         Group                
+-------------------------------------------------------------------------------------------------------------------------------------
+PLL0|clkout_inferred_clock      76.2 MHz      64.8 MHz      13.127        15.443        -2.316     inferred     Autoconstr_clkgroup_1
+PLL0|clkoutd_inferred_clock     98.9 MHz      84.1 MHz      10.113        11.897        -1.785     inferred     Autoconstr_clkgroup_0
+System                          192.2 MHz     163.3 MHz     5.204         6.122         -0.918     system       system_clkgroup      
+=====================================================================================================================================
 
 
 
@@ -432,11 +582,20 @@ Worst slack in design: NA
 Clock Relationships
 *******************
 
-Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
---------------------------------------------------------------------------------------------------------
-Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
---------------------------------------------------------------------------------------------------------
-========================================================================================================
+Clocks                                                    |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                     Ending                       |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------------------------------------
+System                       System                       |  5.204       -0.918  |  No paths    -      |  No paths    -      |  No paths    -    
+System                       PLL0|clkoutd_inferred_clock  |  10.113      -0.263  |  No paths    -      |  No paths    -      |  No paths    -    
+System                       PLL0|clkout_inferred_clock   |  13.127      7.716   |  No paths    -      |  No paths    -      |  No paths    -    
+PLL0|clkoutd_inferred_clock  System                       |  10.113      7.906   |  No paths    -      |  No paths    -      |  No paths    -    
+PLL0|clkoutd_inferred_clock  PLL0|clkoutd_inferred_clock  |  10.113      -1.785  |  No paths    -      |  No paths    -      |  No paths    -    
+PLL0|clkoutd_inferred_clock  PLL0|clkout_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+PLL0|clkout_inferred_clock   System                       |  13.127      8.917   |  No paths    -      |  No paths    -      |  No paths    -    
+PLL0|clkout_inferred_clock   PLL0|clkoutd_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+PLL0|clkout_inferred_clock   PLL0|clkout_inferred_clock   |  13.127      -2.316  |  No paths    -      |  6.563       4.738  |  No paths    -    
+=================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -448,39 +607,1061 @@ Interface Information
 No IO constraint found
 
 
+
+====================================
+Detailed Report for Clock: PLL0|clkout_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                      Starting                                                                       Arrival           
+Instance                              Reference                      Type      Pin     Net                           Time        Slack 
+                                      Clock                                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------
+psram64.un1_cur_line_10_0_dreg[0]     PLL0|clkout_inferred_clock     DFFCE     Q       un1_cur_line_10_0_dreg[0]     0.440       -2.316
+psram64.un1_cur_line_10_0_dreg[1]     PLL0|clkout_inferred_clock     DFFCE     Q       un1_cur_line_10_0_dreg[1]     0.440       -2.248
+psram64.psram_sio_out_ret_2           PLL0|clkout_inferred_clock     DFFCE     Q       cur_pos_reto[3]               0.440       -2.212
+psram64.un1_cur_line_10_0_dreg[2]     PLL0|clkout_inferred_clock     DFFCE     Q       un1_cur_line_10_0_dreg[2]     0.440       -2.180
+psram64.psram_sio_out_ret_11          PLL0|clkout_inferred_clock     DFFCE     Q       cur_pos_reto[4]               0.440       -2.144
+psram64.un1_cur_line_10_0_dreg[3]     PLL0|clkout_inferred_clock     DFFCE     Q       un1_cur_line_10_0_dreg[3]     0.440       -2.111
+psram64.psram_sio_out_ret_9           PLL0|clkout_inferred_clock     DFFCE     Q       cur_pos_reto[5]               0.440       -2.075
+psram64.un1_cur_line_10_0_dreg[4]     PLL0|clkout_inferred_clock     DFFCE     Q       un1_cur_line_10_0_dreg[4]     0.440       -2.043
+psram64.psram_sio_out_ret_8           PLL0|clkout_inferred_clock     DFFCE     Q       cur_pos_reto[6]               0.440       -2.007
+psram64.un1_cur_line_10_0_dreg[5]     PLL0|clkout_inferred_clock     DFFCE     Q       un1_cur_line_10_0_dreg[5]     0.440       -1.974
+=======================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                      Starting                                                                        Required           
+Instance                              Reference                      Type      Pin     Net                            Time         Slack 
+                                      Clock                                                                                              
+-----------------------------------------------------------------------------------------------------------------------------------------
+psram64.psram_sio_out_ret_10          PLL0|clkout_inferred_clock     DFFCE     D       psram_sio_out_25_0_iv_1[2]     12.967       -2.316
+psram64.un1_cur_line_10_0_dreg[9]     PLL0|clkout_inferred_clock     DFFCE     D       m106                           12.967       -1.737
+psram64.psram_sio_out_ret             PLL0|clkout_inferred_clock     DFFCE     D       psram_sio_out_25_iv_3[0]       12.967       -1.360
+psram64.task_x[0]                     PLL0|clkout_inferred_clock     DFFCE     CE      task_xe                        12.967       -0.537
+psram64.task_x[1]                     PLL0|clkout_inferred_clock     DFFCE     CE      task_xe                        12.967       -0.537
+psram64.task_x[2]                     PLL0|clkout_inferred_clock     DFFCE     CE      task_xe                        12.967       -0.537
+psram64.task_x[3]                     PLL0|clkout_inferred_clock     DFFCE     CE      task_xe                        12.967       -0.537
+psram64.task_x[4]                     PLL0|clkout_inferred_clock     DFFCE     CE      task_xe                        12.967       -0.537
+psram64.task_x[5]                     PLL0|clkout_inferred_clock     DFFCE     CE      task_xe                        12.967       -0.537
+psram64.task_x[6]                     PLL0|clkout_inferred_clock     DFFCE     CE      task_xe                        12.967       -0.537
+=========================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      13.127
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         12.967
+
+    - Propagation time:                      15.283
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.316
+
+    Number of logic level(s):                16
+    Starting point:                          psram64.un1_cur_line_10_0_dreg[0] / Q
+    Ending point:                            psram64.psram_sio_out_ret_10 / D
+    The start point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+
+Instance / Net                                     Pin      Pin               Arrival     No. of    
+Name                                     Type      Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------
+psram64.un1_cur_line_10_0_dreg[0]        DFFCE     Q        Out     0.440     0.440       -         
+un1_cur_line_10_0_dreg[0]                Net       -        -       1.225     -           1         
+psram64.un1_cur_line_cry_0_0             ALU       I1       In      -         1.666       -         
+psram64.un1_cur_line_cry_0_0             ALU       COUT     Out     1.254     2.920       -         
+un1_cur_line_cry_0                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_1_0             ALU       CIN      In      -         2.920       -         
+psram64.un1_cur_line_cry_1_0             ALU       COUT     Out     0.068     2.988       -         
+un1_cur_line_cry_1                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_2_0             ALU       CIN      In      -         2.988       -         
+psram64.un1_cur_line_cry_2_0             ALU       COUT     Out     0.068     3.056       -         
+un1_cur_line_cry_2                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_3_0             ALU       CIN      In      -         3.056       -         
+psram64.un1_cur_line_cry_3_0             ALU       COUT     Out     0.068     3.125       -         
+un1_cur_line_cry_3                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_4_0             ALU       CIN      In      -         3.125       -         
+psram64.un1_cur_line_cry_4_0             ALU       COUT     Out     0.068     3.193       -         
+un1_cur_line_cry_4                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_5_0             ALU       CIN      In      -         3.193       -         
+psram64.un1_cur_line_cry_5_0             ALU       COUT     Out     0.068     3.261       -         
+un1_cur_line_cry_5                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_6_0             ALU       CIN      In      -         3.261       -         
+psram64.un1_cur_line_cry_6_0             ALU       COUT     Out     0.068     3.330       -         
+un1_cur_line_cry_6                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_7_0             ALU       CIN      In      -         3.330       -         
+psram64.un1_cur_line_cry_7_0             ALU       COUT     Out     0.068     3.398       -         
+un1_cur_line_cry_7                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_8_0             ALU       CIN      In      -         3.398       -         
+psram64.un1_cur_line_cry_8_0             ALU       COUT     Out     0.068     3.467       -         
+un1_cur_line_cry_8                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_9_0             ALU       CIN      In      -         3.467       -         
+psram64.un1_cur_line_cry_9_0             ALU       COUT     Out     0.068     3.535       -         
+un1_cur_line_cry_9                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_10_0            ALU       CIN      In      -         3.535       -         
+psram64.un1_cur_line_cry_10_0            ALU       SUM      Out     0.676     4.211       -         
+un1_cur_line[13]                         Net       -        -       1.225     -           1         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      I3       In      -         5.436       -         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      F        Out     0.751     6.187       -         
+psram_sio_out_25_0_iv_1_0[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      I0       In      -         7.106       -         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      F        Out     1.238     8.344       -         
+PSRAM_SIO_OUT[2]                         Net       -        -       1.225     -           2         
+psram64.psram_sio_out_m[2]               LUT2      I0       In      -         9.570       -         
+psram64.psram_sio_out_m[2]               LUT2      F        Out     1.238     10.808      -         
+psram_sio_out_m[2]                       Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      I1       In      -         11.727      -         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      F        Out     1.319     13.046      -         
+psram_sio_out_25_0_iv_1_1[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      I1       In      -         13.965      -         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      F        Out     1.319     15.283      -         
+psram_sio_out_25_0_iv_1[2]               Net       -        -       0.000     -           1         
+psram64.psram_sio_out_ret_10             DFFCE     D        In      -         15.283      -         
+====================================================================================================
+Total path delay (propagation time + setup) of 15.443 is 9.011(58.3%) logic and 6.432(41.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      13.127
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         12.967
+
+    - Propagation time:                      15.245
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.278
+
+    Number of logic level(s):                12
+    Starting point:                          psram64.un1_cur_line_10_0_dreg[0] / Q
+    Ending point:                            psram64.psram_sio_out_ret_10 / D
+    The start point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+
+Instance / Net                                     Pin      Pin               Arrival     No. of    
+Name                                     Type      Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------
+psram64.un1_cur_line_10_0_dreg[0]        DFFCE     Q        Out     0.440     0.440       -         
+un1_cur_line_10_0_dreg[0]                Net       -        -       1.225     -           1         
+psram64.un1_cur_line_cry_0_0             ALU       I1       In      -         1.666       -         
+psram64.un1_cur_line_cry_0_0             ALU       COUT     Out     1.254     2.920       -         
+un1_cur_line_cry_0                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_1_0             ALU       CIN      In      -         2.920       -         
+psram64.un1_cur_line_cry_1_0             ALU       COUT     Out     0.068     2.988       -         
+un1_cur_line_cry_1                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_2_0             ALU       CIN      In      -         2.988       -         
+psram64.un1_cur_line_cry_2_0             ALU       COUT     Out     0.068     3.056       -         
+un1_cur_line_cry_2                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_3_0             ALU       CIN      In      -         3.056       -         
+psram64.un1_cur_line_cry_3_0             ALU       COUT     Out     0.068     3.125       -         
+un1_cur_line_cry_3                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_4_0             ALU       CIN      In      -         3.125       -         
+psram64.un1_cur_line_cry_4_0             ALU       COUT     Out     0.068     3.193       -         
+un1_cur_line_cry_4                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_5_0             ALU       CIN      In      -         3.193       -         
+psram64.un1_cur_line_cry_5_0             ALU       COUT     Out     0.068     3.261       -         
+un1_cur_line_cry_5                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_6_0             ALU       CIN      In      -         3.261       -         
+psram64.un1_cur_line_cry_6_0             ALU       SUM      Out     0.676     3.937       -         
+un1_cur_line[9]                          Net       -        -       1.225     -           1         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      I2       In      -         5.162       -         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      F        Out     0.986     6.149       -         
+psram_sio_out_25_0_iv_1_0[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      I0       In      -         7.068       -         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      F        Out     1.238     8.306       -         
+PSRAM_SIO_OUT[2]                         Net       -        -       1.225     -           2         
+psram64.psram_sio_out_m[2]               LUT2      I0       In      -         9.531       -         
+psram64.psram_sio_out_m[2]               LUT2      F        Out     1.238     10.770      -         
+psram_sio_out_m[2]                       Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      I1       In      -         11.688      -         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      F        Out     1.319     13.007      -         
+psram_sio_out_25_0_iv_1_1[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      I1       In      -         13.926      -         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      F        Out     1.319     15.245      -         
+psram_sio_out_25_0_iv_1[2]               Net       -        -       0.000     -           1         
+psram64.psram_sio_out_ret_10             DFFCE     D        In      -         15.245      -         
+====================================================================================================
+Total path delay (propagation time + setup) of 15.405 is 8.972(58.2%) logic and 6.432(41.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      13.127
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         12.967
+
+    - Propagation time:                      15.215
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.248
+
+    Number of logic level(s):                15
+    Starting point:                          psram64.un1_cur_line_10_0_dreg[1] / Q
+    Ending point:                            psram64.psram_sio_out_ret_10 / D
+    The start point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+
+Instance / Net                                     Pin      Pin               Arrival     No. of    
+Name                                     Type      Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------
+psram64.un1_cur_line_10_0_dreg[1]        DFFCE     Q        Out     0.440     0.440       -         
+un1_cur_line_10_0_dreg[1]                Net       -        -       1.225     -           1         
+psram64.un1_cur_line_cry_1_0             ALU       I1       In      -         1.666       -         
+psram64.un1_cur_line_cry_1_0             ALU       COUT     Out     1.254     2.920       -         
+un1_cur_line_cry_1                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_2_0             ALU       CIN      In      -         2.920       -         
+psram64.un1_cur_line_cry_2_0             ALU       COUT     Out     0.068     2.988       -         
+un1_cur_line_cry_2                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_3_0             ALU       CIN      In      -         2.988       -         
+psram64.un1_cur_line_cry_3_0             ALU       COUT     Out     0.068     3.056       -         
+un1_cur_line_cry_3                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_4_0             ALU       CIN      In      -         3.056       -         
+psram64.un1_cur_line_cry_4_0             ALU       COUT     Out     0.068     3.125       -         
+un1_cur_line_cry_4                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_5_0             ALU       CIN      In      -         3.125       -         
+psram64.un1_cur_line_cry_5_0             ALU       COUT     Out     0.068     3.193       -         
+un1_cur_line_cry_5                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_6_0             ALU       CIN      In      -         3.193       -         
+psram64.un1_cur_line_cry_6_0             ALU       COUT     Out     0.068     3.261       -         
+un1_cur_line_cry_6                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_7_0             ALU       CIN      In      -         3.261       -         
+psram64.un1_cur_line_cry_7_0             ALU       COUT     Out     0.068     3.330       -         
+un1_cur_line_cry_7                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_8_0             ALU       CIN      In      -         3.330       -         
+psram64.un1_cur_line_cry_8_0             ALU       COUT     Out     0.068     3.398       -         
+un1_cur_line_cry_8                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_9_0             ALU       CIN      In      -         3.398       -         
+psram64.un1_cur_line_cry_9_0             ALU       COUT     Out     0.068     3.467       -         
+un1_cur_line_cry_9                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_10_0            ALU       CIN      In      -         3.467       -         
+psram64.un1_cur_line_cry_10_0            ALU       SUM      Out     0.676     4.142       -         
+un1_cur_line[13]                         Net       -        -       1.225     -           1         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      I3       In      -         5.367       -         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      F        Out     0.751     6.119       -         
+psram_sio_out_25_0_iv_1_0[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      I0       In      -         7.038       -         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      F        Out     1.238     8.276       -         
+PSRAM_SIO_OUT[2]                         Net       -        -       1.225     -           2         
+psram64.psram_sio_out_m[2]               LUT2      I0       In      -         9.501       -         
+psram64.psram_sio_out_m[2]               LUT2      F        Out     1.238     10.740      -         
+psram_sio_out_m[2]                       Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      I1       In      -         11.659      -         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      F        Out     1.319     12.977      -         
+psram_sio_out_25_0_iv_1_1[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      I1       In      -         13.896      -         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      F        Out     1.319     15.215      -         
+psram_sio_out_25_0_iv_1[2]               Net       -        -       0.000     -           1         
+psram64.psram_sio_out_ret_10             DFFCE     D        In      -         15.215      -         
+====================================================================================================
+Total path delay (propagation time + setup) of 15.375 is 8.942(58.2%) logic and 6.432(41.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      13.127
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         12.967
+
+    - Propagation time:                      15.179
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.212
+
+    Number of logic level(s):                16
+    Starting point:                          psram64.psram_sio_out_ret_2 / Q
+    Ending point:                            psram64.psram_sio_out_ret_10 / D
+    The start point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+
+Instance / Net                                     Pin      Pin               Arrival     No. of    
+Name                                     Type      Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------
+psram64.psram_sio_out_ret_2              DFFCE     Q        Out     0.440     0.440       -         
+cur_pos_reto[3]                          Net       -        -       1.225     -           1         
+psram64.un1_cur_line_cry_0_0             ALU       I0       In      -         1.666       -         
+psram64.un1_cur_line_cry_0_0             ALU       COUT     Out     1.150     2.815       -         
+un1_cur_line_cry_0                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_1_0             ALU       CIN      In      -         2.815       -         
+psram64.un1_cur_line_cry_1_0             ALU       COUT     Out     0.068     2.884       -         
+un1_cur_line_cry_1                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_2_0             ALU       CIN      In      -         2.884       -         
+psram64.un1_cur_line_cry_2_0             ALU       COUT     Out     0.068     2.952       -         
+un1_cur_line_cry_2                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_3_0             ALU       CIN      In      -         2.952       -         
+psram64.un1_cur_line_cry_3_0             ALU       COUT     Out     0.068     3.020       -         
+un1_cur_line_cry_3                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_4_0             ALU       CIN      In      -         3.020       -         
+psram64.un1_cur_line_cry_4_0             ALU       COUT     Out     0.068     3.089       -         
+un1_cur_line_cry_4                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_5_0             ALU       CIN      In      -         3.089       -         
+psram64.un1_cur_line_cry_5_0             ALU       COUT     Out     0.068     3.157       -         
+un1_cur_line_cry_5                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_6_0             ALU       CIN      In      -         3.157       -         
+psram64.un1_cur_line_cry_6_0             ALU       COUT     Out     0.068     3.226       -         
+un1_cur_line_cry_6                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_7_0             ALU       CIN      In      -         3.226       -         
+psram64.un1_cur_line_cry_7_0             ALU       COUT     Out     0.068     3.294       -         
+un1_cur_line_cry_7                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_8_0             ALU       CIN      In      -         3.294       -         
+psram64.un1_cur_line_cry_8_0             ALU       COUT     Out     0.068     3.362       -         
+un1_cur_line_cry_8                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_9_0             ALU       CIN      In      -         3.362       -         
+psram64.un1_cur_line_cry_9_0             ALU       COUT     Out     0.068     3.431       -         
+un1_cur_line_cry_9                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_10_0            ALU       CIN      In      -         3.431       -         
+psram64.un1_cur_line_cry_10_0            ALU       SUM      Out     0.676     4.106       -         
+un1_cur_line[13]                         Net       -        -       1.225     -           1         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      I3       In      -         5.332       -         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      F        Out     0.751     6.083       -         
+psram_sio_out_25_0_iv_1_0[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      I0       In      -         7.002       -         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      F        Out     1.238     8.240       -         
+PSRAM_SIO_OUT[2]                         Net       -        -       1.225     -           2         
+psram64.psram_sio_out_m[2]               LUT2      I0       In      -         9.465       -         
+psram64.psram_sio_out_m[2]               LUT2      F        Out     1.238     10.704      -         
+psram_sio_out_m[2]                       Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      I1       In      -         11.623      -         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      F        Out     1.319     12.941      -         
+psram_sio_out_25_0_iv_1_1[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      I1       In      -         13.860      -         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      F        Out     1.319     15.179      -         
+psram_sio_out_25_0_iv_1[2]               Net       -        -       0.000     -           1         
+psram64.psram_sio_out_ret_10             DFFCE     D        In      -         15.179      -         
+====================================================================================================
+Total path delay (propagation time + setup) of 15.339 is 8.906(58.1%) logic and 6.432(41.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      13.127
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         12.967
+
+    - Propagation time:                      15.177
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.210
+
+    Number of logic level(s):                11
+    Starting point:                          psram64.un1_cur_line_10_0_dreg[1] / Q
+    Ending point:                            psram64.psram_sio_out_ret_10 / D
+    The start point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkout_inferred_clock [rising] on pin CLK
+
+Instance / Net                                     Pin      Pin               Arrival     No. of    
+Name                                     Type      Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------
+psram64.un1_cur_line_10_0_dreg[1]        DFFCE     Q        Out     0.440     0.440       -         
+un1_cur_line_10_0_dreg[1]                Net       -        -       1.225     -           1         
+psram64.un1_cur_line_cry_1_0             ALU       I1       In      -         1.666       -         
+psram64.un1_cur_line_cry_1_0             ALU       COUT     Out     1.254     2.920       -         
+un1_cur_line_cry_1                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_2_0             ALU       CIN      In      -         2.920       -         
+psram64.un1_cur_line_cry_2_0             ALU       COUT     Out     0.068     2.988       -         
+un1_cur_line_cry_2                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_3_0             ALU       CIN      In      -         2.988       -         
+psram64.un1_cur_line_cry_3_0             ALU       COUT     Out     0.068     3.056       -         
+un1_cur_line_cry_3                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_4_0             ALU       CIN      In      -         3.056       -         
+psram64.un1_cur_line_cry_4_0             ALU       COUT     Out     0.068     3.125       -         
+un1_cur_line_cry_4                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_5_0             ALU       CIN      In      -         3.125       -         
+psram64.un1_cur_line_cry_5_0             ALU       COUT     Out     0.068     3.193       -         
+un1_cur_line_cry_5                       Net       -        -       0.000     -           1         
+psram64.un1_cur_line_cry_6_0             ALU       CIN      In      -         3.193       -         
+psram64.un1_cur_line_cry_6_0             ALU       SUM      Out     0.676     3.869       -         
+un1_cur_line[9]                          Net       -        -       1.225     -           1         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      I2       In      -         5.094       -         
+psram64.psram_sio_out_25_0_iv_1_0[2]     LUT4      F        Out     0.986     6.080       -         
+psram_sio_out_25_0_iv_1_0[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      I0       In      -         6.999       -         
+psram64.psram_sio_out_25_0_iv[2]         LUT4      F        Out     1.238     8.238       -         
+PSRAM_SIO_OUT[2]                         Net       -        -       1.225     -           2         
+psram64.psram_sio_out_m[2]               LUT2      I0       In      -         9.463       -         
+psram64.psram_sio_out_m[2]               LUT2      F        Out     1.238     10.701      -         
+psram_sio_out_m[2]                       Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      I1       In      -         11.620      -         
+psram64.psram_sio_out_25_0_iv_1_1[2]     LUT4      F        Out     1.319     12.939      -         
+psram_sio_out_25_0_iv_1_1[2]             Net       -        -       0.919     -           1         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      I1       In      -         13.858      -         
+psram64.psram_sio_out_25_0_iv_1[2]       LUT4      F        Out     1.319     15.177      -         
+psram_sio_out_25_0_iv_1[2]               Net       -        -       0.000     -           1         
+psram64.psram_sio_out_ret_10             DFFCE     D        In      -         15.177      -         
+====================================================================================================
+Total path delay (propagation time + setup) of 15.336 is 8.904(58.1%) logic and 6.432(41.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: PLL0|clkoutd_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                               Starting                                                         Arrival           
+Instance                                       Reference                       Type     Pin     Net             Time        Slack 
+                                               Clock                                                                              
+----------------------------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[0\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[0]     0.440       -1.785
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[1\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[1]     0.440       -1.716
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[2\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[2]     0.440       -1.648
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[3\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[3]     0.440       -1.579
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[4\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[4]     0.440       -0.947
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[5\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[5]     0.440       -0.430
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[6\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[6]     0.440       -0.362
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[7\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[7]     0.440       -0.293
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[8\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[8]     0.440       -0.225
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[9\]     PLL0|clkoutd_inferred_clock     DFFC     Q       rbin_num[9]     0.440       0.407 
+==================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                  Starting                                                             Required           
+Instance                                          Reference                       Type     Pin     Net                 Time         Slack 
+                                                  Clock                                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.Empty_Z                  PLL0|clkoutd_inferred_clock     DFFP     D       rempty_val_NE_i     9.953        -1.785
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[9\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_52_i              9.953        3.303 
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[8\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_53_i              9.953        3.371 
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[7\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_54_i              9.953        3.439 
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[6\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_55_i              9.953        3.508 
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[5\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_56_i              9.953        3.576 
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[4\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_57_i              9.953        3.644 
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[3\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_58_i              9.953        3.713 
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[2\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_59_i              9.953        3.781 
+psram64.rdfifo.fifo_inst.\\Equal\.rptr_Z\[1\]     PLL0|clkoutd_inferred_clock     DFFC     D       N_60_i              9.953        3.850 
+==========================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.113
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.953
+
+    - Propagation time:                      11.738
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.785
+
+    Number of logic level(s):                9
+    Starting point:                          psram64.rdfifo.fifo_inst.\\rbin_num_Z\[0\] / Q
+    Ending point:                            psram64.rdfifo.fifo_inst.Empty_Z / D
+    The start point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                  Pin      Pin               Arrival     No. of    
+Name                                                   Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[0\]             DFFC     Q        Out     0.440     0.440       -         
+rbin_num[0]                                            Net      -        -       1.225     -           2         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_0_0         ALU      I0       In      -         1.666       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_0_0         ALU      COUT     Out     1.150     2.815       -         
+rbin_num_next_cry_0                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0         ALU      CIN      In      -         2.815       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0         ALU      COUT     Out     0.068     2.884       -         
+rbin_num_next_cry_1                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0         ALU      CIN      In      -         2.884       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0         ALU      COUT     Out     0.068     2.952       -         
+rbin_num_next_cry_2                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      CIN      In      -         2.952       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      COUT     Out     0.068     3.020       -         
+rbin_num_next_cry_3                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      CIN      In      -         3.020       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      SUM      Out     0.676     3.696       -         
+rbin_num_next[4]                                       Net      -        -       1.225     -           4         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     I1       In      -         4.921       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     F        Out     1.319     6.240       -         
+rempty_val_NE_i_N_6L10_1                               Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     I3       In      -         7.159       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     F        Out     0.751     7.910       -         
+rempty_val_NE_i_N_9L18                                 Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     I3       In      -         8.829       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     F        Out     0.751     9.580       -         
+rempty_val_NE_i_1                                      Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     I0       In      -         10.499      -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     F        Out     1.238     11.738      -         
+rempty_val_NE_i                                        Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.Empty_Z                       DFFP     D        In      -         11.738      -         
+=================================================================================================================
+Total path delay (propagation time + setup) of 11.897 is 6.690(56.2%) logic and 5.207(43.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      10.113
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.953
+
+    - Propagation time:                      11.669
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.716
+
+    Number of logic level(s):                8
+    Starting point:                          psram64.rdfifo.fifo_inst.\\rbin_num_Z\[1\] / Q
+    Ending point:                            psram64.rdfifo.fifo_inst.Empty_Z / D
+    The start point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                  Pin      Pin               Arrival     No. of    
+Name                                                   Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[1\]             DFFC     Q        Out     0.440     0.440       -         
+rbin_num[1]                                            Net      -        -       1.225     -           2         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0         ALU      I0       In      -         1.666       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0         ALU      COUT     Out     1.150     2.815       -         
+rbin_num_next_cry_1                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0         ALU      CIN      In      -         2.815       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0         ALU      COUT     Out     0.068     2.884       -         
+rbin_num_next_cry_2                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      CIN      In      -         2.884       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      COUT     Out     0.068     2.952       -         
+rbin_num_next_cry_3                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      CIN      In      -         2.952       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      SUM      Out     0.676     3.628       -         
+rbin_num_next[4]                                       Net      -        -       1.225     -           4         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     I1       In      -         4.853       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     F        Out     1.319     6.172       -         
+rempty_val_NE_i_N_6L10_1                               Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     I3       In      -         7.090       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     F        Out     0.751     7.842       -         
+rempty_val_NE_i_N_9L18                                 Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     I3       In      -         8.761       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     F        Out     0.751     9.512       -         
+rempty_val_NE_i_1                                      Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     I0       In      -         10.431      -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     F        Out     1.238     11.669      -         
+rempty_val_NE_i                                        Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.Empty_Z                       DFFP     D        In      -         11.669      -         
+=================================================================================================================
+Total path delay (propagation time + setup) of 11.829 is 6.622(56.0%) logic and 5.207(44.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      10.113
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.953
+
+    - Propagation time:                      11.601
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.648
+
+    Number of logic level(s):                7
+    Starting point:                          psram64.rdfifo.fifo_inst.\\rbin_num_Z\[2\] / Q
+    Ending point:                            psram64.rdfifo.fifo_inst.Empty_Z / D
+    The start point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                  Pin      Pin               Arrival     No. of    
+Name                                                   Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[2\]             DFFC     Q        Out     0.440     0.440       -         
+rbin_num[2]                                            Net      -        -       1.225     -           2         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0         ALU      I0       In      -         1.666       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0         ALU      COUT     Out     1.150     2.815       -         
+rbin_num_next_cry_2                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      CIN      In      -         2.815       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      COUT     Out     0.068     2.884       -         
+rbin_num_next_cry_3                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      CIN      In      -         2.884       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      SUM      Out     0.676     3.559       -         
+rbin_num_next[4]                                       Net      -        -       1.225     -           4         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     I1       In      -         4.784       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     F        Out     1.319     6.103       -         
+rempty_val_NE_i_N_6L10_1                               Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     I3       In      -         7.022       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     F        Out     0.751     7.773       -         
+rempty_val_NE_i_N_9L18                                 Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     I3       In      -         8.692       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     F        Out     0.751     9.443       -         
+rempty_val_NE_i_1                                      Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     I0       In      -         10.362      -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     F        Out     1.238     11.601      -         
+rempty_val_NE_i                                        Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.Empty_Z                       DFFP     D        In      -         11.601      -         
+=================================================================================================================
+Total path delay (propagation time + setup) of 11.760 is 6.553(55.7%) logic and 5.207(44.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      10.113
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.953
+
+    - Propagation time:                      11.532
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.579
+
+    Number of logic level(s):                6
+    Starting point:                          psram64.rdfifo.fifo_inst.\\rbin_num_Z\[3\] / Q
+    Ending point:                            psram64.rdfifo.fifo_inst.Empty_Z / D
+    The start point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                  Pin      Pin               Arrival     No. of    
+Name                                                   Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[3\]             DFFC     Q        Out     0.440     0.440       -         
+rbin_num[3]                                            Net      -        -       1.225     -           2         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      I0       In      -         1.666       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      COUT     Out     1.150     2.815       -         
+rbin_num_next_cry_3                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      CIN      In      -         2.815       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      SUM      Out     0.676     3.491       -         
+rbin_num_next[4]                                       Net      -        -       1.225     -           4         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     I1       In      -         4.716       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     F        Out     1.319     6.035       -         
+rempty_val_NE_i_N_6L10_1                               Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     I3       In      -         6.954       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     F        Out     0.751     7.705       -         
+rempty_val_NE_i_N_9L18                                 Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     I3       In      -         8.624       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     F        Out     0.751     9.375       -         
+rempty_val_NE_i_1                                      Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     I0       In      -         10.294      -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     F        Out     1.238     11.532      -         
+rempty_val_NE_i                                        Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.Empty_Z                       DFFP     D        In      -         11.532      -         
+=================================================================================================================
+Total path delay (propagation time + setup) of 11.692 is 6.485(55.5%) logic and 5.207(44.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      10.113
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.953
+
+    - Propagation time:                      10.900
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.947
+
+    Number of logic level(s):                5
+    Starting point:                          psram64.rdfifo.fifo_inst.\\rbin_num_Z\[4\] / Q
+    Ending point:                            psram64.rdfifo.fifo_inst.Empty_Z / D
+    The start point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                  Pin      Pin               Arrival     No. of    
+Name                                                   Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\rbin_num_Z\[4\]             DFFC     Q        Out     0.440     0.440       -         
+rbin_num[4]                                            Net      -        -       1.225     -           2         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      I0       In      -         1.666       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      SUM      Out     1.193     2.858       -         
+rbin_num_next[4]                                       Net      -        -       1.225     -           4         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     I1       In      -         4.084       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     F        Out     1.319     5.402       -         
+rempty_val_NE_i_N_6L10_1                               Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     I3       In      -         6.321       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     F        Out     0.751     7.072       -         
+rempty_val_NE_i_N_9L18                                 Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     I3       In      -         7.991       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     F        Out     0.751     8.743       -         
+rempty_val_NE_i_1                                      Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     I0       In      -         9.662       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     F        Out     1.238     10.900      -         
+rempty_val_NE_i                                        Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.Empty_Z                       DFFP     D        In      -         10.900      -         
+=================================================================================================================
+Total path delay (propagation time + setup) of 11.060 is 5.852(52.9%) logic and 5.207(47.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                         Starting                                                     Arrival           
+Instance                                                 Reference     Type     Pin      Net                          Time        Slack 
+                                                         Clock                                                                          
+----------------------------------------------------------------------------------------------------------------------------------------
+pll0.pll_inst                                            System        PLL      LOCK     pll0_lock                    0.000       -0.918
+psram64.rdfifo.fifo_inst.\\Equal\.wdata_q6_cZ            System        INV      O        \\Equal\.wdata_q6            0.000       -0.263
+psram64.rdfifo.fifo_inst.wcnt_sub_0_axb_1_lofx_I3_cZ     System        INV      O        wcnt_sub_0_axb_1_lofx_I3     0.000       7.716 
+psram64.rdfifo.fifo_inst.wcnt_sub_1_axb_2_lofx_I3_cZ     System        INV      O        wcnt_sub_1_axb_2_lofx_I3     0.000       8.019 
+psram64.rdfifo.fifo_inst.wcnt_sub_1_axb_3_lofx_I3_cZ     System        INV      O        wcnt_sub_1_axb_3_lofx_I3     0.000       8.088 
+psram64.rdfifo.fifo_inst.wcnt_sub_1_axb_6_lofx_I3_cZ     System        INV      O        wcnt_sub_1_axb_6_lofx_I3     0.000       8.293 
+psram64.rdfifo.lcd_hsync_i                               System        INV      O        lcd_hsync_i                  0.000       8.728 
+psram64.rdfifo.lcd_vsync_i                               System        INV      O        lcd_vsync_i                  0.000       8.728 
+psram64.rdfifo.fifo_inst.Full_i_cZ                       System        INV      O        Full_i                       0.000       11.742
+========================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                         Starting                                               Required           
+Instance                                 Reference     Type      Pin        Net                 Time         Slack 
+                                         Clock                                                                     
+-------------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.lcd_hsync_i               System        INV       I          lcd_hsync           5.204        -0.918
+psram64.rdfifo.lcd_vsync_i               System        INV       I          lcd_vsync           5.204        -0.918
+psram64.rdfifo.fifo_inst.mem_mem_0_0     System        SDPX9     RESETB     RdReset             2.997        -0.918
+psram64.rdfifo.fifo_inst.Empty_Z         System        DFFP      D          rempty_val_NE_i     9.953        -0.263
+LCD_B[0]                                 System        DFFP      D          lcd_b[0]            9.953        3.830 
+LCD_B[1]                                 System        DFFP      D          lcd_b[1]            9.953        3.830 
+LCD_B[2]                                 System        DFFP      D          lcd_b[2]            9.953        3.830 
+LCD_B[3]                                 System        DFFP      D          lcd_b[3]            9.953        3.830 
+LCD_B[4]                                 System        DFFP      D          lcd_b[4]            9.953        3.830 
+LCD_DEN                                  System        DFFC      D          lcd_den             9.953        3.830 
+===================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.204
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         5.204
+
+    - Propagation time:                      6.122
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.918
+
+    Number of logic level(s):                2
+    Starting point:                          pll0.pll_inst / LOCK
+    Ending point:                            psram64.rdfifo.lcd_vsync_i / I
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                                     Pin        Pin               Arrival     No. of    
+Name                                     Type      Name       Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------
+pll0.pll_inst                            PLL       LOCK       Out     0.000     0.000       -         
+pll0_lock                                Net       -          -       1.225     -           1         
+GLOBAL_RESET                             LUT2      I1         In      -         1.225       -         
+GLOBAL_RESET                             LUT2      F          Out     1.319     2.544       -         
+GLOBAL_RESET                             Net       -          -       1.372     -           258       
+psram64.rdfifo.fifo_inst.mem_mem_0_0     SDPX9     RESETB     In      -         3.916       -         
+psram64.rdfifo.fifo_inst.mem_mem_0_0     SDPX9     DO[17]     Out     0.982     4.897       -         
+mem_mem_0_0_DO[17]                       Net       -          -       1.225     -           1         
+psram64.rdfifo.lcd_vsync_i               INV       I          In      -         6.122       -         
+======================================================================================================
+Total path delay (propagation time + setup) of 6.122 is 2.300(37.6%) logic and 3.822(62.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      5.204
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         5.204
+
+    - Propagation time:                      6.122
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.918
+
+    Number of logic level(s):                2
+    Starting point:                          pll0.pll_inst / LOCK
+    Ending point:                            psram64.rdfifo.lcd_hsync_i / I
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                                     Pin        Pin               Arrival     No. of    
+Name                                     Type      Name       Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------
+pll0.pll_inst                            PLL       LOCK       Out     0.000     0.000       -         
+pll0_lock                                Net       -          -       1.225     -           1         
+GLOBAL_RESET                             LUT2      I1         In      -         1.225       -         
+GLOBAL_RESET                             LUT2      F          Out     1.319     2.544       -         
+GLOBAL_RESET                             Net       -          -       1.372     -           258       
+psram64.rdfifo.fifo_inst.mem_mem_0_0     SDPX9     RESETB     In      -         3.916       -         
+psram64.rdfifo.fifo_inst.mem_mem_0_0     SDPX9     DO[16]     Out     0.982     4.897       -         
+mem_mem_0_0_DO[16]                       Net       -          -       1.225     -           1         
+psram64.rdfifo.lcd_hsync_i               INV       I          In      -         6.122       -         
+======================================================================================================
+Total path delay (propagation time + setup) of 6.122 is 2.300(37.6%) logic and 3.822(62.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      10.113
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.953
+
+    - Propagation time:                      10.216
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.263
+
+    Number of logic level(s):                9
+    Starting point:                          psram64.rdfifo.fifo_inst.\\Equal\.wdata_q6_cZ / O
+    Ending point:                            psram64.rdfifo.fifo_inst.Empty_Z / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                  Pin      Pin               Arrival     No. of    
+Name                                                   Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\Equal\.wdata_q6_cZ          INV      O        Out     0.000     0.000       -         
+\\Equal\.wdata_q6                                      Net      -        -       1.225     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_0_0         ALU      CIN      In      -         1.225       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_0_0         ALU      COUT     Out     0.068     1.294       -         
+rbin_num_next_cry_0                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0         ALU      CIN      In      -         1.294       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0         ALU      COUT     Out     0.068     1.362       -         
+rbin_num_next_cry_1                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0         ALU      CIN      In      -         1.362       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0         ALU      COUT     Out     0.068     1.430       -         
+rbin_num_next_cry_2                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      CIN      In      -         1.430       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0         ALU      COUT     Out     0.068     1.499       -         
+rbin_num_next_cry_3                                    Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      CIN      In      -         1.499       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0         ALU      SUM      Out     0.676     2.174       -         
+rbin_num_next[4]                                       Net      -        -       1.225     -           4         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     I1       In      -         3.400       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_2L1         LUT2     F        Out     1.319     4.718       -         
+rempty_val_NE_i_N_6L10_1                               Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     I3       In      -         5.637       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_9L18_cZ     LUT4     F        Out     0.751     6.388       -         
+rempty_val_NE_i_N_9L18                                 Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     I3       In      -         7.307       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_1_cZ          LUT4     F        Out     0.751     8.059       -         
+rempty_val_NE_i_1                                      Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     I0       In      -         8.977       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ            LUT4     F        Out     1.238     10.216      -         
+rempty_val_NE_i                                        Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.Empty_Z                       DFFP     D        In      -         10.216      -         
+=================================================================================================================
+Total path delay (propagation time + setup) of 10.376 is 5.168(49.8%) logic and 5.207(50.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      10.113
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.953
+
+    - Propagation time:                      9.203
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 0.749
+
+    Number of logic level(s):                13
+    Starting point:                          psram64.rdfifo.fifo_inst.\\Equal\.wdata_q6_cZ / O
+    Ending point:                            psram64.rdfifo.fifo_inst.Empty_Z / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                    Pin      Pin               Arrival     No. of    
+Name                                                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\Equal\.wdata_q6_cZ            INV      O        Out     0.000     0.000       -         
+\\Equal\.wdata_q6                                        Net      -        -       1.225     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_0_0           ALU      CIN      In      -         1.225       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_0_0           ALU      COUT     Out     0.068     1.294       -         
+rbin_num_next_cry_0                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0           ALU      CIN      In      -         1.294       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0           ALU      COUT     Out     0.068     1.362       -         
+rbin_num_next_cry_1                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0           ALU      CIN      In      -         1.362       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0           ALU      COUT     Out     0.068     1.430       -         
+rbin_num_next_cry_2                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0           ALU      CIN      In      -         1.430       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0           ALU      COUT     Out     0.068     1.499       -         
+rbin_num_next_cry_3                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0           ALU      CIN      In      -         1.499       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0           ALU      COUT     Out     0.068     1.567       -         
+rbin_num_next_cry_4                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_5_0           ALU      CIN      In      -         1.567       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_5_0           ALU      COUT     Out     0.068     1.636       -         
+rbin_num_next_cry_5                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_6_0           ALU      CIN      In      -         1.636       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_6_0           ALU      COUT     Out     0.068     1.704       -         
+rbin_num_next_cry_6                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_7_0           ALU      CIN      In      -         1.704       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_7_0           ALU      COUT     Out     0.068     1.772       -         
+rbin_num_next_cry_7                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_8_0           ALU      CIN      In      -         1.772       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_8_0           ALU      COUT     Out     0.068     1.841       -         
+rbin_num_next_cry_8                                      Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_9_0           ALU      CIN      In      -         1.841       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_9_0           ALU      SUM      Out     0.676     2.516       -         
+rbin_num_next[9]                                         Net      -        -       1.225     -           5         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_5L8           LUT2     I1       In      -         3.742       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_5L8           LUT2     F        Out     1.319     5.060       -         
+rempty_val_NE_i_N_6L10_0_1                               Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_6L10_0_cZ     LUT4     I2       In      -         5.979       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_6L10_0_cZ     LUT4     F        Out     0.986     6.966       -         
+rempty_val_NE_i_N_6L10_0                                 Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ              LUT4     I1       In      -         7.885       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ              LUT4     F        Out     1.319     9.203       -         
+rempty_val_NE_i                                          Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.Empty_Z                         DFFP     D        In      -         9.203       -         
+===================================================================================================================
+Total path delay (propagation time + setup) of 9.363 is 5.075(54.2%) logic and 4.288(45.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      10.113
+    - Setup time:                            0.160
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.953
+
+    - Propagation time:                      8.900
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 1.053
+
+    Number of logic level(s):                12
+    Starting point:                          psram64.rdfifo.fifo_inst.\\Equal\.wdata_q6_cZ / O
+    Ending point:                            psram64.rdfifo.fifo_inst.Empty_Z / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            PLL0|clkoutd_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                           Pin      Pin               Arrival     No. of    
+Name                                                            Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------
+psram64.rdfifo.fifo_inst.\\Equal\.wdata_q6_cZ                   INV      O        Out     0.000     0.000       -         
+\\Equal\.wdata_q6                                               Net      -        -       1.225     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_0_0                  ALU      CIN      In      -         1.225       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_0_0                  ALU      COUT     Out     0.068     1.294       -         
+rbin_num_next_cry_0                                             Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0                  ALU      CIN      In      -         1.294       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_1_0                  ALU      COUT     Out     0.068     1.362       -         
+rbin_num_next_cry_1                                             Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0                  ALU      CIN      In      -         1.362       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_2_0                  ALU      COUT     Out     0.068     1.430       -         
+rbin_num_next_cry_2                                             Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0                  ALU      CIN      In      -         1.430       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_3_0                  ALU      COUT     Out     0.068     1.499       -         
+rbin_num_next_cry_3                                             Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0                  ALU      CIN      In      -         1.499       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_4_0                  ALU      COUT     Out     0.068     1.567       -         
+rbin_num_next_cry_4                                             Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_5_0                  ALU      CIN      In      -         1.567       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_5_0                  ALU      COUT     Out     0.068     1.636       -         
+rbin_num_next_cry_5                                             Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_6_0                  ALU      CIN      In      -         1.636       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_6_0                  ALU      COUT     Out     0.068     1.704       -         
+rbin_num_next_cry_6                                             Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_7_0                  ALU      CIN      In      -         1.704       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_7_0                  ALU      COUT     Out     0.068     1.772       -         
+rbin_num_next_cry_7                                             Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_8_0                  ALU      CIN      In      -         1.772       -         
+psram64.rdfifo.fifo_inst.rbin_num_next_cry_8_0                  ALU      SUM      Out     0.676     2.448       -         
+rbin_num_next[8]                                                Net      -        -       1.225     -           5         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_4L5_0_N_5L8_0_cZ     LUT3     I1       In      -         3.673       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_4L5_0_N_5L8_0_cZ     LUT3     F        Out     1.319     4.992       -         
+rempty_val_NE_i_N_4L5_0_N_5L8_0                                 Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_7L12_cZ              LUT3     I1       In      -         5.911       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_N_7L12_cZ              LUT3     F        Out     1.319     7.230       -         
+rempty_val_NE_i_N_7L12                                          Net      -        -       0.919     -           1         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ                     LUT4     I3       In      -         8.149       -         
+psram64.rdfifo.fifo_inst.rempty_val_NE_i_cZ                     LUT4     F        Out     0.751     8.900       -         
+rempty_val_NE_i                                                 Net      -        -       0.000     -           1         
+psram64.rdfifo.fifo_inst.Empty_Z                                DFFP     D        In      -         8.900       -         
+==========================================================================================================================
+Total path delay (propagation time + setup) of 9.059 is 4.771(52.7%) logic and 4.288(47.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
 ##### END OF TIMING REPORT #####]
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 322MB peak: 322MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 252MB peak: 255MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 322MB peak: 322MB)
+Finished timing report (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 252MB peak: 255MB)
 
 ---------------------------------------
-Resource Usage Report for MAIN 
+Resource Usage Report for TOP 
 
-Mapping to part: gw1n_1qfn48-6
+Mapping to part: gw1n_1qfn48-5
 Cell usage:
+ALU             95 uses
+DFFC            126 uses
+DFFCE           82 uses
+DFFN            1 use
+DFFP            23 uses
+DFFPE           25 uses
 GSR             1 use
+INV             10 uses
+MUX2_LUT5       13 uses
+MUX2_LUT6       2 uses
+PLL             1 use
+SDPX9           2 uses
+LUT1            10 uses
+LUT2            112 uses
+LUT3            93 uses
+LUT4            265 uses
 
 I/O ports: 34
-I/O primitives: 23
-OBUF           19 uses
-TBUF           4 uses
+I/O primitives: 33
+IBUF           3 uses
+IOBUF          4 uses
+OBUF           23 uses
+TBUF           3 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   0 of 864 (0%)
+Register bits not including I/Os:   257 of 864 (29%)
+
+RAM/ROM usage summary
+Block Rams : 2 of 4 (50%)
+
 Total load per clock:
+   PLL0|clkoutd_inferred_clock: 66
+   PLL0|clkout_inferred_clock: 197
 
 @S |Mapping Summary:
-Total  LUTs: 0 (0%)
+Total  LUTs: 480 (41%)
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 322MB peak: 322MB)
+At Mapper Exit (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 78MB peak: 255MB)
 
-Process took 0h:00m:04s realtime, 0h:00m:04s cputime
-# Sun Sep 22 16:41:55 2019
+Process took 0h:00m:09s realtime, 0h:00m:09s cputime
+# Tue Sep 24 17:35:47 2019
 
 ###########################################################]

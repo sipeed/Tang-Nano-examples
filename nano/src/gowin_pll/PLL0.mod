@@ -6,17 +6,17 @@
 
 -mod_name PLL0
 -file_name PLL0
--path /home/athieka/tang/nano/src/gowin_pll/
+-path C:/fpga/Tang-Nano-examples/nano/src/gowin_pll/
 -type PLL
 -file_type vlg
 -dev_type GW1N-1
 -dyn_idiv_sel false
--idiv_sel 1
+-idiv_sel 6
 -dyn_fbdiv_sel false
--fbdiv_sel 3
+-fbdiv_sel 25
 -dyn_odiv_sel false
 -odiv_sel 8
--dyn_sdiv_sel 4
+-dyn_sdiv_sel 10
 -dyn_da_en true
 -rst_sig false
 -rst_sig_p false

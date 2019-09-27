@@ -1,0 +1,126 @@
+# Fri Sep 27 12:38:01 2019
+
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
+
+Hostname: GOWIN-PC
+
+Implementation : rev_1
+Synopsys Generic Technology Pre-mapping, Version mapgw, Build 1429R, Built Aug 27 2019 09:36:45
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 118MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\temp\FIFO\rev_1\LCD_FIFO_scck.rpt 
+Printing clock  summary report in "C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\temp\FIFO\rev_1\LCD_FIFO_scck.rpt" file 
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 127MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 127MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 127MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 139MB peak: 141MB)
+
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 218MB peak: 218MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 219MB peak: 219MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 219MB peak: 219MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 219MB peak: 219MB)
+
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 220MB peak: 220MB)
+
+
+
+Clock Summary
+******************
+
+          Start              Requested     Requested     Clock        Clock                     Clock
+Level     Clock              Frequency     Period        Type         Group                     Load 
+-----------------------------------------------------------------------------------------------------
+0 -       LCD_FIFO|RdClk     82.7 MHz      12.099        inferred     Autoconstr_clkgroup_1     77   
+                                                                                                     
+0 -       LCD_FIFO|WrClk     82.8 MHz      12.083        inferred     Autoconstr_clkgroup_0     67   
+=====================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                   Clock     Source          Clock Pin                             Non-clock Pin     Non-clock Pin                
+Clock              Load      Pin             Seq Example                           Seq Example       Comb Example                 
+----------------------------------------------------------------------------------------------------------------------------------
+LCD_FIFO|RdClk     77        RdClk(port)     fifo_inst.Equal\.rq2_wptr[10:0].C     -                 fifo_inst.un1_RdClk.I[0](inv)
+                                                                                                                                  
+LCD_FIFO|WrClk     67        WrClk(port)     fifo_inst.Equal\.wq2_rptr[10:0].C     -                 fifo_inst.un1_WrClk.I[0](inv)
+==================================================================================================================================
+
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 125 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       WrClk               port                   48         ENCRYPTED      
+@KP:ckid0_1       RdClk               port                   77         ENCRYPTED      
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\temp\FIFO\rev_1\LCD_FIFO.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 220MB peak: 220MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 220MB peak: 220MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 221MB peak: 221MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 142MB peak: 222MB)
+
+Process took 0h:00m:04s realtime, 0h:00m:04s cputime
+# Fri Sep 27 12:38:06 2019
+
+###########################################################]

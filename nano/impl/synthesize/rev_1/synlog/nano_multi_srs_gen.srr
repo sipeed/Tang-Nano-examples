@@ -7,25 +7,22 @@ with Synopsys, Inc. All other use, reproduction, modification, or distribution o
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
 Build: P-2019.03G-Beta4
-Install: /home/athieka/gowin/SynplifyPro
-OS: Ubuntu 16.04.6 LTS
-Hostname: gowin-vm
-max virtual memory: unlimited (bytes)
-max user processes: 15449
-max stack size: 8388608 (bytes)
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
 
+Hostname: GOWIN-PC
 
 Implementation : rev_1
-Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:30:05
+Synopsys Synopsys Netlist Linker, Version comp2019q1p1, Build 231R, Built Aug  2 2019 09:58:27
 
 @N|Running in 64-bit mode
-File /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_comp.srs changed - recompiling
+File C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synwork\nano_comp.srs changed - recompiling
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 143MB peak: 143MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 90MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 22 22:24:45 2019
+# Fri Sep 27 16:13:28 2019
 
 ###########################################################]

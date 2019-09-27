@@ -1,8 +1,7 @@
-/home/athieka/gowin/SynplifyPro/bin/syn_nfilter  -link  -top  TOP  -multisrs  /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_comp.srs  -osyn  /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_mult.srs  -log  /home/athieka/tang/nano/impl/synthesize/rev_1/synlog/nano_multi_srs_gen.srr 
-relcom:../../../../../../gowin/SynplifyPro/bin/syn_nfilter -link -top TOP -multisrs ../synwork/nano_comp.srs -osyn ../synwork/nano_mult.srs -log ../synlog/nano_multi_srs_gen.srr
-rc:0 success:1 runtime:1
-file:../synwork/nano_comp.srs|io:i|time:1569162283|size:120913|exec:0|csum:826952F3A9386C13F25603355A0B6873
-file:../synwork/nano_mult.srs|io:o|time:1569162285|size:4550|exec:0|csum:
-file:../synlog/nano_multi_srs_gen.srr|io:o|time:1569162285|size:1205|exec:0|csum:
-file:../../../../../../gowin/SynplifyPro/linux_a_64/syn_nfilter|io:i|time:1567039481|size:12227208|exec:1|csum:99F130565A5CD6ECEE0D20F180C16BBD
-file:../../../../../../gowin/SynplifyPro/bin/syn_nfilter|io:i|time:1567039468|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0
+C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  TOP  -multisrs  C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synwork\nano_comp.srs  -osyn  C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synwork\nano_mult.srs  -log  C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synlog\nano_multi_srs_gen.srr 
+relcom:..\..\..\..\..\..\..\Gowin\Gowin_V1.9.2Beta\SynplifyPro\bin64\syn_nfilter.exe -link -top TOP -multisrs ..\synwork\nano_comp.srs -osyn ..\synwork\nano_mult.srs -log ..\synlog\nano_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\nano_comp.srs|io:i|time:1569572006|size:131284|exec:0|csum:84D4979A68403B32C601740104CBDFE2
+file:..\synwork\nano_mult.srs|io:o|time:1569572008|size:4945|exec:0|csum:
+file:..\synlog\nano_multi_srs_gen.srr|io:o|time:1569572008|size:1142|exec:0|csum:
+file:..\..\..\..\..\..\..\Gowin\Gowin_V1.9.2Beta\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1564765422|size:8840192|exec:1|csum:3679135E094FDC1A8D56C913E5E7F562

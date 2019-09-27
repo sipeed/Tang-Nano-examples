@@ -1,0 +1,4 @@
+Library, Design Unit, compile Time, Peak Mem Usage
+work, LCD_FIFO, 0h:00m:00s,    103 MB
+work, \~fifo.LCD_FIFO , 0h:00m:00s,    106 MB
+work, work_C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\temp\FIFO\fifo_define.v_unit, 0h:00m:00s,      0 MB

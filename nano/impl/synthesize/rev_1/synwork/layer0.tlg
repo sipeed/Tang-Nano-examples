@@ -1,11 +1,9 @@
 Selecting top level module TOP
-@N: CG364 :"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v":1800:7:1800:9|Synthesizing module PLL in library work.
+@N: CG364 :"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v":1800:7:1800:9|Synthesizing module PLL in library work.
 Running optimization stage 1 on PLL .......
-@N: CG364 :"/home/athieka/tang/nano/src/gowin_pll/PLL0.v":8:7:8:10|Synthesizing module PLL0 in library work.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\gowin_pll\PLL0.v":8:7:8:10|Synthesizing module PLL0 in library work.
 Running optimization stage 1 on PLL0 .......
-@N: CG364 :"/home/athieka/tang/nano/src/GATED_CLK.v":1:7:1:15|Synthesizing module GATED_CLK in library work.
-Running optimization stage 1 on GATED_CLK .......
-@N: CG364 :"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v":1864:7:1864:9|Synthesizing module GSR in library work.
+@N: CG364 :"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v":1864:7:1864:9|Synthesizing module GSR in library work.
 Running optimization stage 1 on GSR .......
 Running optimization stage 1 on INV .......
 Running optimization stage 1 on LUT4 .......
@@ -15,48 +13,76 @@ Running optimization stage 1 on MUX2_LUT5 .......
 Running optimization stage 1 on MUX2_LUT6 .......
 Running optimization stage 1 on DFFC .......
 Running optimization stage 1 on DFFP .......
+Running optimization stage 1 on DFFNP .......
 Running optimization stage 1 on DFFCE .......
 Running optimization stage 1 on SDPX9 .......
 Running optimization stage 1 on ALU .......
 Running optimization stage 1 on GND .......
 Running optimization stage 1 on VCC .......
-Running optimization stage 1 on \~fifo.PSRAM_RDFIFO_  .......
-@N: CG364 :"/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v":2927:7:2927:18|Synthesizing module PSRAM_RDFIFO in library work.
-Running optimization stage 1 on PSRAM_RDFIFO .......
-@W: CL168 :"/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v":3000:6:3000:11|Removing instance GND_cZ because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
-@N: CG364 :"/home/athieka/tang/nano/src/SYNC_SIGNAL.v":7:7:7:17|Synthesizing module SYNC_SIGNAL in library work.
-Running optimization stage 1 on SYNC_SIGNAL .......
-@N: CG364 :"/home/athieka/tang/nano/src/PSRAM64.v":7:7:7:13|Synthesizing module PSRAM64 in library work.
-@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
-@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
-@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
-@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
-@W: CS263 :"/home/athieka/tang/nano/src/PSRAM64.v":125:13:125:26|Port-width mismatch for port Wnum. The port definition is 11 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
-Running optimization stage 1 on PSRAM64 .......
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Optimizing register bit cur_pos[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Optimizing register bit cur_pos[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit psram_ctrl to a constant 1. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Pruning register bits 9 to 8 of cur_pos[9:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL169 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning unused register psram_ctrl. Make sure that there are no unused intermediate registers.
-@N: CG364 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:9|Synthesizing module TOP in library work.
-@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":9:19:9:23|Removing wire LED_R, as there is no assignment to it.
-@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":10:19:10:23|Removing wire LED_G, as there is no assignment to it.
-@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":11:19:11:23|Removing wire LED_B, as there is no assignment to it.
+Running optimization stage 1 on \~fifo.LCD_FIFO_  .......
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\LCD_FIFO.v":2833:7:2833:14|Synthesizing module LCD_FIFO in library work.
+Running optimization stage 1 on LCD_FIFO .......
+@W: CL168 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\LCD_FIFO.v":2899:6:2899:11|Removing instance GND_cZ because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@N: CG364 :"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v":2062:7:2062:10|Synthesizing module DQCE in library work.
+Running optimization stage 1 on DQCE .......
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\GATED_CLK.v":1:7:1:15|Synthesizing module GATED_CLK in library work.
+Running optimization stage 1 on GATED_CLK .......
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":1:7:1:15|Synthesizing module LCD_PSRAM in library work.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":10:12:10:18|Removing wire mcu_ack, as there is no assignment to it.
+Running optimization stage 1 on LCD_PSRAM .......
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":10:12:10:18|*Output mcu_ack has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL169 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning unused register psram_eid[15:0]. Make sure that there are no unused intermediate registers.
+@A: CL282 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Feedback mux created for signal spi_mode[1:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":56:0:56:5|Optimizing register bit cur_line[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":56:0:56:5|Pruning register bit 9 of cur_line[9:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":7:7:7:9|Synthesizing module TOP in library work.
+@W: CG781 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":92:10:92:13|Input mcu_req on instance lcd0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":9:19:9:23|Removing wire LED_R, as there is no assignment to it.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":10:19:10:23|Removing wire LED_G, as there is no assignment to it.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":11:19:11:23|Removing wire LED_B, as there is no assignment to it.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":21:19:21:25|Removing wire MCU_ACK, as there is no assignment to it.
 Running optimization stage 1 on TOP .......
-@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":9:19:9:23|*Output LED_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
-@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":10:19:10:23|*Output LED_G has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
-@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":11:19:11:23|*Output LED_B has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":9:19:9:23|*Output LED_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":10:19:10:23|*Output LED_G has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":11:19:11:23|*Output LED_B has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":21:19:21:25|*Output MCU_ACK has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":53:0:53:5|Pruning register bits 2 to 0 of LCD_B[4:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":53:0:53:5|Pruning register bits 2 to 0 of LCD_R[4:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 Running optimization stage 2 on TOP .......
-@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":30:18:30:24|Input LCD_BKL is unused.
-Running optimization stage 2 on PSRAM64 .......
-@N: CL189 :"/home/athieka/tang/nano/src/PSRAM64.v":85:0:85:5|Register bit psram_ctrl_buf is always 1.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit task_x[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL260 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning register bit 7 of task_x[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL260 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning register bit 15 of cnt[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@N: CL201 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Trying to extract state machine for register task_state.
+@W: CL260 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":53:0:53:5|Pruning register bit 1 of LCD_G[5:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL159 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":20:18:20:24|Input MCU_REQ is unused.
+@N: CL159 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":30:18:30:24|Input LCD_BKL is unused.
+Running optimization stage 2 on LCD_PSRAM .......
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit tick_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[0] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[1] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit task_x[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit task_x[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit task_x[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit task_x[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bits 7 to 4 of task_x[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bits 23 to 10 of px_cnt[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bits 3 to 0 of px_cnt[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL260 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bit 15 of tick_cnt[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL201 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Trying to extract state machine for register task_state.
 Extracted state machine for register task_state
-State machine has 20 reachable states with original encodings of:
+State machine has 39 reachable states with original encodings of:
    00000000
    00000001
    00000010
@@ -76,24 +102,46 @@ State machine has 20 reachable states with original encodings of:
    00010000
    00010001
    00010010
+   00010011
+   00010100
+   00010101
+   00010110
+   00010111
+   00011000
+   00011001
+   00011010
+   00011011
+   00011100
+   00011101
+   00011110
+   00011111
+   00100000
+   00100001
+   00100010
+   00100011
+   00100100
+   00100101
    11111111
-@N: CL201 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Trying to extract state machine for register state.
+@N: CL201 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Trying to extract state machine for register state.
 Extracted state machine for register state
-State machine has 6 reachable states with original encodings of:
+State machine has 5 reachable states with original encodings of:
    00000000
    00000001
    00000010
    00000011
    00000100
-   00000101
-Running optimization stage 2 on SYNC_SIGNAL .......
-Running optimization stage 2 on PSRAM_RDFIFO .......
-Running optimization stage 2 on \~fifo.PSRAM_RDFIFO_  .......
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bits 15 to 2 of lcd_fifo_data[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL159 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":9:11:9:17|Input mcu_req is unused.
+Running optimization stage 2 on GATED_CLK .......
+Running optimization stage 2 on DQCE .......
+Running optimization stage 2 on LCD_FIFO .......
+Running optimization stage 2 on \~fifo.LCD_FIFO_  .......
 Running optimization stage 2 on VCC .......
 Running optimization stage 2 on GND .......
 Running optimization stage 2 on ALU .......
 Running optimization stage 2 on SDPX9 .......
 Running optimization stage 2 on DFFCE .......
+Running optimization stage 2 on DFFNP .......
 Running optimization stage 2 on DFFP .......
 Running optimization stage 2 on DFFC .......
 Running optimization stage 2 on MUX2_LUT6 .......
@@ -103,11 +151,10 @@ Running optimization stage 2 on LUT3 .......
 Running optimization stage 2 on LUT4 .......
 Running optimization stage 2 on INV .......
 Running optimization stage 2 on GSR .......
-Running optimization stage 2 on GATED_CLK .......
 Running optimization stage 2 on PLL0 .......
 Running optimization stage 2 on PLL .......
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
-@L: /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/layer0.rt.csv
+@L: C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synwork\layer0.rt.csv
 

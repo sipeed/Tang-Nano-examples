@@ -1,16 +1,16 @@
 #--  Synopsys, Inc.
 #--  Version P-2019.03G-Beta4
-#--  Project file /home/athieka/tang/nano/impl/synthesize/rev_1/run_options.txt
-#--  Written on Sun Sep 22 22:24:42 2019
+#--  Project file C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\run_options.txt
+#--  Written on Fri Sep 27 16:13:15 2019
 
 
 #project files
-add_file -verilog "/home/athieka/tang/nano/src/TOP.v"
-add_file -verilog "/home/athieka/tang/nano/src/SYNC_SIGNAL.v"
-add_file -verilog "/home/athieka/tang/nano/src/GATED_CLK.v"
-add_file -verilog "/home/athieka/tang/nano/src/PSRAM64.v"
-add_file -verilog "/home/athieka/tang/nano/src/gowin_pll/PLL0.v"
-add_file -verilog "/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/TOP.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/SYNC_SIGNAL.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/GATED_CLK.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/gowin_pll/PLL0.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/LCD_PSRAM.v"
+add_file -verilog "C:/fpga/Tang-Nano-examples/nano/src/LCD_FIFO/LCD_FIFO.v"
 
 
 

@@ -1,1 +1,0 @@
--link -encrypt -top TOP -osyn /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/nano_comp.srs /home/athieka/tang/nano/impl/synthesize/rev_1/synwork/layer0.srs  -jobname linker  

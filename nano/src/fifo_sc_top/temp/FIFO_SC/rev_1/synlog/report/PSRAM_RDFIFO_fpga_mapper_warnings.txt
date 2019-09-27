@@ -1,1 +1,0 @@
-@W: MT420 |Found inferred clock PSRAM_RDFIFO|Clk with period 11.74ns. Please declare a user-defined clock on port Clk.

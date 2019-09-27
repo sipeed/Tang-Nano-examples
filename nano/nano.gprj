@@ -9,9 +9,9 @@
         <File path="src/nano.cst" type="file.cst" enable="1"/>
         <File path="src/SYNC_SIGNAL.v" type="file.verilog" enable="1"/>
         <File path="src/GATED_CLK.v" type="file.verilog" enable="1"/>
-        <File path="src/PSRAM64.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_pll/PLL0.v" type="file.verilog" enable="1"/>
-        <File path="src/fifo_top/PSRAM_RDFIFO.v" type="file.verilog" enable="1"/>
         <File path="src/nano.sdc" type="file.sdc" enable="1"/>
+        <File path="src/LCD_PSRAM.v" type="file.verilog" enable="1"/>
+        <File path="src/LCD_FIFO/LCD_FIFO.v" type="file.verilog" enable="1"/>
     </FileList>
 </Project>

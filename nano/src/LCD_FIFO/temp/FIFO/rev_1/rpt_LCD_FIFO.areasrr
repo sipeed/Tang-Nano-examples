@@ -1,0 +1,83 @@
+
+Copyright (C) 1994-2019 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.03G-Beta4
+Install: C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro
+OS: Windows 6.1
+
+Hostname: GOWIN-PC
+
+Implementation : rev_1
+
+#### START OF AREA REPORT #####[
+
+Part:			GW1N_1QFN48-5 (GoWin)
+
+------------------------------------------------------------------------
+########   Utilization report for  Top level view:   LCD_FIFO   ########
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     115                100 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block LCD_FIFO:	115 (35.06 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+LUTS          123                100 %                
+MUX2_LUT5     6                  100 %                
+MUX2_LUT6     3                  100 %                
+ALU           66                 100 %                
+======================================================
+Total COMBINATIONAL LOGIC in the block LCD_FIFO:	198 (60.37 % Utilization)
+
+
+MEMORY ELEMENTS
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+BLOCK RAMS/ROMS     2                  100 %                
+============================================================
+Total MEMORY ELEMENTS in the block LCD_FIFO:	2 (0.61 % Utilization)
+
+--------------------------------------------------------------------------
+########   Utilization report for  cell:   \\\~fifo\.LCD_FIFO\    ########
+Instance path:   LCD_FIFO.\\\~fifo\.LCD_FIFO\                             
+==========================================================================
+
+SEQUENTIAL ELEMENTS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     115                100 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block LCD_FIFO.\\\~fifo\.LCD_FIFO\ :	115 (35.06 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+LUTS          123                100 %                
+MUX2_LUT5     6                  100 %                
+MUX2_LUT6     3                  100 %                
+ALU           66                 100 %                
+======================================================
+Total COMBINATIONAL LOGIC in the block LCD_FIFO.\\\~fifo\.LCD_FIFO\ :	198 (60.37 % Utilization)
+
+
+MEMORY ELEMENTS
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+BLOCK RAMS/ROMS     2                  100 %                
+============================================================
+Total MEMORY ELEMENTS in the block LCD_FIFO.\\\~fifo\.LCD_FIFO\ :	2 (0.61 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

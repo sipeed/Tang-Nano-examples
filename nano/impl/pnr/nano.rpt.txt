@@ -5,22 +5,22 @@
 1. PnR Messages
 
   <Report Title>: Gowin PnR Report
-  <Design File>: /home/athieka/tang/nano/impl/synthesize/rev_1/nano.vm
-  <Physical Constraints File>: /home/athieka/tang/nano/src/nano.cst
-  <Timing Constraints File>: /home/athieka/tang/nano/src/nano.sdc
+  <Design File>: C:/fpga/Tang-Nano-examples/nano/impl/synthesize/rev_1/nano.vm
+  <Physical Constraints File>: C:\fpga\Tang-Nano-examples\nano\src\nano.cst
+  <Timing Constraints File>: C:\fpga\Tang-Nano-examples\nano\src\nano.sdc
   <GOWIN Version>: V1.9.2Beta
   <Part Number>: GW1N-LV1QN48C5/I4
-  <Created Time>:Sun Sep 22 22:26:29 2019
+  <Created Time>:Fri Sep 27 16:14:03 2019
 
 
 2. Placer
 
   Starting Placer:
-    Placement Phase 0 ...   REAL time: 0.432754 secs
-    Placement Phase 1 ...   REAL time: 0.527305 secs
-    Placement Phase 2 ...   REAL time: 1.0757 secs
-    Placement Phase 3 ...   REAL time: 14.7812 secs
-  Total REAL time to Placement completion: 16.817 secs.
+    Placement Phase 0 ...   REAL time: 0.094 secs
+    Placement Phase 1 ...   REAL time: 0.156 secs
+    Placement Phase 2 ...   REAL time: 0.421 secs
+    Placement Phase 3 ...   REAL time: 6.53 secs
+  Total REAL time to Placement completion: 7.201 secs.
 
 
 3. Resource Usage Summary
@@ -28,24 +28,24 @@
   ----------------------------------------------------------
   Resources            | Usage
   ----------------------------------------------------------
-  Logics               | 574/1152  49%
-    --LUTs,ALUs,ROM16s | 574(479 LUTs, 95 ALUs, 0 ROM16s)
+  Logics               | 649/1152  56%
+    --LUTs,ALUs,ROM16s | 649(536 LUTs, 113 ALUs, 0 ROM16s)
     --SSRAMs(RAM16s)   | 0
-  Registers            | 237/945  25%
-    --Logic Registers  | 223/864  25%
-    --I/O Registers    | 14/81  17%
-  CLSs                 | 354/576  61%
+  Registers            | 252/945  26%
+    --Logic Registers  | 244/864  28%
+    --I/O Registers    | 8/81  9%
+  CLSs                 | 418/576  72%
   I/O Ports            | 34
-  I/O Bufs             | 33
-    --Input Bufs       | 3
+  I/O Bufs             | 32
+    --Input Bufs       | 2
     --Output Bufs      | 26
     --Inout Bufs       | 4
-  IOLOGICs             | 22
+  IOLOGICs             | 12
   IODELAYs             | 0/27  0%
   BSRAMs               | 2/4  50%
   PLLs                 | 1/1  100%
   DCSs                 | 0/4  0%
-  DQCEs                | 0/12  0%
+  DQCEs                | 1/12  8%
   OSCs                 | 0/1  0%
   User Flashes         | 0/1  0%
   CLKDIVs              | 0/2  0%
@@ -62,7 +62,7 @@
   -----------------------
   bank 0   | 9/11(81%)   
   bank 1   | 9/9(100%)   
-  bank 2   | 12/12(100%) 
+  bank 2   | 11/12(91%)  
   bank 3   | 3/9(33%)    
   =======================
 
@@ -70,10 +70,10 @@
 5. Router
 
   Starting Router:
-    Route Phase 0: 1068 unrouted; REAL time: 0.000944 secs
-    Route Phase 1: 676 unrouted; REAL time: 0.175246 secs
-    Route Phase 2: 0  unrouted; REAL time: 1.38003 secs
-  Total REAL time to Router completion: 1.55622 secs.
+    Route Phase 0: 1179 unrouted; REAL time: 0 secs
+    Route Phase 1: 771 unrouted; REAL time: 0.031 secs
+    Route Phase 2: 0  unrouted; REAL time: 0.453 secs
+  Total REAL time to Router completion: 0.484 secs.
 
 
 6. Global Clock Usage Summary
@@ -81,7 +81,7 @@
   -------------------------------
   Global Clock  | Usage       
   -------------------------------
-  PRIMARY       | 2/8(25%)
+  PRIMARY       | 3/8(37%)
   SECONDARY     | 1/8(12%)
   GCLK_PIN      | 4/4(100%)
   PLL           | 1/1(100%)
@@ -95,8 +95,9 @@
   -------------------------------------------
   Signal         | Global Clock   | Location
   -------------------------------------------
-  SYS_CLK_100M   | PRIMARY        | LEFT
-  SYS_CLK_25M    | PRIMARY        | LEFT
+  SYS_CLK_80M    | PRIMARY        | LEFT
+  psram_sclk     | PRIMARY        | RIGHT
+  LCD_PCLK_c     | PRIMARY        | LEFT
   GLOBAL_RESET   | SECONDARY      |  -
   ===========================================
 
@@ -202,4 +203,4 @@ Loc./Bank| Signal        | Dir.  | Site     | IO Type  | Pull Mode | Hysteresis 
   Placement and routing completed.
 
 
-10. Memory usage: 291MB.
+10. Memory usage: 147MB.

@@ -5,7 +5,7 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 *******************************************************************************************-->
 <report_table display_priority="2" name="Timing Summary">
 <report_link name="Detailed report">
-<data>/home/athieka/tang/nano/impl/synthesize/rev_1/synlog/nano_fpga_mapper.srr</data>
+<data>C:\fpga\Tang-Nano-examples\nano\impl\synthesize\rev_1\synlog\nano_fpga_mapper.srr</data>
 <title>START OF TIMING REPORT</title>
 </report_link>
 <row>
@@ -15,21 +15,27 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <data tcl_name="slack">Slack</data>
 </row>
 <row>
+<data>GATED_CLK|clkout_inferred_clock</data>
+<data>374.2 MHz</data>
+<data>318.1 MHz</data>
+<data>-0.472</data>
+</row>
+<row>
 <data>PLL0|clkout_inferred_clock</data>
-<data>78.0 MHz</data>
-<data>66.3 MHz</data>
-<data>-2.264</data>
+<data>53.9 MHz</data>
+<data>45.8 MHz</data>
+<data>-3.272</data>
 </row>
 <row>
 <data>PLL0|clkoutd_inferred_clock</data>
-<data>98.9 MHz</data>
-<data>84.1 MHz</data>
-<data>-1.785</data>
+<data>66.9 MHz</data>
+<data>56.9 MHz</data>
+<data>-2.637</data>
 </row>
 <row>
 <data>System</data>
-<data>192.2 MHz</data>
-<data>163.3 MHz</data>
-<data>-0.918</data>
+<data>74.1 MHz</data>
+<data>62.9 MHz</data>
+<data>-2.383</data>
 </row>
 </report_table>

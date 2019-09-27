@@ -2,17 +2,18 @@
 @N|Running in 64-bit mode
 @N: CG1349 :	| Running Verilog Compiler in System Verilog mode
 @N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
-@N: CG364 :"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v":1800:7:1800:9|Synthesizing module PLL in library work.
-@N: CG364 :"/home/athieka/tang/nano/src/gowin_pll/PLL0.v":8:7:8:10|Synthesizing module PLL0 in library work.
-@N: CG364 :"/home/athieka/tang/nano/src/GATED_CLK.v":1:7:1:15|Synthesizing module GATED_CLK in library work.
-@N: CG364 :"/home/athieka/gowin/SynplifyPro/lib/generic/gw1n.v":1864:7:1864:9|Synthesizing module GSR in library work.
-@N: CG364 :"/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v":2927:7:2927:18|Synthesizing module PSRAM_RDFIFO in library work.
-@N: CG364 :"/home/athieka/tang/nano/src/SYNC_SIGNAL.v":7:7:7:17|Synthesizing module SYNC_SIGNAL in library work.
-@N: CG364 :"/home/athieka/tang/nano/src/PSRAM64.v":7:7:7:13|Synthesizing module PSRAM64 in library work.
-@N: CG364 :"/home/athieka/tang/nano/src/TOP.v":7:7:7:9|Synthesizing module TOP in library work.
-@N: CL159 :"/home/athieka/tang/nano/src/TOP.v":30:18:30:24|Input LCD_BKL is unused.
-@N: CL189 :"/home/athieka/tang/nano/src/PSRAM64.v":85:0:85:5|Register bit psram_ctrl_buf is always 1.
-@N: CL201 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Trying to extract state machine for register task_state.
-@N: CL201 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Trying to extract state machine for register state.
+@N: CG364 :"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v":1800:7:1800:9|Synthesizing module PLL in library work.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\gowin_pll\PLL0.v":8:7:8:10|Synthesizing module PLL0 in library work.
+@N: CG364 :"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v":1864:7:1864:9|Synthesizing module GSR in library work.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\LCD_FIFO.v":2833:7:2833:14|Synthesizing module LCD_FIFO in library work.
+@N: CG364 :"C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\lib\generic\gw1n.v":2062:7:2062:10|Synthesizing module DQCE in library work.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\GATED_CLK.v":1:7:1:15|Synthesizing module GATED_CLK in library work.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":1:7:1:15|Synthesizing module LCD_PSRAM in library work.
+@N: CG364 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":7:7:7:9|Synthesizing module TOP in library work.
+@N: CL159 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":20:18:20:24|Input MCU_REQ is unused.
+@N: CL159 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":30:18:30:24|Input LCD_BKL is unused.
+@N: CL201 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Trying to extract state machine for register task_state.
+@N: CL201 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Trying to extract state machine for register state.
+@N: CL159 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":9:11:9:17|Input mcu_req is unused.
 @N|Running in 64-bit mode
 

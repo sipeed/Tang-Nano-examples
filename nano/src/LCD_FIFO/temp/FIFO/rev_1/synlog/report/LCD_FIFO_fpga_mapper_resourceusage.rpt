@@ -1,0 +1,29 @@
+---------------------------------------
+Resource Usage Report for LCD_FIFO 
+
+Mapping to part: gw1n_1qfn48-5
+Cell usage:
+ALU             66 uses
+DFFC            99 uses
+DFFCE           10 uses
+DFFNP           4 uses
+DFFP            2 uses
+GSR             1 use
+INV             8 uses
+MUX2_LUT5       6 uses
+MUX2_LUT6       3 uses
+SDPX9           2 uses
+LUT2            45 uses
+LUT3            25 uses
+LUT4            53 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   115 of 864 (13%)
+
+RAM/ROM usage summary
+Block Rams : 2 of 4 (50%)
+
+
+@S |Mapping Summary:
+Total  LUTs: 123 (10%)
+

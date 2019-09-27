@@ -7,15 +7,16 @@
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
 0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
-2 gated/generated clock tree(s) driving 240 clock pin(s) of sequential element(s)
-0 instances converted, 240 sequential instances remain driven by gated/generated clocks
+3 gated/generated clock tree(s) driving 257 clock pin(s) of sequential element(s)
+0 instances converted, 257 sequential instances remain driven by gated/generated clocks
 
-======================================================= Gated/Generated Clocks =======================================================
-Clock Tree ID     Driving Element           Drive Element Type     Unconverted Fanout     Sample Instance      Explanation            
---------------------------------------------------------------------------------------------------------------------------------------
-@KP:ckid0_1       pll0.pll_inst.CLKOUT      PLL                    158                    psram64.state[5]     Black box on clock path
-@KP:ckid0_2       pll0.pll_inst.CLKOUTD     PLL                    82                     LCD_G[5:0]           Black box on clock path
-======================================================================================================================================
+================================================================= Gated/Generated Clocks =================================================================
+Clock Tree ID     Driving Element                      Drive Element Type     Unconverted Fanout     Sample Instance               Explanation            
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       pll0.pll_inst.CLKOUT                 PLL                    164                    lcd0.task_state[38]           Black box on clock path
+@KP:ckid0_1       pll0.pll_inst.CLKOUTD                PLL                    77                     LCD_G_1[5:2]                  Black box on clock path
+@KP:ckid0_2       lcd0.sclk_gated.dqce_inst.CLKOUT     DQCE                   16                     lcd0.spi_buf_in_high[7:0]     Black box on clock path
+==========================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######

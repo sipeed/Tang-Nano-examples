@@ -1,23 +1,73 @@
-@W: CS141 :"/home/athieka/tang/nano/src/gowin_pll/PLL0.v":3:7:3:11|Unrecognized synthesis directive title. Verify the correct directive name.
-@W: CL168 :"/home/athieka/tang/nano/src/fifo_top/PSRAM_RDFIFO.v":3000:6:3000:11|Removing instance GND_cZ because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
-@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
-@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
-@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
-@W: CG1340 :"/home/athieka/tang/nano/src/PSRAM64.v":149:33:149:44|Index into variable shift_data could be out of range ; a simulation mismatch is possible.
-@W: CS263 :"/home/athieka/tang/nano/src/PSRAM64.v":125:13:125:26|Port-width mismatch for port Wnum. The port definition is 11 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Optimizing register bit cur_pos[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Optimizing register bit cur_pos[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit psram_ctrl to a constant 1. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"/home/athieka/tang/nano/src/PSRAM64.v":60:0:60:5|Pruning register bits 9 to 8 of cur_pos[9:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL169 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning unused register psram_ctrl. Make sure that there are no unused intermediate registers.
-@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":9:19:9:23|Removing wire LED_R, as there is no assignment to it.
-@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":10:19:10:23|Removing wire LED_G, as there is no assignment to it.
-@W: CG360 :"/home/athieka/tang/nano/src/TOP.v":11:19:11:23|Removing wire LED_B, as there is no assignment to it.
-@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":9:19:9:23|*Output LED_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
-@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":10:19:10:23|*Output LED_G has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
-@W: CL318 :"/home/athieka/tang/nano/src/TOP.v":11:19:11:23|*Output LED_B has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Optimizing register bit task_x[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL260 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning register bit 7 of task_x[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL260 :"/home/athieka/tang/nano/src/PSRAM64.v":370:0:370:5|Pruning register bit 15 of cnt[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":75:28:75:31|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":76:28:76:31|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":77:28:77:31|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":78:36:78:39|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":79:35:79:38|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":80:36:80:39|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\gowin_pll\PLL0.v":3:7:3:11|Unrecognized synthesis directive title. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":41:30:41:33|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":42:29:42:32|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":45:56:45:59|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":46:93:46:96|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":53:59:53:62|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":80:36:80:39|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":81:34:81:37|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":82:38:82:41|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":83:37:83:40|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":84:31:84:34|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":85:37:85:40|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":86:36:86:39|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":105:31:105:34|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":109:27:109:30|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":110:32:110:35|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":111:28:111:31|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":113:32:113:35|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":114:30:114:33|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CS141 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":115:32:115:35|Unrecognized synthesis directive keep. Verify the correct directive name.
+@W: CL168 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\LCD_FIFO.v":2899:6:2899:11|Removing instance GND_cZ because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":10:12:10:18|Removing wire mcu_ack, as there is no assignment to it.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":10:12:10:18|*Output mcu_ack has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL169 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning unused register psram_eid[15:0]. Make sure that there are no unused intermediate registers.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":56:0:56:5|Optimizing register bit cur_line[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":56:0:56:5|Pruning register bit 9 of cur_line[9:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CG781 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":92:10:92:13|Input mcu_req on instance lcd0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":9:19:9:23|Removing wire LED_R, as there is no assignment to it.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":10:19:10:23|Removing wire LED_G, as there is no assignment to it.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":11:19:11:23|Removing wire LED_B, as there is no assignment to it.
+@W: CG360 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":21:19:21:25|Removing wire MCU_ACK, as there is no assignment to it.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":9:19:9:23|*Output LED_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":10:19:10:23|*Output LED_G has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":11:19:11:23|*Output LED_B has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":21:19:21:25|*Output MCU_ACK has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":53:0:53:5|Pruning register bits 2 to 0 of LCD_B[4:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":53:0:53:5|Pruning register bits 2 to 0 of LCD_R[4:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL260 :"C:\fpga\Tang-Nano-examples\nano\src\TOP.v":53:0:53:5|Pruning register bit 1 of LCD_G[5:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit tick_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[0] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[1] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit px_cnt[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit task_x[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit task_x[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit task_x[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Optimizing register bit task_x[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bits 7 to 4 of task_x[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bits 23 to 10 of px_cnt[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bits 3 to 0 of px_cnt[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL260 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bit 15 of tick_cnt[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL279 :"C:\fpga\Tang-Nano-examples\nano\src\LCD_PSRAM.v":580:0:580:5|Pruning register bits 15 to 2 of lcd_fifo_data[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 
