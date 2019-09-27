@@ -3,7 +3,7 @@
 //File Title: IP file
 //GOWIN Version: v1.9.2Beta
 //Part Number: GW1N-LV1QN48C5/I4
-//Created Time: Fri Sep 27 16:04:23 2019
+//Created Time: Sat Sep 28 01:26:03 2019
 
 module PLL0 (clkout, lock, clkoutd, clkin);
 
@@ -40,11 +40,11 @@ PLL pll_inst (
 
 defparam pll_inst.FCLKIN = "24";
 defparam pll_inst.DYN_IDIV_SEL = "false";
-defparam pll_inst.IDIV_SEL = 5;
+defparam pll_inst.IDIV_SEL = 7;
 defparam pll_inst.DYN_FBDIV_SEL = "false";
-defparam pll_inst.FBDIV_SEL = 24;
+defparam pll_inst.FBDIV_SEL = 10;
 defparam pll_inst.DYN_ODIV_SEL = "false";
-defparam pll_inst.ODIV_SEL = 8;
+defparam pll_inst.ODIV_SEL = 16;
 defparam pll_inst.PSDA_SEL = "0000";
 defparam pll_inst.DYN_DA_EN = "true";
 defparam pll_inst.DUTYDA_SEL = "1000";

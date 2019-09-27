@@ -1,3 +1,4 @@
+`include "config.v"
 module LCD_PSRAM(input clk,
 					input reset,
 					output reg psram_ctrl,
@@ -15,15 +16,16 @@ module LCD_PSRAM(input clk,
 					output[4:0] lcd_b,
 					output lcd_hsync,
 					output lcd_vsync,
-					output lcd_den
+					output lcd_den,
+                    output led_r
 					);
 
 parameter SCREEN_WIDTH = 10'd800;
 parameter SCREEN_HEIGTH = 10'd480;
-parameter VBP	= 8'd1;	// vertical back porch timing
+parameter VBP	= 8'd5;	// vertical back porch timing
 parameter VFP	= 8'd5;	// vertical front porch timing
 parameter HBP	= 8'd10;	// horizontal back porch timing
-parameter HFP	= 8'd20;	// horizontal front porch timing
+parameter HFP	= 8'd10;	// horizontal front porch timing
 localparam LCD_LINES = SCREEN_HEIGTH + VBP + VFP;
 localparam LCD_LINE_SIZE = SCREEN_WIDTH + HBP + HFP;
 localparam SCREEN_SIZE = LCD_LINES * LCD_LINE_SIZE;
@@ -91,17 +93,17 @@ assign lcd_hsync = lcd_fifo_q[16];
 assign lcd_vsync = lcd_fifo_q[17];
 assign lcd_den = lcd_fifo_q[18];
 
-LCD_FIFO lcd_fifo(.Reset(reset),
-					.Data({1'b0, cur_den, cur_vsync, cur_hsync, lcd_fifo_data}),
-					.WrClk(~clk),
-					.WrEn(lcd_fifo_wrreq),
-					.Q(lcd_fifo_q),
-					.RdClk(lcd_pclk),
-					.Almost_Empty(lcd_fifo_aempty_flag),
-					.RdEn(~lcd_fifo_aempty_flag),
-					.Almost_Full(lcd_fifo_afull_flag),
-					.Empty(lcd_fifo_empty_flag),
-					.Full(lcd_fifo_full_flag));
+LCD_RAM lcd_fifo(.aclr(reset),
+                .data({1'b0, cur_den, cur_vsync, cur_hsync, lcd_fifo_data}),
+                .rdclk(lcd_pclk),
+                .rdreq(1'b1),
+                .wrclk(~clk),
+                .wrreq(lcd_fifo_wrreq),
+                .q(lcd_fifo_q),
+                .rdempty(lcd_fifo_empty_flag),
+                .wrfull(lcd_fifo_full_flag),
+                .almost_empty(lcd_fifo_aempty_flag),
+                .almost_full(lcd_fifo_afull_flag));
 reg psram_clk_out;	//synthesis keep
 GATED_CLK sclk_gated(.clkin(clk),
 						.clkout(psram_sclk),
@@ -166,6 +168,7 @@ input[7:0] next_state;
 input[7:0] odata;
 begin
 	spi_mode <= `SPI_MODE_1;
+`ifdef NANO
     case (task_x)
     8'd0:
     begin
@@ -219,7 +222,8 @@ begin
 		task_x <= 16'd0;
     end
     endcase
-	/*if (task_x < 8'd8)
+`else
+	if (task_x < 8'd8)
 	begin
 		task_x <= task_x + 1'b1;
 		psram_clk_out <= 1'b1;
@@ -233,13 +237,15 @@ begin
 			task_state <= next_state;
 			task_x <= 16'd0;
 		//end
-	end*/
+	end
+`endif
 end
 endtask
 task _SHIFT_OUT_4_24;
 input[7:0] next_state;
 input[23:0] out_data;
 begin
+`ifdef NANO
     case (task_x)
     8'd0:
     begin
@@ -285,13 +291,137 @@ begin
 		task_state <= next_state;
     end
     endcase
+`else
+    case (task_x)
+    8'd0:
+    begin
+        spi_mode <= `SPI_MODE_4O;
+        psram_clk_out <= 1'b1;
+        task_x <= 8'd1;
+        psram_sio_out <= out_data[6*4-1 -: 4];
+    end
+    8'd1:
+    begin
+        task_x <= 8'd2;
+        psram_sio_out <= out_data[5*4-1 -: 4];
+    end
+    8'd2:
+    begin
+        task_x <= 8'd3;
+        psram_sio_out <= out_data[4*4-1 -: 4];
+    end
+    8'd3:
+    begin
+        task_x <= 8'd4;
+        psram_sio_out <= out_data[3*4-1 -: 4];
+    end
+    8'd4:
+    begin
+        task_x <= 8'd5;
+        psram_sio_out <= out_data[2*4-1 -: 4];
+    end
+    8'd5:
+    begin
+        task_x <= 8'd6;
+        psram_sio_out <= out_data[1*4-1 -: 4];
+        
+    end
+    8'd6:
+    begin
+    	task_x <= 8'd7;
+    	psram_clk_out <= 1'b0;
+   	end
+    8'd7:
+    begin
+        task_x <= 8'd0;
+		task_state <= next_state;
+    end
+    endcase
+`endif
 end
 endtask
-
+task _SHIFT_OUT_4_16;
+input[7:0] next_state;
+input[15:0] out_data;
+begin
+	spi_mode <= `SPI_MODE_4O;
+`ifdef NANO
+	case (task_x)
+	8'd0:
+	begin
+		task_x <= 8'd1;
+		psram_clk_out <= 1'b1;			
+	end
+	8'd1:
+	begin
+		task_x <= 8'd2;
+		psram_sio_out <= out_data[4*4-1 -:4];
+	end
+	8'd2:
+	begin
+		task_x <= 8'd3;
+		psram_sio_out <= out_data[3*4-1 -:4];
+	end
+	8'd3:
+	begin
+		task_x <= 8'd4;
+		psram_sio_out <= out_data[2*4-1 -:4];
+	end
+	8'd4:
+	begin
+		task_x <= 8'd5;
+		psram_sio_out <= out_data[1*4-1 -:4];
+		psram_clk_out <= 1'b0;
+	end
+	8'd5: task_x <= 8'd6;
+	8'd6:
+	begin
+		task_x <= 8'd0;
+		task_state <= next_state;
+	end
+	endcase
+`else
+	case (task_x)
+	8'd0:
+	begin
+		task_x <= 8'd1;
+		psram_clk_out <= 1'b1;	
+		psram_sio_out <= out_data[4*4-1 -:4];		
+	end
+	8'd1:
+	begin
+		task_x <= 8'd2;
+		psram_sio_out <= out_data[3*4-1 -:4];
+	end
+	8'd2:
+	begin
+		task_x <= 8'd3;
+		psram_sio_out <= out_data[2*4-1 -:4];
+	end
+	8'd3:
+	begin
+		task_x <= 8'd4;
+		psram_sio_out <= out_data[1*4-1 -:4];
+	end
+	8'd4:
+	begin
+		task_x <= 8'd5;
+		psram_clk_out <= 1'b0;
+	end
+	8'd5: 
+	begin
+		task_x <= 8'd0;
+		task_state <= next_state;
+	end
+	endcase
+`endif
+end
+endtask
 task _SHIFT_OUT_4;
 input[7:0] next_state;
 input[7:0] out_data;
 begin
+`ifdef NANO
 	case (task_x)
 	8'd0:
 	begin
@@ -318,7 +448,9 @@ begin
 		task_state <= next_state;
     end
 	endcase
-	/*if (task_x < 8'd2)
+`else
+	/*spi_mode <= `SPI_MODE_4O;
+	if (task_x < 8'd2)
 	begin		
 		psram_clk_out <= 1'b1;
 		task_x <= task_x + 1'b1;
@@ -330,6 +462,28 @@ begin
 		task_x <= 8'd0;
 		task_state <= next_state;
 	end*/
+	case (task_x)
+	8'd0:
+	begin
+		spi_mode <= `SPI_MODE_4O;
+		task_x <= 8'd1;
+		psram_clk_out <= 1'b1;	
+		psram_sio_out <= out_data[7:4];	
+	end
+	8'd1:
+	begin
+		task_x <= 8'd2;        
+        psram_sio_out <= out_data[3:0];
+		
+	end
+    8'd2:
+    begin
+    	psram_clk_out <= 1'b0;
+        task_x <= 8'd0;
+		task_state <= next_state;
+    end
+	endcase
+`endif
 end
 endtask
 task _SHIFT_IN_4_16_2;
@@ -352,9 +506,12 @@ begin
         task_x <= 8'd5;
     end
     8'd5: task_x <= 8'd6;
-    8'd6:
+    8'd6: task_x <= 8'd7;
+    8'd7:
     begin
-        lcd_fifo_data <= lcd_fifo_data <= {spi_buf_in_high, spi_buf_in};
+        //if ({spi_buf_in_high, spi_buf_in} == 16'hf800)
+        //lcd_fifo_data <= 16'hf800;
+        lcd_fifo_data <= {spi_buf_in_high, spi_buf_in};
         lcd_fifo_wrreq <= 1'b1;
         task_x <= 8'd0;
 		task_state <= next_state;
@@ -365,7 +522,47 @@ endtask
 task _SHIFT_IN_4_16;
 input[7:0] next_state;
 begin
+`ifdef NANO
 	case (task_x)
+	8'd0: 
+	begin
+		lcd_fifo_wrreq <= 1'b0;
+		psram_clk_out <= 1'b1;
+		spi_mode <= `SPI_MODE_4I;
+		task_x <= 8'd1;	
+	end
+	8'd1: task_x <= 8'd2;
+	8'd2:
+	begin
+		psram_clk_out <= 1'b0;
+		task_x <= 8'd3;
+	end
+	8'd3:
+	begin	
+		psram_clk_out <= 1'b1;		
+		task_x <= 8'd4;
+	end
+	8'd4:
+    begin
+        lcd_fifo_data <= {lcd_fifo_data[7:0], spi_buf_in};
+        task_x <= 8'd5;
+    end
+	8'd5:
+	begin
+		psram_clk_out <= 1'b0;
+		task_x <= 8'd6;		
+	end
+	8'd6:task_x <= 8'd7;
+    8'd7:
+    begin
+        lcd_fifo_data <= {lcd_fifo_data[7:0], spi_buf_in};
+		lcd_fifo_wrreq <= 1'b1;
+		task_x <= 8'd0;
+		task_state <= next_state;
+    end
+	endcase	
+`else
+    case (task_x)
 	8'd0: 
 	begin
 		lcd_fifo_wrreq <= 1'b0;
@@ -399,6 +596,7 @@ begin
 		task_state <= next_state;
 	end
 	endcase	
+`endif
 end
 endtask
 
@@ -498,23 +696,23 @@ begin
 	/*8'd2: _SHIFT_OUT_4(8'd3, addr[3*8-1 -:8]);
 	8'd3: _SHIFT_OUT_4(8'd4, addr[2*8-1 -:8]);
 	8'd4: _SHIFT_OUT_4(8'd5, addr[8-1 -:8]);*/
-	8'd5: _SHIFT_OUT_4(8'd6, data[15:8]);
-	8'd6: _SHIFT_OUT_4(8'd9, data[7:0]);
-	8'd7: _SHIFT_OUT_4(8'd8, data[15:8]);
-	8'd8: _SHIFT_OUT_4(8'd9, data[7:0]);
-	8'd9: _SHIFT_OUT_4(8'd10, data[15:8]);
-	8'd10: _SHIFT_OUT_4(8'd11, data[7:0]);
-	8'd11: _SHIFT_OUT_4(8'd12, data[15:8]);
-	8'd12: _SHIFT_OUT_4(8'd13, data[7:0]);
-	8'd13: _SHIFT_OUT_4(8'd14, data[15:8]);
-	8'd14: _SHIFT_OUT_4(8'd15, data[7:0]);
-	8'd15: _SHIFT_OUT_4(8'd16, data[15:8]);
-	8'd16: _SHIFT_OUT_4(8'd17, data[7:0]);
-	8'd17: _SHIFT_OUT_4(8'd18, data[15:8]);
-	8'd18: _SHIFT_OUT_4(8'd19, data[7:0]);
-	8'd19: _SHIFT_OUT_4(8'd20, data[15:8]);
-	8'd20: _SHIFT_OUT_4(8'd21, data[7:0]);
-	8'd21: _SHIFT_OUT_4(8'd22, data[15:8]);
+	8'd5: _SHIFT_OUT_4_16(8'd6, data);
+	8'd6: _SHIFT_OUT_4_16(8'd7, data);
+	8'd7: _SHIFT_OUT_4_16(8'd8, data);
+	8'd8: _SHIFT_OUT_4_16(8'd9, data);
+	8'd9: _SHIFT_OUT_4_16(8'd10, data);
+	8'd10: _SHIFT_OUT_4_16(8'd11, data);
+	8'd11: _SHIFT_OUT_4_16(8'd12, data);
+	8'd12: _SHIFT_OUT_4_16(8'd13, data);
+	8'd13: _SHIFT_OUT_4_16(8'd14, data);
+	8'd14: _SHIFT_OUT_4_16(8'd15, data);
+	8'd15: _SHIFT_OUT_4_16(8'd16, data);
+	8'd16: _SHIFT_OUT_4_16(8'd17, data);
+	8'd17: _SHIFT_OUT_4_16(8'd18, data);
+	8'd18: _SHIFT_OUT_4_16(8'd19, data);
+	8'd19: _SHIFT_OUT_4_16(8'd20, data);
+	8'd20: _SHIFT_OUT_4_16(8'd37, data);
+	/*8'd21: _SHIFT_OUT_4(8'd22, data[15:8]);
 	8'd22: _SHIFT_OUT_4(8'd23, data[7:0]);
 	8'd23: _SHIFT_OUT_4(8'd24, data[15:8]);
 	8'd24: _SHIFT_OUT_4(8'd25, data[7:0]);
@@ -529,8 +727,8 @@ begin
 	8'd33: _SHIFT_OUT_4(8'd34, data[15:8]);
 	8'd34: _SHIFT_OUT_4(8'd35, data[7:0]);
 	8'd35: _SHIFT_OUT_4(8'd36, data[15:8]);
-	8'd36: _SHIFT_OUT_4(8'd37, data[7:0]);
-	8'd37: _PSRAM_CS(8'hff, 8'd5, `PSRAM_CE_OFF);
+	8'd36: _SHIFT_OUT_4(8'd37, data[7:0]);*/
+	8'd37: _PSRAM_CS(8'hff, 8'd16, `PSRAM_CE_OFF);
 	8'hff:
 	begin
 	end
@@ -567,7 +765,7 @@ begin
 	8'd22: 
 	begin
 		lcd_fifo_wrreq <= 1'b0;
-		_PSRAM_CS(8'hff, 8'd4, `PSRAM_CE_OFF);
+		_PSRAM_CS(8'hff, 8'd6, `PSRAM_CE_OFF);
 	end
 	8'hff:
 	begin		
@@ -613,7 +811,7 @@ begin
 		begin
 			if (px_cnt < SCREEN_SIZE)
 			begin
-				px_cnt <= px_cnt +8'd16;
+				px_cnt <= px_cnt +8'd1;
 				state <= 8'd2;
 			end
 			else 
@@ -625,7 +823,7 @@ begin
 		end
 		8'd2:
 		begin
-			PSRAM_WRITE(24'd0, {5'b11111, 6'b000000, 5'b00000});
+			PSRAM_WRITE(24'd0, 16'h5050);
 			if (task_state == 8'hff)
 			begin
 				task_state <= 8'd0;

@@ -29,6 +29,7 @@ module TOP(input SYS_CLK,
             output LCD_PCLK,
             input LCD_BKL
             );
+assign LED_B = 1'b0;
 wire SYS_CLK_80M;
 wire SYS_CLK_10M;
 wire pll0_lock;

@@ -11,11 +11,11 @@
 -file_type vlg
 -dev_type GW1N-1
 -dyn_idiv_sel false
--idiv_sel 6
+-idiv_sel 8
 -dyn_fbdiv_sel false
--fbdiv_sel 25
+-fbdiv_sel 11
 -dyn_odiv_sel false
--odiv_sel 8
+-odiv_sel 16
 -dyn_sdiv_sel 10
 -dyn_da_en true
 -rst_sig false

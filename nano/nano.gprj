@@ -13,5 +13,7 @@
         <File path="src/nano.sdc" type="file.sdc" enable="1"/>
         <File path="src/LCD_PSRAM.v" type="file.verilog" enable="1"/>
         <File path="src/LCD_FIFO/LCD_FIFO.v" type="file.verilog" enable="1"/>
+        <File path="src/config.v" type="file.verilog" enable="1"/>
+        <File path="src/LCD_RAM.v" type="file.verilog" enable="1"/>
     </FileList>
 </Project>

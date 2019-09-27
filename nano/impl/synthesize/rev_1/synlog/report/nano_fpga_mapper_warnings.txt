@@ -1,5 +1,0 @@
-@W: MT246 :"c:\fpga\tang-nano-examples\nano\src\gated_clk.v":10:5:10:13|Blackbox DQCE is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
-@W: MT246 :"c:\fpga\tang-nano-examples\nano\src\gowin_pll\pll0.v":21:4:21:11|Blackbox PLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
-@W: MT420 |Found inferred clock PLL0|clkoutd_inferred_clock with period 14.95ns. Please declare a user-defined clock on net pll0.LCD_PCLK_c.
-@W: MT420 |Found inferred clock GATED_CLK|clkout_inferred_clock with period 2.67ns. Please declare a user-defined clock on net lcd0.sclk_gated.psram_sclk.
-@W: MT420 |Found inferred clock PLL0|clkout_inferred_clock with period 18.54ns. Please declare a user-defined clock on net pll0.SYS_CLK_80M.

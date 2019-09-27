@@ -1,3 +1,0 @@
-ckid0_0:@|S:pll0.pll_inst.CLKOUT@|E:lcd0.task_state[38]@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
-ckid0_1:@|S:pll0.pll_inst.CLKOUTD@|E:LCD_G_1[5:2]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1
-ckid0_2:@|S:lcd0.sclk_gated.dqce_inst.CLKOUT@|E:lcd0.spi_buf_in_high[7:0]@|F:@syn_dgcc_clockid0_2==1@|M:ClockId_0_2

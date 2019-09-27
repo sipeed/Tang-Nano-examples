@@ -3,7 +3,7 @@
 //File Title: Template file for instantiation
 //GOWIN Version: v1.9.2Beta
 //Part Number: GW1N-LV1QN48C5/I4
-//Created Time: Fri Sep 27 16:04:23 2019
+//Created Time: Sat Sep 28 01:26:03 2019
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------
