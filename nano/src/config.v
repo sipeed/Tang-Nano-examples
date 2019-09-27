@@ -1,2 +1,0 @@
-`define NANO
-//`define TANG

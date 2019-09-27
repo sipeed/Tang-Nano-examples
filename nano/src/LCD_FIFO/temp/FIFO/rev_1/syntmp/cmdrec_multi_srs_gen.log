@@ -1,7 +1,0 @@
-C:\Gowin\Gowin_V1.9.2Beta\SynplifyPro\bin64\syn_nfilter.exe  -link  -multisrs  C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\temp\FIFO\rev_1\synwork\LCD_FIFO_comp.srs  -osyn  C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\temp\FIFO\rev_1\synwork\LCD_FIFO_mult.srs  -log  C:\fpga\Tang-Nano-examples\nano\src\LCD_FIFO\temp\FIFO\rev_1\synlog\LCD_FIFO_multi_srs_gen.srr 
-relcom:..\..\..\..\..\..\..\..\..\Gowin\Gowin_V1.9.2Beta\SynplifyPro\bin64\syn_nfilter.exe -link -multisrs ..\synwork\LCD_FIFO_comp.srs -osyn ..\synwork\LCD_FIFO_mult.srs -log ..\synlog\LCD_FIFO_multi_srs_gen.srr
-rc:0 success:1 runtime:0
-file:..\synwork\LCD_FIFO_comp.srs|io:i|time:1569559080|size:22980|exec:0|csum:7682E1C10818FACEE0C46A3167F8119A
-file:..\synwork\LCD_FIFO_mult.srs|io:o|time:1569559081|size:2588|exec:0|csum:
-file:..\synlog\LCD_FIFO_multi_srs_gen.srr|io:o|time:1569559081|size:1330|exec:0|csum:
-file:..\..\..\..\..\..\..\..\..\Gowin\Gowin_V1.9.2Beta\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1564765422|size:8840192|exec:1|csum:3679135E094FDC1A8D56C913E5E7F562

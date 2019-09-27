@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BUFGConfig>
+    <GeneralConfig>
+        <Type>EG_LOGIC_BUFG</Type>
+        <Device>EG4S20BG256</Device>
+        <create_VHDL>false</create_VHDL>
+        <inst>test</inst>
+    </GeneralConfig>
+</BUFGConfig>
