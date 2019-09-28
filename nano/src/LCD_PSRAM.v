@@ -823,7 +823,7 @@ begin
 		end
 		8'd2:
 		begin
-			PSRAM_WRITE(24'd0, 16'h5050);
+			PSRAM_WRITE(24'd0, 16'h07e0);
 			if (task_state == 8'hff)
 			begin
 				task_state <= 8'd0;

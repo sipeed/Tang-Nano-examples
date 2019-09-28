@@ -34,7 +34,7 @@ wire SYS_CLK_80M;
 wire SYS_CLK_10M;
 wire pll0_lock;
 PLL0 pll0(
-        .clkout(SYS_CLK_80M), //output clkout
+        .clkoutp(SYS_CLK_80M), //output clkout
         .lock(pll0_lock), //output lock
         .clkoutd(SYS_CLK_10M), //output clkoutd
         .clkin(SYS_CLK) //input clkin
