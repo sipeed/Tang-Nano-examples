@@ -1,0 +1,11 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device>gw1n1-004</Device>
+    <FileList>
+        <File path="src/led.v" type="file.verilog" enable="1"/>
+        <File path="src/led_prj.cst" type="file.cst" enable="1"/>
+    </FileList>
+</Project>
