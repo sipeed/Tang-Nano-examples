@@ -54,6 +54,8 @@ module VGAMod
             LineCount       <=  16'b0;
             PixelCount      <=  16'b0;
             end
+        else
+            PixelCount      <=  PixelCount + 1'b1;
     end
 
 	reg			[9:0]  Data_R;
