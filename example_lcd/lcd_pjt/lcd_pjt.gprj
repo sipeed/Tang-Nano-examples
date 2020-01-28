@@ -6,7 +6,6 @@
     <Device>gw1n1-004</Device>
     <FileList>
         <File path="src/TOP.v" type="file.verilog" enable="1"/>
-        <File path="src/gowin_pll/gowin_pll.v" type="file.verilog" enable="1"/>
         <File path="src/VGAMod.v" type="file.verilog" enable="1"/>
         <File path="src/rgb_psram.cst" type="file.cst" enable="1"/>
         <File path="src/gowin_osc/gowin_osc.v" type="file.verilog" enable="1"/>
