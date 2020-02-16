@@ -55,7 +55,7 @@
  "SSPI" : true,
  "Show_All_Warnings" : false,
  "Synthesis On/Off Implemented as Translate On/Off" : false,
- "Synthesize_tool" : "Synplify",
+ "Synthesize_tool" : "GowinSyn",
  "TopModule" : "TOP",
  "USERCODE_CUSTOM" : false,
  "USERCODE_CUSTOM_TEXT" : "00000000",
